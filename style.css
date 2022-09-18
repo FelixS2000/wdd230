@@ -1,0 +1,21 @@
+body{
+    background-color:chocolate;
+}
+head{
+    background-color: rgb(136, 108, 33);
+    
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: darkolivegreen;
+}
+ul{
+   text-align:justify;
+   box-shadow: none;
+}
+p{
+    background-color: darkolivegreen;
+}
