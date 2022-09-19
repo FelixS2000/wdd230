@@ -11,6 +11,8 @@ h1{
 h2{
     text-align: center;
     background-color: darkolivegreen;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 ul{
    text-align:justify;
