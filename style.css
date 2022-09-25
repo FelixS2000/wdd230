@@ -1,0 +1,31 @@
+body{
+    background-color:white;
+}
+header{
+    background-color: rgb(136, 108, 33);
+    
+}
+h1{
+    text-align: center;
+}
+h2{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+ul{
+   text-align:justify;
+   box-shadow: none;
+}
+p{
+    background-color: darkolivegreen;
+}
+img{
+    width: 200px;
+    height: 300px;
+}
+.lastupdate{
+    color: yellow;
+}
+.copyright{
+    color: aliceblue;
+}
