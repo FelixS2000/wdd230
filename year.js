@@ -1,0 +1,9 @@
+var date = new Date();
+var year = date.getFullYear();
+var day = date.getDay();
+var month = date.getMonth();
+var dates = date.getDate();
+var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+document.getElementById("currentTime").innerHTML = month + '/' + day + '/' + year;
+document.getElementById("currentYear").innerHTML = year;
+document.getElementById("currentHour").innerHTML = time;
