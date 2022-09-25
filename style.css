@@ -1,7 +1,7 @@
 body{
-    background-color:chocolate;
+    background-color:white;
 }
-head{
+header{
     background-color: rgb(136, 108, 33);
     
 }
@@ -9,8 +9,6 @@ h1{
     text-align: center;
 }
 h2{
-    text-align: center;
-    background-color: darkolivegreen;
     font-family: 'Inconsolata', monospace;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -20,4 +18,14 @@ ul{
 }
 p{
     background-color: darkolivegreen;
+}
+img{
+    width: 200px;
+    height: 300px;
+}
+.lastupdate{
+    color: yellow;
+}
+.copyright{
+    color: aliceblue;
 }

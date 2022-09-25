@@ -1,0 +1,21 @@
+@media screen and (min-width: 40em) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    header {
+        font-size: 20px;
+    }
+    .section-header h3 {
+        font-size: 17px;
+    }
+    .section-header a {
+        font-size: 15px;
+    }
+    section p {
+        font-size: 13px;
+    }
+    footer {
+        font-size: 13px;
+    }
+}
