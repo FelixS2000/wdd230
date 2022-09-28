@@ -3,7 +3,7 @@ body{
 }
 header{
     background-color: rgb(136, 108, 33);
-    
+    flex: auto;
 }
 h1{
     text-align: center;
