@@ -6,7 +6,7 @@ header{
     
 }
 h1{
-    text-align: center;
+    float:right;
     color: antiquewhite;
 }
 h2{
