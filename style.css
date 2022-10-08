@@ -1,9 +1,10 @@
 body{
     background-color:white;
 }
-header{
+header {
+    align-items: center;
     background-color: rgb(136, 108, 33);
-    
+    display: flex;
 }
 h2{
     font-family: 'Inconsolata', monospace;
@@ -29,6 +30,6 @@ img{
     text-align: center;
 }
 .header-name{
-    margin-bottom: 2rem;
+    margin-right: 2%;
     margin-top: 0;
 }
