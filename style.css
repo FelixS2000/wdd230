@@ -1,5 +1,8 @@
 body{
     background-color:white;
+    max-width: 1080px;
+    margin: 0 auto;
+    float:none;
 }
 header {
     align-items: center;
