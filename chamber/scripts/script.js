@@ -44,3 +44,4 @@ function changeTheme() {
 }
 
 theme.addEventListener("click", changeTheme);
+document.getElementById("lastModified") = now;
