@@ -43,5 +43,5 @@ function changeTheme() {
   }
 }
 mondays = now.getDay(1)
-document.write("🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.")
+document.write("🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.") = mondays;
 theme.addEventListener("click", changeTheme);

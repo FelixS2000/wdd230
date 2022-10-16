@@ -30,3 +30,6 @@ button.addEventListener('click', function () {
     input.focus();
 }
 )
+const date = new Date();
+
+document.getElementById("currentTime").innerHTML = date;
