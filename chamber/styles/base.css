@@ -1,12 +1,66 @@
-body
-html
-header
-nav
-.welcome
-.event
-.weather
-.release
-.firstSpotlight
-.secondSpotlight
-.logo
-.miniLogo
+body{
+    font-style: italic;
+    background-color: seagreen;
+}
+nav {
+    margin: auto;
+    max-width: 760px;
+    background-color: tomato;
+}
+.navigation{
+    list-style: none;
+    padding: 0;
+}
+.navigation li{
+    display: none;
+}
+.navigation a{
+    display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+.navigation a.navig::before {
+    content: "🏠 ";
+}
+.navigation a:hover{
+    color: whitesmoke;
+    background-color: black;
+}
+#welcome{
+    text-align: center;
+    flex-direction: column;
+    background-color: rosybrown;
+}
+#event{
+    text-align: center;
+    
+}
+#weather{
+    text-align: center;
+
+}
+#release{
+    text-align: center;
+    box-sizing: border-box;
+}
+#firstSpotlight{
+    text-align: center;
+    box-sizing: border-box;
+}
+#secondSpotlight{
+    text-align: center;
+    box-sizing: border-box;
+}
+#logo{
+    text-align: center;
+    box-sizing: border-box;
+}
+#miniLogo{
+    text-align: center;
+    box-sizing: border-box;
+}
