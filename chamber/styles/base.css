@@ -3,13 +3,28 @@ body{
     background-color: seagreen;
 }
 nav {
-    margin: auto;
+    margin: 0 auto;
     max-width: 760px;
     background-color: tomato;
+}
+header{
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
 }
 .navigation{
     list-style: none;
     padding: 0;
+}
+.navigation li:first-child{
+    display: block;
 }
 .navigation li{
     display: none;
@@ -31,36 +46,74 @@ nav {
     color: whitesmoke;
     background-color: black;
 }
+.heading{
+    text-align: center;
+}
+.responsive li {
+	display: block;
+}
+
+.responsive a.navig::before {
+	content: "❌ ";
+}
+/* Media Query for medium+ views */
+@media only screen and (min-width: 32.5em) {
+	.navigation {
+		display: flex;
+	}
+	.navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 auto;
+	}
+	.navigation a {
+		text-align: center;
+	}
+	.navigation li:first-child {
+		display: none;
+	}
+}
+div.miniLogo{
+    display: flex;
+}
 #welcome{
     text-align: center;
-    flex-direction: column;
     background-color: rosybrown;
+    grid-column: 1;
+    grid-row: 2;
+    
 }
 #event{
     text-align: center;
-    
+    grid-column: 2/4;
+    grid-row: 2;
+    background-color: rosybrown;
+    align-content: space-between;
 }
 #weather{
     text-align: center;
+    background-color: rosybrown;
 
 }
 #release{
-    text-align: center;
-    box-sizing: border-box;
+  text-align: center; 
+  align-content: space-between;
+  background-color: rosybrown;
 }
 #firstSpotlight{
-    text-align: center;
-    box-sizing: border-box;
+   align-content: center;
 }
 #secondSpotlight{
-    text-align: center;
-    box-sizing: border-box;
+   align-content: center;
 }
-#logo{
-    text-align: center;
-    box-sizing: border-box;
+.social,
+img{
+   justify-content: center; 
+   display: grid;
+   width: 40%;
+   align-content: center;
+   
 }
-#miniLogo{
-    text-align: center;
-    box-sizing: border-box;
+header,
+footer{
+    background-color: peru;
 }

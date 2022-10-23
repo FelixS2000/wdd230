@@ -1,13 +1,6 @@
-body
-html
-head
-header
-nav
-.welcome
-.event
-.weather
-.release
-.firstSpotlight
-.secondSpotlight
-.logo
-.miniLogo
+@media screen and (min-width: 70em) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
