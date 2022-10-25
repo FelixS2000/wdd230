@@ -109,11 +109,12 @@ div.miniLogo{
 img{
    justify-content: center; 
    display: grid;
-   width: 40%;
+   width: 100%;
+   height: 60%;
+   background-image:none;
    align-content: center;
    
 }
-header,
 footer{
     background-color: peru;
 }

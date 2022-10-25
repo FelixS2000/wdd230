@@ -3,4 +3,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+    header {
+        font-size: 32px;
+    }
+    .heading  {
+        font-size: 29px;
+    }
+    .heading a {
+        font-size: 26px;
+    }
+    section p {
+        font-size: 22px;
+    }
+    footer {
+        font-size: 22px;
+    }
 }
