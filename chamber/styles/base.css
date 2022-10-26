@@ -52,9 +52,15 @@ footer{
 .responsive li {
 	display: block;
 }
-
+.logo{
+    width: 10em;
+}
 .responsive a.navig::before {
 	content: "❌ ";
+}
+.heading,
+h1{
+    align-items: flex-end;
 }
 /* Media Query for medium+ views */
 @media only screen and (min-width: 32.5em) {
