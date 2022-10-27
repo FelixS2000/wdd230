@@ -10,5 +10,5 @@ hambutton.addEventListener('click', () => {mainnav.classList.toggle('responsive'
 window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('responsive')};
 
 document.getElementById("currentYear").innerHTML = year;
-document.getElementById("lastModified").innerHTML = date;
+document.getElementById("lastModified").innerHTML = time;
 document.getElementById("lastTime").innerHTML = time;
