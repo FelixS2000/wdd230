@@ -58,10 +58,6 @@ footer{
 .responsive a.navig::before {
 	content: "❌ ";
 }
-.heading,
-h1{
-    align-items: flex-end;
-}
 /* Media Query for medium+ views */
 @media only screen and (min-width: 32.5em) {
 	.navigation {
@@ -111,15 +107,17 @@ div.miniLogo{
 #secondSpotlight{
    align-content: center;
 }
+#bannerMessage{
+    align-content: flex-end;
+    background-color: coral;
+}
+.heading,
 .social,
 img{
-   justify-content: center; 
    display: grid;
    width: 100%;
    height: 60%;
-   background-image:none;
-   align-content: center;
-   
+ 
 }
 footer{
     background-color: peru;

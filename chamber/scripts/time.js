@@ -12,3 +12,4 @@ window.onresize = () => {if (window.innerWidth > 760) mainnav.classList.remove('
 document.getElementById("currentYear").innerHTML = year;
 document.getElementById("lastModified").innerHTML = time;
 document.getElementById("lastTime").innerHTML = time;
+document.getElementById("bannerMessage").textContent = "🤝🏼 Come join us for the chamber meet and greet Monday at 7:00 p.m.";
