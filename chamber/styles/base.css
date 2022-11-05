@@ -111,10 +111,14 @@ div.miniLogo{
   background-color: rosybrown;
 }
 #firstSpotlight{
-   align-content: center;
+   text-align: center; 
+   align-content: space-between;
+   background-color: rosybrown;
 }
 #secondSpotlight{
-   align-content: center;
+   text-align: center; 
+   align-content: space-between;
+   background-color: rosybrown;
 }
 .bannerMessage{
     margin: auto;
