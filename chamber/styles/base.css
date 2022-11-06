@@ -112,14 +112,19 @@ div.miniLogo{
 }
 #firstSpotlight{
    text-align: center; 
-   align-content: space-between;
+   float:left;
+   width: 50%;
+   height: 250px;
    background-color: rosybrown;
 }
 #secondSpotlight{
-   text-align: center; 
-   align-content: space-between;
-   background-color: rosybrown;
+    text-align: center;
+    float: right;
+    width: 50%;
+    height: 250px;
+    background-color: rosybrown;
 }
+
 .bannerMessage{
     margin: auto;
     background-color: coral;
