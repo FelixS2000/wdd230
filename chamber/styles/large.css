@@ -1,7 +1,8 @@
 @media screen and (min-width: 70em) {
     main {
         display: grid;
-        grid-template-columns:   1fr;
+        grid-column:3;
+        grid-row:3;
     }
     header {
         font-size: 32px;
@@ -17,5 +18,63 @@
     }
     footer {
         font-size: 22px;
-    }
+    }   
+}
+#lastTime{
+    text-align: center;
+}
+#welcome{
+    width: 50%;
+    right: -350px;
+    position:relative;
+}
+#event{
+    width: 15%;
+    position: relative;
+    left: -10px;
+    top: -600px;
+}
+#weather{
+    width: 15%;
+    position: relative;
+    left: -10px;
+    top: -500px;
+}
+#join{
+    width: 15%;
+    position: relative;
+    left: -10px;
+    top: -300px;
+}
+#release{
+    width: 60%;
+    position: relative;
+    right: -250px;
+    top: -300px;
+}
+#firstSpotlight{
+    width: 15%;
+    position: relative;
+    right: -1100px;
+    top: -1070px;
+}
+#secondSpotlight{
+    width: 15px;
+    position: relative;
+    right: -1000px;
+    top: -1050px;
+}
+.logo1 img{
+    width: 10%;
+    height: 10%;
+    position:absolute;
+    right: 120px;
+    top: 150px;
+}
+.logo2 img{
+    width: 10%;
+    height: 10%;
+    position:absolute;
+    left: 900px;
+    top: 150px;
 }
