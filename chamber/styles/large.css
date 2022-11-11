@@ -23,60 +23,71 @@
 #lastTime{
     text-align: center;
 }
-#welcome{
+.welcome{
     width: 50%;
-    right: -350px;
-    position:relative;
+    margin: auto;
+    padding: 0%;
 }
-#event{
-    width: 15%;
+.event{
+    width: 20%;
+    margin-right: auto;
+    top: -310%;
     position: relative;
-    right: -100px;
+    padding-left: 0%;
+}
+.weather{
+    width: 20%;
+    margin-right: auto;
+    top: -450%;
+    position: relative;
+    padding: auto;
+}
+.join{
+    width: 20%;
+    margin-right: auto;
     top: -600px;
-}
-#weather{
-    width: 15%;
     position: relative;
-    left: 100px;
-    top: -600px;
+    padding-left: 0%;
 }
-#join{
-    width: 15%;
-    position: relative;
-    left: 100px;
-    top: -350px;
-}
-#release{
+.release{
     width: 60%;
+    margin: auto;
+    top: -400px;
     position: relative;
-    right: -250px;
-    top: -300px;
 }
-#firstSpotlight{
-    width: 150px;
-    height: 150px;
+.firstSpotlight{
+    width: 20%;
+    margin-left: auto;
+    top: -1150px;
     position: relative;
-    right: -1100px;
-    top: -1070px;
+    padding: auto;
 }
-#secondSpotlight{
-    width: 150px;
-    height: 150px;
+.secondSpotlight{
+    width: 20%;
+    margin-left: auto;
+    top: -1150px;
     position: relative;
-    right: -1100px;
-    top: -1050px;
+    padding: auto;
+}
+.thirdSpotlight{
+    width: 20%;
+    margin-left: auto;
+    top: -1150px;
+    position: relative;
+    padding: auto;
 }
 .logo1 img{
     width: 10%;
-    height: 10%;
+    margin-left:1000px;
+    top: 50px;
+    padding: 0%;
     position:absolute;
-    right: 120px;
-    top: 150px;
+
 }
 .logo2 img{
-    width: 10%;
-    height: 10%;
+    width: 100px;
+    margin-left: 300px;
+    top: 50px;
+    padding: 0%;
     position:absolute;
-    left: 900px;
-    top: 150px;
 }
