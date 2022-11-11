@@ -22,52 +22,54 @@
 #lastTime{
     text-align: center;
 }
-.welcome{
+#welcome{
     width: 5%;
     left: -200px;
     top: 1px;
     padding: auto;
     position: relative;  
 }
-.event{
+#event{
     width: 15%;
     left: -100px;
     top: 500px;
     
 }
-.weather{
+#weather{
     width: 15%;
     left: 100px;
     top: -600px;
 }
-.join{
+#join{
     width: 15%;
     left: 100px;
     top: -350px;
 }
-.release{
+#release{
     width: 60%;
     right: -250px;
     top: -300px;
 }
-.firstSpotlight{
+#firstSpotlight{
     width: 150px;
     height: 150px;
     right: -1100px;
     top: -1070px;
-    
+    background-color:#FF8906;
 }
-.secondSpotlight{
+#secondSpotlight{
     width: 150px;
     height: 150px;
     right: -1100px;
     top: -1050px;
+    background-color:#FF8906;
 }
-.thirdSpotlight{
+#thirdSpotlight{
     width: 150px;
     height: 150px;
     right: -1100px;
     top: -1050px;
+    background-color:#FF8906;
 }
 .logo1 img{
     width: 10%;
