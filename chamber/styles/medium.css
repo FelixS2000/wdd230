@@ -19,3 +19,67 @@
         font-size: 13px;
     }
 }
+#lastTime{
+    text-align: center;
+}
+.welcome{
+    width: 5%;
+    left: -200px;
+    top: 1px;
+    padding: auto;
+    position: relative;  
+}
+.event{
+    width: 15%;
+    left: -100px;
+    top: 500px;
+    
+}
+.weather{
+    width: 15%;
+    left: 100px;
+    top: -600px;
+}
+.join{
+    width: 15%;
+    left: 100px;
+    top: -350px;
+}
+.release{
+    width: 60%;
+    right: -250px;
+    top: -300px;
+}
+.firstSpotlight{
+    width: 150px;
+    height: 150px;
+    right: -1100px;
+    top: -1070px;
+    
+}
+.secondSpotlight{
+    width: 150px;
+    height: 150px;
+    right: -1100px;
+    top: -1050px;
+}
+.thirdSpotlight{
+    width: 150px;
+    height: 150px;
+    right: -1100px;
+    top: -1050px;
+}
+.logo1 img{
+    width: 10%;
+    height: 10%;
+    position:absolute;
+    right: 120px;
+    top: 150px;
+}
+.logo2 img{
+    width: 10%;
+    height: 10%;
+    position:absolute;
+    left: 900px;
+    top: 150px;
+}

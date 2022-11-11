@@ -1,10 +1,11 @@
 body{
     font-style: italic;
-    background-color: seagreen;
+    background-color:#FFFFFE;
 }
 nav {
     margin: 0 auto;
     width: 100%;
+    background-color: #f25f4c;
 }
 header{
     margin: auto;
@@ -38,7 +39,7 @@ footer{
 	font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 .navigation a.navig::before {
-    content: "🏠 ";
+    content: "ðŸ  ";
 }
 .navigation a:hover{
     color: whitesmoke;
@@ -60,22 +61,22 @@ footer{
 
 }
 .logo1 img{
-    width: 15%;
-    position:absolute;
-    right: 50px;
-    top: 14px;
+    width: 10%;
+    position:relative;
+    left: 50px;
+    top: -200px;
 }
 .logo2 img{
     width: 10%;
-    position: absolute;
+    position:static;
     right: 40px;
     top: 23px;
 }
 .offLogo img{
-    width: 45%;
+    width: 30%;
 }
 .responsive a.navig::before {
-	content: "❌ ";
+	content: "âŒ ";
 }
 /* Media Query for medium+ views */
 @media only screen and (min-width: 32.5em) {
@@ -96,52 +97,52 @@ footer{
 div.miniLogo{
     display: flex;
 }
-#welcome{
+.welcome{
     text-align: center;
-    background-color: rosybrown;
-    
-    
+    background-color: #f25f4c;
 }
-#event{
+.event{
     text-align: center;
     grid-column: 2/4;
     grid-row: 2;
-    background-color: rosybrown;
+    background-color: #f25f4c;
     align-content: space-between;
 }
-#weather{
+.weather{
     text-align: center;
-    background-color: rosybrown;
+    background-color: #f25f4c;
 
 }
-#release{
+.release{
   text-align: center; 
   align-content: space-between;
-  background-color: rosybrown;
+  background-color: #f25f4c;
 }
-#join{
+.join{
     text-align: center;
-    background-color: rosybrown;
+    background-color: #f25f4c;
 }
-#firstSpotlight{
+.firstSpotlight{
    text-align: center; 
-   
-   
-   background-color: rosybrown;
+   background-color:#FF8906;
 }
-#secondSpotlight{
+.secondSpotlight{
     text-align: center;
-    
-    background-color: rosybrown;
+    background-color:#FF8906;
 }
-#lastTime{
+.thirdSpotlight{
+    text-align: center;
+    background-color: #FF8906;
+}
+.lastTime{
     text-align: center;
 }
 
 .bannerMessage{
-    margin: auto;
-    background-color: coral;
-    padding: 5px;
+    margin: 1px;
+    padding: 1px;
+    font-size: small;
+    text-align: center;
 }
 .heading,
 .social,
