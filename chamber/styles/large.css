@@ -25,54 +25,56 @@
 }
 .welcome{
     width: 50%;
-    margin: auto;
+    margin-left: 600px;
     padding: 0%;
+    position: relative;
 }
 .event{
     width: 20%;
-    margin-right: auto;
-    top: -310%;
-    position: relative;
-    padding-left: 0%;
+    margin-left: 150px;
+    top: -300%;
+    position:relative;
+    padding: -260px;
 }
 .weather{
     width: 20%;
-    margin-right: auto;
-    top: -450%;
+    margin-left: -50px;
+    top: -420%;
     position: relative;
     padding: auto;
 }
 .join{
     width: 20%;
-    margin-right: auto;
-    top: -600px;
+    margin-left: -50px;
+    top: -2900%;
     position: relative;
     padding-left: 0%;
 }
 .release{
     width: 60%;
-    margin: auto;
-    top: -400px;
+    margin-left: 80px;
+    top: -300%;
     position: relative;
+    padding: auto;
 }
 .firstSpotlight{
     width: 20%;
-    margin-left: auto;
+    margin-left: 1px;
     top: -1150px;
     position: relative;
     padding: auto;
 }
 .secondSpotlight{
     width: 20%;
-    margin-left: auto;
-    top: -1150px;
+    margin-left: 1px;
+    top: -1100px;
     position: relative;
     padding: auto;
 }
 .thirdSpotlight{
     width: 20%;
-    margin-left: auto;
-    top: -1150px;
+    margin-left: 1px;
+    top: -1050px;
     position: relative;
     padding: auto;
 }
