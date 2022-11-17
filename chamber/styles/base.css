@@ -3,8 +3,8 @@ body{
     background-color:#FFFFFE;
 }
 nav {
-    margin: 0 auto;
-    width: 100%;
+    padding: auto;
+    width: auto;
     background-color: #f25f4c;
 }
 header{
@@ -13,14 +13,17 @@ header{
 }
 footer{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    padding: auto;
+}
+.title{
+    text-align:center
 }
 .navigation{
     list-style: none;
-    padding: 0;
+    
 }
 .navigation li:first-child{
     display: block;
@@ -30,7 +33,7 @@ footer{
 }
 .navigation a{
     display: block;
-	padding: 0.75rem;
+	padding: 0.7rem;
 	text-align: left;
 	text-decoration: none;
 	color: black;
@@ -51,30 +54,27 @@ footer{
 .responsive li {
 	display: block;
 }
-.logo{
-    width: 10em;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding-top: 55px;
-    gap: 5%;
+.offLogo{
+    width: 15%;
+    padding: 10px;
+    
 
 }
-.logo1 img{
-    width: 10%;
-    position:relative;
-    left: 50px;
-    top: -200px;
+div.logo1 img{
+    width: 10fr;
+    height: auto;
+    position: relative;
+    left: 200px;
+    top: -110%;
 }
-.logo2 img{
-    width: 10%;
-    position:static;
-    right: 40px;
-    top: 23px;
+div.logo2 img{
+    width: 5%;
+    height: auto;
+    position: relative;
+    left: 300px;
+    top: -350%;
 }
-.offLogo img{
-    width: 30%;
-}
+
 .responsive a.navig::before {
 	content: "❌ ";
 }
@@ -97,42 +97,42 @@ footer{
 div.miniLogo{
     display: flex;
 }
-.welcome{
-    text-align: center;
-    background-color: #f25f4c;
+section.welcome,
+section.event,
+section.weather, 
+section.join{
+    position: relative;
+    width: auto;
+    left: auto;
+    top: auto;
 }
-.event{
-    text-align: center;
-    grid-column: 2/4;
-    grid-row: 2;
-    background-color: #f25f4c;
-    align-content: space-between;
+section.release{
+    position: relative;
+    width: auto;
+    right: auto;
+    top: auto;
 }
-.weather{
-    text-align: center;
-    background-color: #f25f4c;
 
-}
-.release{
-  text-align: center; 
-  align-content: space-between;
-  background-color: #f25f4c;
-}
+.welcome,
+.event,
+.weather,
+.release,
 .join{
     text-align: center;
     background-color: #f25f4c;
 }
-.firstSpotlight{
+.firstSpotlight,
+.secondSpotlight{
    text-align: center; 
    background-color:#FF8906;
 }
-.secondSpotlight{
-    text-align: center;
-    background-color:#FF8906;
-}
 .thirdSpotlight{
-    text-align: center;
-    background-color: #FF8906;
+    display: none;
+}
+section.firstSpotlight,
+section.secondSpotlight{
+    width: auto;
+    margin: 1%;
 }
 .lastTime{
     text-align: center;
@@ -147,9 +147,8 @@ div.miniLogo{
 .heading,
 .social,
 img{
-   display: grid;
    width: 100%;
-   height: 60%;
+   height: 100%;
  
 }
 footer{
