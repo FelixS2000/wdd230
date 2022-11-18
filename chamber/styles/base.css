@@ -5,11 +5,14 @@ body{
 nav {
     padding: auto;
     width: auto;
-    background-color: #f25f4c;
+    background-color: #a7a9be;
 }
 header{
     margin: auto;
     display: grid;
+}
+head{
+    text-size-adjust: 100px;
 }
 footer{
     display: grid;
@@ -59,6 +62,9 @@ footer{
     padding: 10px;
     
 
+}
+div.title{
+    background-color: #a7a9be;
 }
 div.logo1 img{
     width: 10fr;
@@ -119,7 +125,7 @@ section.release{
 .release,
 .join{
     text-align: center;
-    background-color: #f25f4c;
+    background-color: #a7a9be;
 }
 .firstSpotlight,
 .secondSpotlight{
