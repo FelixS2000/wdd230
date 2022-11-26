@@ -1,0 +1,57 @@
+[
+    {
+        "company":"Rica",
+        "address":"KM 6 1/2 Autopista Duarte, EN, Santo Domingo",
+        "phoneNumber":"809-563-7422",
+        "companyLogo":"https://lh5.googleusercontent.com/-6V8ceozQXM4/AAAAAAAAAAI/AAAAAAAAAAA/w6jp3U-rWew/s44-p-k-no-ns-nd/photo.jpg"
+    },
+    {
+        "company":"Nestle",
+        "address":"Av. Abraham Lincoln 118, Santo Domingo",
+        "phoneNumber":"849-214-5111",
+        "companyLogo":"https://www.nestle.com/sites/default/files/flickr-nestle-corporate-logo-2020.jpg"
+    },
+    {
+        "company":"Claro",
+        "address":"Av. John F. Kennedy esquina Av. Abraham Lincoln, Serrallés, Ágora Mall, Santo Domingo 10150",
+        "phoneNumber":"809-220-1111",
+        "companyLogo":"https://www.seekpng.com/png/small/286-2863067_claro-logo-con-slogan-claro-republica-dominicana.png"
+    },
+    {
+        "company":"Air Century",
+        "address":" International Airport La Isabela , Dr. Joaquín Balaguer, 11A Santo Domingo",
+        "phoneNumber":"809-426-4333",
+        "companyLogo":"https://www.aircentury.com/wp-content/uploads/2021/07/aircentury_logo-01-01.png"
+    },
+    {
+        "company":"Grupo Corripio",
+        "address":" Av. Núñez de Cáceres, casi esq. John F. Kennedy Distrito Nacional, Santo Domingo",
+        "phoneNumber":"809-227-3200",
+        "companyLogo":"https://f.fcdn.app/assets/commerce/www.tiendascorripio.com.do/28e8_dfc2/public/web/img/logo.svg"
+    },
+    {
+        "company":"Brugal",
+        "address":"Piso 11, Downtown Business Tower Ave. Núñez de Cáceres esq. Rómulo Betancourt. Santo Domingo",
+        "phoneNumber":"809-566-5651",
+        "companyLogo":"https://www.brugal-rum.com/sites/g/files/jrulke301/files/Brugal_Shield_FOOTER.png"
+    },
+    {
+        "company":"Grupo Vimenca",
+        "address":"AV. Abraham Lincoln NO. 306 Santo Domingo",
+        "phoneNumber":"809-200-7380",
+        "companyLogo":"http://vimenca.com/wp-content/uploads/2019/12/LOGO-VIMENCA-BLANCO-01.png"
+    },
+    {
+        "company":"Seguros Universal",
+        "address":"Av. Winston Churchill No. 1100,Evaristo Morales",
+        "phoneNumber":"809-544-7100",
+        "companyLogo":"https://www.universal.com.do/assets_manager/assets/images/logo-366x100.png"
+    },
+    {
+        "company":"Altice Dominicana S.A",
+        "address":"Av. Sarasota esq. Arrayanes y las caobas, local 57A-I, Plaza Bella Vista Mall",
+        "phoneNumber":"809-859-6555",
+        "companyLogo":"https://www.legna.com.do/wp-content/uploads/2018/07/logo-altice.jpg"
+    }
+
+]
