@@ -3,7 +3,7 @@ body{
     background-color:#FFFFFE;
 }
 nav {
-    padding: auto;
+    padding: 0%;
     width: auto;
     background-color: #a7a9be;
 }
@@ -12,14 +12,14 @@ header{
     display: grid;
 }
 head{
-    text-size-adjust: 100px;
+    text-size-adjust:initial;
 }
 footer{
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
     text-align: center;
-    padding: auto;
+    padding:0%;
 }
 .title{
     text-align:center
@@ -66,18 +66,23 @@ footer{
 div.title{
     background-color: #a7a9be;
 }
+div.logo img{
+    position: relative;
+    left: 230px;
+    top: 10px;
+}
 div.logo1 img{
-    width: 10fr;
+    width:autos;
     height: auto;
     position: relative;
-    left: 200px;
+    left: 0px;
     top: -110%;
 }
 div.logo2 img{
     width: 5%;
     height: auto;
     position: relative;
-    left: 300px;
+    left: 0px;
     top: -350%;
 }
 
@@ -101,22 +106,20 @@ div.logo2 img{
 	}
 }
 div.miniLogo{
-    display: flex;
+    display: block;
 }
 section.welcome,
 section.event,
 section.weather, 
 section.join{
     position: relative;
-    width: auto;
-    left: auto;
-    top: auto;
+    
 }
 section.release{
     position: relative;
-    width: auto;
-    right: auto;
-    top: auto;
+    width: 0%;
+    right: 0%;
+    top: 0%;
 }
 
 .welcome,
@@ -135,10 +138,19 @@ section.release{
 .thirdSpotlight{
     display: none;
 }
-section.firstSpotlight,
+section.welcome img{
+    width: 100%;
+}
+section.firstSpotlight{
+    width: 10%;
+}
 section.secondSpotlight{
     width: auto;
-    margin: 1%;
+    position: relative;
+    left: -10px;
+}
+img{
+    min-width:0%;
 }
 .lastTime{
     text-align: center;
@@ -159,4 +171,12 @@ img{
 }
 footer{
     background-color: peru;
+}
+
+span#bannerMessage{
+    display:grid;
+}
+
+img#weathericon{
+    width: auto;
 }
