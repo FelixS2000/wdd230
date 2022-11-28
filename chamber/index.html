@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <div class="bannerMessage"></div>
+            <p><span id="bannerMessage"></span></p>
             <div class="title"><h1>Chamber Home</h1></div>
             <div class="offLogo">
                 <img src="images/chamber-home.webp" alt="mini logo">
@@ -18,10 +18,10 @@
             <nav>
                 <ul class="navigation">
                     <li><a class="navig" href="#">Menu</a></li>
-                    <li><a href="https://github.com/FelixS2000/wdd230/blob/main/chamber/index.html">Home</a></li>
-                    <li><a href="https://github.com/FelixS2000/wdd230/blob/main/image-section/discover.html">Discover</a></li>
-                    <li><a href="https://github.com/FelixS2000/wdd230/blob/main/business-directory/directory.html">Directory</a></li>
-                    <li><a href="https://github.com/FelixS2000/wdd230/blob/main/join-page/join.html">Join</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
                     <li><a href="#">Contact</a></li>  
                 </ul>
             </nav>
@@ -51,7 +51,8 @@
                         <div id="weather__content">
                             <h2><span id="temp"></span>℉</h2>
                             <figure>
-                              <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >                             <figcaption id="figcaption"></figcaption>
+                              <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >
+                              <figcaption id="figcaption">few clouds</figcaption>
                             </figure>
                             <p>Wind: <span id="wind"></span> MPH</p>
                             <p>
@@ -72,7 +73,7 @@
             <div>
                 <section class="release">
                     <h1>New Release</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laborum repellat voluptatibus nisi veniam suscipit, excepturi aliquid consequuntur maiores vitae eligendi necessitatibus.</p>
+                    <p>Thanks for being part of this aplication. We are excited to start and see how it works around your comunity this app</p>
                 </section>
             </div> 
             <br>
@@ -126,5 +127,6 @@
             </div>
         </footer>
         <script src="scripts/time.js"></script>
+        <script src="scripts/windchill.js"></script>
     </body>
 </html>
