@@ -22,55 +22,53 @@
 #lastTime{
     text-align: center;
 }
-.welcome{
-    width: 5%;
-    left: -200px;
-    top: 1px;
-    padding: auto;
-    position: relative;  
+section.welcome{
+    position: relative;
+    width: auto;
+    height: min-content;
+    top: auto;
 }
-.event{
-    width: 15%;
-    left: -100px;
-    top: 500px;
-    
-}
-.weather{
-    width: 15%;
-    left: 100px;
-    top: -600px;
-}
-.join{
-    width: 15%;
-    left: 100px;
-    top: -350px;
-}
-.release{
-    width: 60%;
-    right: -250px;
-    top: -300px;
-}
-.firstSpotlight{
-    width: 150px;
+section.release{
+    position: relative;
+    width: auto;
     height: 150px;
-    right: -1100px;
-    top: -1070px;
-    background-color:#FF8906;
+    top: -700px;
 }
-.secondSpotlight{
-    width: 150px;
+section.firstSpotlight{
+    width: 300px;
     height: 150px;
-    right: -1100px;
-    top: -1050px;
-    background-color:#FF8906;
+    position: relative;
+    top: -700px;
 }
-.thirdSpotlight{
-    width: 150px;
+section.secondSpotlight{
+    width: 300px;
     height: 150px;
-    right: -1100px;
-    top: -1050px;
-    background-color:#FF8906;
+    position: relative;
+    top: -875px;
+    left: 310px;
 }
+section.join{
+    width: auto;
+    height: 150px;
+    position: relative;
+    top: -150px;
+}
+section.event{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    top: 600px;
+}
+section.weather{
+    position: relative;
+    width: 300px;
+    height: 250px;
+    top: 312px;
+    left: 305px;
+}
+
+
+
 .logo1 img{
     width: 10%;
     height: 10%;
