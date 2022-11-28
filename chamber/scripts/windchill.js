@@ -19,7 +19,7 @@ const windchill = (temp, wind) => {
    const windSpeed = parseFloat(document.querySelector("#wind").textContent);
    windchill(temperature, windSpeed);
    
-   const url = `https://api.openweathermap.org/data/2.5/weather?q=San Cristóbal, DO&APPID=5446be76d7c7bdd03fa8dc5f3a9eddb6`;
+   const url = `https://api.openweathermap.org/data/2.5/weather?q=San Cristóbal,DO&APPID=5446be76d7c7bdd03fa8dc5f3a9eddb6`;
    
    async function apiFetch() {
      try {
