@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Felix S. Guzman">
+    <title>Domincan Republic Weather</title>
+</head>
+<body>
+    <div>
+        <section class="weather">
+            <h1>Weather</h1>
+            <body>
+                <div id="weather__content">
+                    <h2><span id="temp"></span>℉</h2>
+                    <figure>
+                      <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >
+                      <figcaption id="figcaption"></figcaption>
+                    </figure>
+                    <p>Wind: <span id="wind"></span> MPH</p>
+                    <p>
+                      Wind Chill: <span id="windchill"></span><span id="windDegree"></span>
+                    </p>
+                  </div>
+            </body>
+        </section>
+    </div>
+</body>
+<script src="weather-api.js"></script>
+</html>
