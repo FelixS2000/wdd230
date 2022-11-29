@@ -1,0 +1,94 @@
+body{
+    font-style: italic;
+    background-color:#FFFFFE;
+}
+nav {
+    padding: 0%;
+    width: auto;
+    background-color: #a7a9be;
+}
+header{
+    margin: auto;
+    display: grid;
+}
+head{
+    text-size-adjust:initial;
+}
+footer{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    text-align: center;
+    padding:0%;
+}
+.title{
+    text-align:center
+}
+.navigation{
+    list-style: none;
+    
+}
+.navigation li:first-child{
+    display: block;
+}
+.navigation li{
+    display: none;
+}
+.navigation a{
+    display: block;
+	padding: 0.7rem;
+	text-align: left;
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+.navigation a.navig::before {
+    content: "🏠 ";
+}
+.navigation a:hover{
+    color: whitesmoke;
+    background-color: black;
+}
+.heading{
+    text-align: center;
+}
+.responsive li {
+	display: block;
+}
+
+.responsive a.navig::before {
+	content: "❌ ";
+}
+/* Media Query for medium+ views */
+@media only screen and (min-width: 32.5em) {
+	.navigation {
+		display: flex;
+	}
+	.navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 auto;
+	}
+	.navigation a {
+		text-align: center;
+	}
+	.navigation li:first-child {
+		display: none;
+	}
+}
+main{
+    background: #FF8906;
+}
+input#submit{
+    text-align: center;
+}
+
+div.firstName,
+div.lastName,
+div.emailUser,
+div.phoneNumber,
+div.membershipLevel,
+div.submitButton{
+    text-align: center
+}
