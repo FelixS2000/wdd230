@@ -61,7 +61,21 @@ footer{
 div.title{
     background-color: #a7a9be;
 }
-
+div.firstImage img{
+    width:100%;
+}
+div.secondImage img{
+    width: 100%;
+}
+div.thirdImage img{
+    width: 500px;
+}
+div.fourImage{
+    width: auto;
+}
+div.fiveImage{
+    width: auto;
+}
 
 .responsive a.navig::before {
 	content: "❌ ";
@@ -81,31 +95,20 @@ div.title{
 	.navigation li:first-child {
 		display: none;
 	}
+    p{
+        background-color: #FF8906;
+        width: fit-content;
+    }
+    img{
+        width: 100%;
+        height: 10%;
+        position:relative;
+        margin: auto;
+    }    
+    
 }
 
-.lastTime{
-    text-align: center;
-}
 
-.bannerMessage{
-    margin: 1px;
-    padding: 1px;
-    font-size: small;
-    text-align: center;
-}
-.firstImage{
-    padding: auto;
-    margin: auto;
-    width: auto;
-    background-color: tomato;
-}
-img{
-   width: 100%;
-   height: 100%;
- 
-}
-.copyright,footer{
-    background-color: peru;
-}
+
 
 
