@@ -47,6 +47,9 @@ section.secondSpotlight{
     top: -875px;
     left: 310px;
 }
+section.thirdSpotlight{
+    display: none;
+}
 section.join{
     width: auto;
     height: 150px;
