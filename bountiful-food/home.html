@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/large.css">
+    <link rel="stylesheet" href="style/medium.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <title>Bountiful Food</title>
+</head>
+<body>
+    <main>
+        <a href="#menu" id="toggle"><span></span></a>
+
+        <div id="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </div>
+        <section class="businessContact">
+            <h2>Business Contact</h2>
+            <p id="businessEmail">fguzmanceri@gmail.com</p>
+            <p id="businessNumber">+1(809)-307-8324</p>
+            <p id="businessAddress">Liberty Street #34, La Altagracia, San Cristobal</p>
+        </section>
+        <section class="summary">
+            <h2>Los Angeles County</h2>
+            <summary>
+                <div id="angelesCounty">
+                    <img src="/bountiful-food/AngelesCounty.jpg" alt="Angeles County" loading="lazy">
+                </div>
+                <p>Los Angeles County is home to about ten million people and on sunny days it seems like most are at the beach. Luckily there are many amazing beaches from Long Beach to Malibu to choose from.</p>
+            </summary>
+        </section>
+        <section class="actionFruit">
+            <h2>Fruit Maker</h2>
+            <p><a href="http://">If you want your own fruit drink mix: "Click Here"</a></p>
+        </section>
+        <section class="socialMedia">
+            <h2>Follow us on</h2>
+            <p><a href="http://">Facebook</a></p>
+            <p><a href="http://">Youtube</a></p>
+            <p><a href="http://">Instagram</a></p>
+        </section>
+        <section class="weatherCards">
+            <h2>Weather</h2>
+            <body>
+                <div id="weather__content">
+                    <p>Temperature: <span id="temp"></span>℉</p>
+                    <p>Temperature min: <span id="mintemp"></span>℉</p>
+                    <p>Temperature max: <span id="maxtemp"></span>℉</p>
+                    <figure>
+                      <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >
+                      <figcaption id="figcaption"></figcaption>
+                    </figure>
+                    <p>Wind Speed: <span id="wind"></span><span id="windchill"><span id="windDegree"></span></span> MPH</p>
+                    <p>
+                      Humidity: <span id="humidity"></span>%
+                    </p>
+                </div>
+                <br>
+                <div id="day1">
+                    <h2>Weather</h2>
+                    <p>Temperature: <span id="temp1"></span>℉</p>
+                    <p>Temperature min: <span id="mintemp1"></span>℉</p>
+                    <p>Temperature max: <span id="maxtemp1"></span>℉</p>
+                    <figure>
+                      <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >
+                      <figcaption id="figcaption1"></figcaption>
+                    </figure>
+                    <p>Wind Speed: <span id="wind1"></span><span id="windchill"><span id="windDegree"></span></span> MPH</p>
+                    <p>
+                      Humidity: <span id="humidity1"></span>%
+                    </p>
+                </div>
+                <br>
+                <div id="day2">
+                    <h2>Weather</h2>
+                    <p>Temperature: <span id="temp2"></span>℉</p>
+                    <p>Temperature min: <span id="mintemp2"></span>℉</p>
+                    <p>Temperature max: <span id="maxtemp2"></span>℉</p>
+                    <figure>
+                      <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >
+                      <figcaption id="figcaption2"></figcaption>
+                    </figure>
+                    <p>Wind Speed: <span id="wind2"></span><span id="windchill"><span id="windDegree"></span></span> MPH</p>
+                    <p>
+                      Humidity: <span id="humidity2"></span>%
+                    </p>
+                </div>
+                <br>
+                <div id="day3">
+                    <h2>Weather</h2>
+                    <p>Temperature: <span id="temp3"></span>℉</p>
+                    <p>Temperature min: <span id="mintemp3"></span>℉</p>
+                    <p>Temperature max: <span id="maxtemp3"></span>℉</p>
+                    <figure>
+                      <img src="https://openweathermap.org/img/w/02d.png" alt="" id="weathericon" >
+                      <figcaption id="figcaption3"></figcaption>
+                    </figure>
+                    <p>Wind Speed: <span id="wind3"></span><span id="windchill"><span id="windDegree"></span></span> MPH</p>
+                    <p>
+                      Humidity: <span id="humidity3"></span>%
+                    </p>
+                </div>
+            </body>
+        </section>
+        <section class="informationCard"></section>
+    </main>
+    <script src="script/weather.js"></script>
+    <script src="script/menu.js"></script>
+</body>
+</html>
