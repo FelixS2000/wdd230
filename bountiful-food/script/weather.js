@@ -35,65 +35,65 @@ function show(data) {
   wind.innerHTML = data.list[0].wind.speed;
 }
 
-function show1(data) {
+function show1(data1) {
   const temp = document.getElementById('temp1');
 
-  temp.innerHTML = data.list[1].main.temp;
+  temp.innerHTML = data1.list[1].main.temp;
 
   const temp2 = document.getElementById('mintemp1');
-  temp2.innerHTML = data.list[1].main.temp_min;
+  temp2.innerHTML = data1.list[1].main.temp_min;
 
   const temp3 = document.getElementById('maxtemp1');
-  temp3.innerHTML = data.list[1].main.temp_max;
+  temp3.innerHTML = data1.list[1].main.temp_max;
 
   const description = document.getElementById('desc1');
-  description.innerHTML = data.list[1].weather[0].description;;
+  description.innerHTML = data1.list[1].weather[0].description;;
 
   const humidity = document.getElementById('humid1');
-  humidity.innerHTML = data.list[1].main.humidity;
+  humidity.innerHTML = data1.list[1].main.humidity;
 
   const wind = document.getElementById('wind1');
-  wind.innerHTML = data.list[1].wind.speed;
+  wind.innerHTML = data1.list[1].wind.speed;
 }
 
-function show2(data) {
+function show2(data2) {
   const temp = document.getElementById('temp2');
 
-  temp.innerHTML = data.list[2].main.temp;
+  temp.innerHTML = data2.list[2].main.temp;
 
   const temp2 = document.getElementById('mintemp2');
-  temp2.innerHTML = data.list[2].main.temp_min;
+  temp2.innerHTML = data2.list[2].main.temp_min;
 
   const temp3 = document.getElementById('maxtemp2');
-  temp3.innerHTML = data.list[2].main.temp_max;
+  temp3.innerHTML = data2.list[2].main.temp_max;
 
   const description = document.getElementById('desc2');
-  description.innerHTML = data.list[2].weather[0].description;;
+  description.innerHTML = data2.list[2].weather[0].description;;
 
   const humidity = document.getElementById('humid2');
-  humidity.innerHTML = data.list[2].main.humidity;
+  humidity.innerHTML = data2.list[2].main.humidity;
 
   const wind = document.getElementById('wind2');
-  wind.innerHTML = data.list[2].wind.speed;
+  wind.innerHTML = data2.list[2].wind.speed;
 }
 
-function show3(data) {
+function show3(data3) {
   const temp = document.getElementById('temp3');
 
-  temp.innerHTML = data.list[3].main.temp;
+  temp.innerHTML = data3.list[3].main.temp;
 
   const temp2 = document.getElementById('mintemp3');
-  temp2.innerHTML = data.list[3].main.temp_min;
+  temp2.innerHTML = data3.list[3].main.temp_min;
 
   const temp3 = document.getElementById('maxtemp3');
-  temp3.innerHTML = data.list[3].main.temp_max;
+  temp3.innerHTML = data3.list[3].main.temp_max;
 
   const description = document.getElementById('desc3');
-  description.innerHTML = data.list[3].weather[0].description;;
+  description.innerHTML = data3.list[3].weather[0].description;;
 
   const humidity = document.getElementById('humid3');
-  humidity.innerHTML = data.list[3].main.humidity;
+  humidity.innerHTML = data3.list[3].main.humidity;
 
   const wind = document.getElementById('wind3');
-  wind.innerHTML = data.list[3].wind.speed;
+  wind.innerHTML = data3.list[3].wind.speed;
 }
