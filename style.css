@@ -1,0 +1,39 @@
+body{
+    background-color:white;
+    max-width: 600px;
+    margin: 0 auto;
+    float:none;
+}
+header {
+    align-items: center;
+    background-color: rgb(136, 108, 33);
+    display:flex;
+    width:auto;
+}
+h2{
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+ul{
+   text-align:justify;
+   box-shadow: none;
+}
+p{
+    background-color: darkolivegreen;
+}
+img{
+    width: 40%;
+    height: auto;
+}
+.lastupdate{
+    color: yellow;
+    text-align: center;
+}
+.copyright{
+    color: aliceblue;
+    text-align: center;
+}
+.header-name{
+    margin-right: 2%;
+    margin-top: 0;
+}
