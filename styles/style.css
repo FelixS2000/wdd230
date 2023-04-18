@@ -5,11 +5,19 @@ body{
     float:none;
 }
 header {
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: rgb(136, 108, 33);
-    display:flex;
-    width:auto;
+    width: auto;
+  }
+  
+.header-name {
+margin: 0;
+font-family: 'Inconsolata', monospace;
+font-family: 'Source Sans Pro', sans-serif;
 }
+  
 h2{
     font-family: 'Inconsolata', monospace;
     font-family: 'Source Sans Pro', sans-serif;
@@ -32,8 +40,4 @@ img{
 .copyright{
     color: aliceblue;
     text-align: center;
-}
-.header-name{
-    margin-right: 2%;
-    margin-top: 0;
 }
