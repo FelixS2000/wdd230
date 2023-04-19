@@ -12,11 +12,13 @@ header {
     width: auto;
   }
   
-.header-name {
-margin: 0;
-font-family: 'Inconsolata', monospace;
-font-family: 'Source Sans Pro', sans-serif;
+.headerName {
+    margin-left: 100px;
+    margin-right: 200px;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Source Sans Pro', sans-serif;
 }
+    
   
 h2{
     font-family: 'Inconsolata', monospace;
@@ -30,7 +32,8 @@ p{
     background-color: darkolivegreen;
 }
 img{
-    width: 40%;
+    width:80px;
+    margin-left: 50px;
     height: auto;
 }
 .lastupdate{
