@@ -1,0 +1,64 @@
+/* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+    /* Make headerName font-size smaller */
+    .headerName {
+      font-size: 24px;
+    }
+    
+    /* Center the image in the header */
+    header div {
+      text-align: center;
+    }
+    
+    /* Make the list items stack vertically */
+    ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    /* Make the footer information stack vertically */
+    footer p {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Media Query for screens between 600px and 900px */
+  @media (min-width: 601px) and (max-width: 900px) {
+    /* Make headerName font-size smaller */
+    .headerName {
+      font-size: 32px;
+    }
+    
+    /* Make the list items stack horizontally */
+    ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+  
+  /* Media Query for screens larger than 900px */
+  @media (min-width: 901px) {
+    /* Increase headerName font-size */
+    .headerName {
+      font-size: 48px;
+    }
+    
+    /* Make the list items display in a row */
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    /* Make the list items take up equal space */
+    ul li {
+      flex-basis: calc(33.33% - 20px);
+    }
+    
+    /* Center the footer information */
+    footer p {
+      text-align: center;
+    }
+  }
+  
