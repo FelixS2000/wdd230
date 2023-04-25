@@ -1,64 +1,128 @@
-/* Media Query for screens smaller than 600px */
+body {
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  float: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(136, 108, 33);
+  width: auto;
+}
+
+.headerName {
+  margin-left: 100px;
+  margin-right: 200px;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+  text-align: justify;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+p {
+  background-color: darkolivegreen;
+  margin: 0;
+  padding: 10px;
+  color: aliceblue;
+}
+
+img {
+  width: 80px;
+  margin-left: 50px;
+  height: auto;
+}
+
+.lastupdate {
+  color: yellow;
+  text-align: center;
+}
+
+.footer {
+  background-color: rgb(136, 108, 33);
+  color: aliceblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+  padding: 10px;
+}
+
+.footer a {
+  color: aliceblue;
+}
+
 @media (max-width: 600px) {
-    /* Make headerName font-size smaller */
-    .headerName {
-      font-size: 24px;
-    }
-    
-    /* Center the image in the header */
-    header div {
-      text-align: center;
-    }
-    
-    /* Make the list items stack vertically */
-    ul li {
-      display: block;
-      margin-bottom: 10px;
-    }
-    
-    /* Make the footer information stack vertically */
-    footer p {
-      display: block;
-      margin-bottom: 10px;
-    }
+  .headerName {
+    font-size: 24px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   
-  /* Media Query for screens between 600px and 900px */
-  @media (min-width: 601px) and (max-width: 900px) {
-    /* Make headerName font-size smaller */
-    .headerName {
-      font-size: 32px;
-    }
-    
-    /* Make the list items stack horizontally */
-    ul li {
-      display: inline-block;
-      margin-right: 20px;
-    }
+  img {
+    margin-left: 0;
+    margin-right: 0;
   }
   
-  /* Media Query for screens larger than 900px */
-  @media (min-width: 901px) {
-    /* Increase headerName font-size */
-    .headerName {
-      font-size: 48px;
-    }
-    
-    /* Make the list items display in a row */
-    ul {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    
-    /* Make the list items take up equal space */
-    ul li {
-      flex-basis: calc(33.33% - 20px);
-    }
-    
-    /* Center the footer information */
-    footer p {
-      text-align: center;
-    }
+  ul li {
+    display: block;
+    margin-right: 0;
   }
   
+  .footer p {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .headerName {
+    font-size: 32px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 901px) {
+  .headerName {
+    font-size: 48px;
+    margin-left: 100px;
+    margin-right: 200px;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  ul li {
+    flex-basis: calc(33.33% - 20px);
+  }
+  
+  .footer p {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
