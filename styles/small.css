@@ -16,13 +16,11 @@ header {
 .headerName {
   margin-left: 100px;
   margin-right: 200px;
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Castoro Titling', cursive;
 }
 
 h2 {
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Castoro Titling', cursive;
 }
 
 ul {
