@@ -17,5 +17,6 @@
     }
     footer {
         font-size: 13px;
+        filter: contrast(1.5);
     }
 }

@@ -75,4 +75,5 @@ footer {
     padding: 1em;
     align-items: center;
     text-align: center;
+    filter: contrast(1.5);
 }
