@@ -28,7 +28,7 @@ body {
   color: var(--color-tertiary);
   line-height: 1.8;
   font-size: var(--paragraph);
-  font-family: "Montserrat", "Segoe UI", "Helvetica", sans-serif;
+  font-family: 'Castoro Titling', cursive;
   letter-spacing: 1px;
 }
 
