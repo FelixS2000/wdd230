@@ -38,7 +38,9 @@ h3,
 h4 {
   color: var(--color-primary);
 }
-
+a{
+  color: #f25f4c;
+}
 h1 {
   font-size: var(--headline1);
 }
@@ -98,6 +100,7 @@ p,
 h3 {
   margin-top: 0;
   margin-bottom: 2.4rem;
+  color: #fffffe;
 }
 
 .subtitle,
