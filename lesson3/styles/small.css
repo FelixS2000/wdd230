@@ -230,6 +230,9 @@ b {
   font-size: var(--small);
 }
 
+h2.subtitle{
+  text-align: center;
+}
 td:last-of-type {
   text-align: center;
 }
