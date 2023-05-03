@@ -150,23 +150,29 @@ small {
 /* Table */
 
 .primary {
-  background: var(--color-primary);
+  background-color: #fffffe;
 }
 
 .secondary {
-  background: var(--color-secondary);
+  background-color: #0f0e17;
 }
 
-.tertiary {
-  background: var(--color-tertiary);
-}
+
 
 .accent {
   background: var(--color-accent);
 }
 
 .accent1 {
-  background: var(--color-accent1);
+  background-color: #a7a9be;
+}
+
+.accent2{
+  background-color: #ff8906;
+}
+
+.accent3{
+  background-color: #f25f4c;
 }
 
 table,
