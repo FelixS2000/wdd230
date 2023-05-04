@@ -89,7 +89,8 @@ nav {
 
 /* Main */
 main {
-  padding: 1.6rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .title {
@@ -108,26 +109,6 @@ h3 {
 h4 {
   margin-top: 0;
   margin-bottom: 0.8rem;
-}
-
-/* Cards */
-
-.cards-container {
-  margin: 4rem 0;
-}
-.cards {
-  background: var(--color-primary);
-  padding: 1.6rem;
-  margin-bottom: 1.6rem;
-  border-radius: 0.5rem;
-}
-
-.cards__title {
-  color: var(--color-secondary);
-}
-
-.cards__text {
-  color: #2e2f3e;
 }
 
 /* Image */
@@ -261,7 +242,8 @@ article {
 
 /* Site Purpose */
 .cards-container {
-  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .cards {
@@ -269,6 +251,7 @@ article {
   padding: 1.6rem;
   margin-bottom: 1.6rem;
   border-radius: 0.5rem;
+  text-align: center; /* center the cards horizontally */
 }
 
 .cards__title {
@@ -278,7 +261,6 @@ article {
 .cards__text {
   background-color: #fffffe;
 }
-
 
 /* Upcoming Events */
 ul {
