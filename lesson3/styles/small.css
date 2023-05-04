@@ -251,3 +251,78 @@ table ul {
   padding: 0 0 0 1.6rem;
   margin: 0;
 }
+
+/* CSS for article */
+article {
+  margin: 0 auto;
+  width: auto;
+}
+
+/* Site Purpose */
+.cards-container {
+  margin: 4rem 0;
+}
+
+.cards {
+  background: var(--color-primary);
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-radius: 0.5rem;
+}
+
+.cards__title {
+  color: var(--color-secondary);
+}
+
+.cards__text {
+  background-color: #fffffe;
+}
+
+
+/* Upcoming Events */
+ul {
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 1.6rem;
+}
+
+ul li h4 {
+  font-size: var(--headline4);
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+ul li p {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: var(--small);
+  color: var(--color-tertiary);
+}
+
+/* Site Purpose and Upcoming Events titles */
+h2,
+h3 {
+  font-size: var(--headline2);
+  margin-top: 3.2rem;
+  margin-bottom: 1.6rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+h3 {
+  font-size: var(--headline3);
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Paragraph */
+p {
+  font-size: var(--paragraph);
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  color: var(--color-tertiary);
+}
