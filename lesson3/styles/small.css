@@ -248,6 +248,7 @@ article {
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
+  background-color: #f2f2f2;
 }
 
 .cards {
@@ -267,7 +268,9 @@ article {
 .cards__text {
   font-size: var(--paragraph);
   color: var(--color-secondary);
+  text-shadow: 1px 1px #fff; /* add a subtle white text-shadow */
 }
+
 
 /* Upcoming Events */
 ul {
