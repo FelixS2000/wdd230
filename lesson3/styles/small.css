@@ -266,7 +266,7 @@ article {
 
 .cards__text {
   font-size: var(--paragraph);
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
 }
 
 /* Upcoming Events */
