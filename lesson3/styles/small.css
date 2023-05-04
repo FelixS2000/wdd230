@@ -47,6 +47,7 @@ h1 {
 
 h2 {
   font-size: var(--headline2);
+  background-color: #0f0e17;
 }
 
 h3 {
