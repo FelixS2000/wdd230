@@ -249,7 +249,9 @@ article {
   gap: 2rem;
   margin-bottom: 2rem;
 }
-
+.cards-container p{
+  color: #ff8906;
+}
 .cards {
   background-color: #fff;
   padding: 2rem;
