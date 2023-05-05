@@ -4,8 +4,11 @@
         <title>Chamber Home</title>
         <meta charset="UTF-8">
         <meta name="viewportss" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px) and (max-width: 1023px)">
         <link rel="stylesheet" href="styles/large.css">
     </head>
     <body>
@@ -13,17 +16,19 @@
             <p><span id="lastTime"></span></p>
             <div class="bannerMessage"><span id="bannerMessageUser"></span></div>
             <div class="logo">
-                        
+                <img src="images/logo.png" alt="Chamber logo">
             </div>
             <nav>
-                <ul class="navigation">
-                    <li><a class="navig" href="#">Menu</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Discover</a></li>
-                    <li><a href="#">Directory</a></li>
-                    <li><a href="#">Join</a></li>
-                    <li><a href="#">Contact</a></li>  
-                </ul>
+                <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <ul class="navigation">
+                        <li><a class="navig" href="#">Menu</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Join</a></li>
+                        <li><a href="#">Contact</a></li>  
+                    </ul>
+                </button>
             </nav>
             
         </header>
@@ -67,7 +72,7 @@
             </div>
             <br>
             <div>
-                <section id=secondSpotlight">
+                <section id="secondSpotlight">
                     <head></head>
                     <h1></h1>
                     <p></p>
@@ -76,6 +81,7 @@
         </main>
         <footer>
             <div class="miniLogo">
+                <img src="images/logo.png" alt="mini logo of chamber">
                 <div class="address">
                     <p>
                         Chamber Home,
@@ -96,5 +102,6 @@
             </div>
         </footer>
         <script src="scripts/time.js"></script>
+        <script src="scripts/menu.js"></script>
     </body>
 </html>
