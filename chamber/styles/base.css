@@ -27,54 +27,73 @@ header {
     height: 50px;
 }
 
-/* Hide menu by default */
-.navigation {
-    display: none;
-  }
-  
-  /* Style hamburger icon */
-  .menu-toggle {
-    display: inline-block;
-    padding: 0.5rem;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-  }
-  
-  .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    margin: 4px;
-    background-color: #333;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Rotate icon on click */
-  .menu-toggle[aria-expanded="true"] span:nth-of-type(1) {
-    transform: rotate(45deg) translate(4px, 4px);
-  }
-  
-  .menu-toggle[aria-expanded="true"] span:nth-of-type(2) {
-    opacity: 0;
-  }
-  
-  .menu-toggle[aria-expanded="true"] span:nth-of-type(3) {
-    transform: rotate(-45deg) translate(4px, -4px);
-  }
-  
-  /* Show menu when toggled */
-  @media screen and (min-width: 768px) {
-    .navigation {
-      display: flex;
-    }
-    
-    .menu-toggle {
-      display: none;
-    }
-  }
-  
+/* Menu */
+nav {
+	max-width: 700px;
+	margin: 10px auto;
+}
 
+/* small view navigation */
+#hamButton {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: fit-content;
+	font-size: 1.5rem;
+	padding: .5rem;
+	color: navy;
+}
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: #333;
+}
+.navigation li {
+	display: none;
+}
+.navigation li a {
+	padding: 1.15rem;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation li a:hover {
+	background-color: #bbb;
+	color: #333;
+	font-weight: 700;
+}
+
+/* large view navigation */
+@media only screen and (min-width: 37.5em) {
+	h1 {
+		font-size: 2.5rem
+	}
+	
+	#hamButton {
+		display: none; /* hide hamburger button */
+	} 
+	
+	.navigation {
+		flex-direction: row;
+	}
+	
+	.navigation li {
+		display: block;
+		flex: 1 1 auto;
+	}
+}
+
+/* when the button is clicked - the responsive class is added and accounted for here */
+.navigation.responsive li {
+	display: block;
+	width: 100%;
+}
+.navigation.responsive li a {
+	display: block;
+}
 /* Main styles */
 main {
     max-width: 1200px;
@@ -134,3 +153,57 @@ footer p {
 .contact a:hover {
     color: #0071BC;
 }
+/* Styles for small viewport sizes */
+@media only screen and (max-width: 768px) {
+    #welcome,
+    #event,
+    #weather,
+    #release {
+      padding: 0;
+      text-align: center;
+    }
+    
+    #welcome h1 {
+      font-size: 1.5rem;
+    }
+    
+    #event h1,
+    #weather h1,
+    #release h1 {
+      font-size: 1.2rem;
+    }
+    
+    #event p,
+    #weather p,
+    #release p {
+      font-size: 0.8rem;
+    }
+    
+    #firstSpotlight,
+    #secondSpotlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    #firstSpotlight img,
+    #secondSpotlight img {
+      width: 100%;
+      height: auto;
+    }
+    
+    #firstSpotlight h2,
+    #secondSpotlight h2 {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    #firstSpotlight p,
+    #secondSpotlight p {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
