@@ -65,13 +65,7 @@ nav {
 	color: #333;
 	font-weight: 700;
 }
-.navigation ul {
-    display: none;
-}
-  
-.navigation.show ul {
-    display: block;
-}
+
   
 /* large view navigation */
 @media only screen and (min-width: 37.5em) {
@@ -101,6 +95,7 @@ nav {
 .navigation.responsive li a {
 	display: block;
 }
+
 /* Main styles */
 main {
     max-width: 1200px;
