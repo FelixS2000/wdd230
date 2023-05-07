@@ -1,10 +1,16 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+@media only screen and (max-width: 768px) {
+    /* Small display grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .grid > * {
+      margin-bottom: 1rem;
+    }
+  }
+  
 /* Body styles */
 body {
     font-family: 'Castoro Titling', serif;
@@ -15,10 +21,10 @@ body {
 
 /* Header styles */
 header {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #fff;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
@@ -67,25 +73,7 @@ nav {
 }
 
   
-/* large view navigation */
-@media only screen and (min-width: 37.5em) {
-	h1 {
-		font-size: 2.5rem
-	}
-	
-	#hamButton {
-		display: none; /* hide hamburger button */
-	} 
-	
-	.navigation {
-		flex-direction: row;
-	}
-	
-	.navigation li {
-		display: block;
-		flex: 1 1 auto;
-	}
-}
+
 
 /* when the button is clicked - the responsive class is added and accounted for here */
 .navigation.responsive li {
@@ -163,6 +151,7 @@ footer p {
     #release {
       padding: 0;
       text-align: center;
+      background-color:springgreen;
     }
     
     #welcome h1 {

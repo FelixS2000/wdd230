@@ -1,5 +1,19 @@
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* Add your styles for medium devices here */
+/* Medium Screen Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Set grid container */
+  #welcome, #release, #firstSpotlight, #secondSpotlight, #join, #event, #weather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
   }
-  
-  
+
+  /* Put first and second spotlights together in a box */
+  #firstSpotlight, #secondSpotlight {
+    grid-column: 1 / 3;
+  }
+
+  /* Put the event and weather sections in a box */
+  #event, #weather {
+    grid-column: 1 / 3;
+  }
+}
