@@ -148,7 +148,8 @@ footer p {
     #welcome,
     #event,
     #weather,
-    #release {
+    #release,
+    #join {
       padding: 0;
       text-align: center;
       background-color:springgreen;
