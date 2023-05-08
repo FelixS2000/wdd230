@@ -1,201 +1,138 @@
-@media only screen and (max-width: 768px) {
-    /* Small display grid */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
   
-    .grid > * {
-      margin-bottom: 1rem;
+/* Small screens */
+@media (max-width: 768px) {
+    /* Hide the menu by default */
+    #menu ul {
+      display: none;
+    }
+    
+    /* Show the menu when the hamburger button is clicked */
+    #menu ul.show {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Style the hamburger button */
+    #hamButton {
+      display: block;
+      background-color: transparent;
+      border: none;
+      color: #333;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 1rem;
     }
   }
   
-/* Body styles */
-body {
+  /* Large screens */
+  @media (min-width: 769px) {
+    #menu ul {
+      display: flex;
+    }
+    
+    #hamButton {
+      display: none;
+    }
+  }
+  
+  
+  body {
     font-family: 'Castoro Titling', serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-}
-
-/* Header styles */
-header {
-    display: grid;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
     background-color: #fff;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-.logo img {
-    height: 50px;
-}
-
-/* Menu */
-nav {
-	max-width: 700px;
-	margin: 10px auto;
-}
-
-/* small view navigation */
-#hamButton {
-	display: block;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: fit-content;
-	font-size: 1.5rem;
-	padding: .5rem;
-	color: navy;
-}
-.navigation {
-	display: flex;
-	flex-direction: column;
-	list-style: none;
-	background-color: #333;
-}
-.navigation li {
-	display: none;
-}
-.navigation li a {
-	padding: 1.15rem;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
-}
-.navigation li a:hover {
-	background-color: #bbb;
-	color: #333;
-	font-weight: 700;
-}
-
+  }
   
-
-
-/* when the button is clicked - the responsive class is added and accounted for here */
-.navigation.responsive li {
-	display: block;
-	width: 100%;
-}
-.navigation.responsive li a {
-	display: block;
-}
-
-/* Main styles */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
     padding: 1rem;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-section h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-section p {
-    margin-bottom: 1rem;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    display: block;
+    max-width: 30%;
+    height: auto;
+  }
+  
+  .navigation ul {
+    display: flex;
+  }
+  
+  .navigation li {
+    margin-right: 1rem;
+  }
+  
+  .bannerMessage {
+    font-weight: bold;
+  }
+  
+  /* Header Styles */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Main Styles */
+  main {
+    padding: 2rem;
+  }
+  
+  #welcome,
+  #event,
+  #weather,
+  #release,
+  #firstSpotlight,
+  #secondSpotlight,
+  #join {
     text-align: center;
-}
-
-footer p {
-    font-size: 0.8rem;
-}
-
-.miniLogo {
+    background-color: #ff8906;
+  }
+  
+  /* Footer Styles */
+  footer {
+    padding: 2rem;
+    background-color: #a7a9be;
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .miniLogo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.miniLogo img {
-    height: 30px;
-    margin-right: 0.5rem;
-}
-
-.address, .contact {
-    margin-right: 1rem;
-}
-
-.address p, .contact p {
-    margin-bottom: 0.5rem;
-}
-
-.contact a {
-    color: #fff;
-}
-
-.contact a:hover {
-    color: #0071BC;
-}
-/* Styles for small viewport sizes */
-@media only screen and (max-width: 768px) {
-    #welcome,
-    #event,
-    #weather,
-    #release,
-    #join {
-      padding: 0;
-      text-align: center;
-      background-color:springgreen;
-    }
-    
-    #welcome h1 {
-      font-size: 1.5rem;
-    }
-    
-    #event h1,
-    #weather h1,
-    #release h1 {
-      font-size: 1.2rem;
-    }
-    
-    #event p,
-    #weather p,
-    #release p {
-      font-size: 0.8rem;
-    }
-    
-    #firstSpotlight,
-    #secondSpotlight {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    #firstSpotlight img,
-    #secondSpotlight img {
-      width: 100%;
-      height: auto;
-    }
-    
-    #firstSpotlight h2,
-    #secondSpotlight h2 {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    #firstSpotlight p,
-    #secondSpotlight p {
-      font-size: 0.8rem;
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 2rem;
   }
+  
+  .miniLogo img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+  
+  .address, .contact {
+    margin-left: 1rem;
+  }
+  
+  
+  
   

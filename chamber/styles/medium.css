@@ -1,54 +1,57 @@
-/* Medium Screen Styles */
-@media (min-width: 768px) and (max-width: 1023px) {
-/* Grid styles */
-.grid {
-display: grid;
-grid-template-areas:
-"welcome welcome welcome welcome"
-"release release firstSpotlight secondSpotlight"
-"join join event event"
-"weather weather weather weather";
-grid-template-columns: repeat(4, 1fr);
-grid-gap: 20px;
-}
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  /* Medium Screens */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
 
-/* Section styles */
-#welcome {
-grid-area: welcome;
-}
+  #welcome,
+  #release {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    background-color: #ff8906;
+    color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 
-#release {
-grid-area: release;
-}
+  #welcome h1,
+  #release h1 {
+    grid-column: 1 / span 2;
+    margin-bottom: 1rem;
+  }
 
-#firstSpotlight {
-grid-area: firstSpotlight;
-}
+  #welcome p,
+  #release p {
+    grid-column: 1 / span 2;
+  }
 
-#secondSpotlight {
-grid-area: secondSpotlight;
-}
+  #firstSpotlight,
+  #secondSpotlight {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-gap: 2rem;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 
-#join {
-grid-area: join;
-}
+  #firstSpotlight h2,
+  #secondSpotlight h2 {
+    grid-column: 1 / span 2;
+    margin-bottom: 1rem;
+  }
 
-#event {
-grid-area: event;
-}
-
-#weather {
-grid-area: weather;
-}
-
-/* Box styles for the two spotlight sections and the event section */
-.box {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-}
-
-.box > div {
-width: 48%;
-}
+  #firstSpotlight p,
+  #secondSpotlight p {
+    grid-column: 1 / span 2;
+  }
 }
