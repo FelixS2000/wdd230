@@ -1,78 +1,54 @@
 /* Medium Screen Styles */
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* Grid styles */
+/* Grid styles */
 .grid {
-  display: grid;
-  grid-template-areas:
-    "welcome welcome welcome welcome"
-    "release release firstSpotlight secondSpotlight"
-    "join join event event"
-    "weather weather weather weather";
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+display: grid;
+grid-template-areas:
+"welcome welcome welcome welcome"
+"release release firstSpotlight secondSpotlight"
+"join join event event"
+"weather weather weather weather";
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 20px;
 }
 
 /* Section styles */
 #welcome {
-  grid-area: welcome;
+grid-area: welcome;
 }
 
 #release {
-  grid-area: release;
+grid-area: release;
 }
 
-#firstSpotlight,
+#firstSpotlight {
+grid-area: firstSpotlight;
+}
+
 #secondSpotlight {
-  grid-area: spotlight;
+grid-area: secondSpotlight;
 }
 
 #join {
-  grid-area: join;
+grid-area: join;
 }
 
 #event {
-  grid-area: event;
+grid-area: event;
 }
 
 #weather {
-  grid-area: weather;
+grid-area: weather;
 }
 
 /* Box styles for the two spotlight sections and the event section */
 .box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
 }
 
 .box > div {
-  width: 48%;
+width: 48%;
 }
-
-/* Media query for medium screens */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Adjust grid and box styles for medium screens */
-  .grid {
-    grid-template-areas:
-      "welcome welcome welcome welcome"
-      "release release release release"
-      "spotlight spotlight spotlight spotlight"
-      "join join join join"
-      "event event weather weather";
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-  }
-
-  .box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-
-  .box > div {
-    width: 100%;
-  }
-}
-
-
 }
