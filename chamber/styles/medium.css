@@ -1,57 +1,47 @@
-/* Media Queries */
-@media only screen and (min-width: 768px) {
-  /* Medium Screens */
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+/* Medium-sized screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for the welcome section */
+  #welcome {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
   }
 
-  #welcome,
+  /* Styles for the release section */
   #release {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    align-items: center;
-    background-color: #ff8906;
-    color: #fff;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
   }
 
-  #welcome h1,
-  #release h1 {
-    grid-column: 1 / span 2;
-    margin-bottom: 1rem;
-  }
-
-  #welcome p,
-  #release p {
-    grid-column: 1 / span 2;
-  }
-
+  /* Styles for the spotlights section */
   #firstSpotlight,
   #secondSpotlight {
-    display: grid;
-    grid-template-columns: repeat(1, 2fr);
-    grid-gap: 2rem;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  /* Styles for the join section */
+  #join {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  /* Styles for the events and weather sections */
+  #event,
+  #weather {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    color: #333;
-    padding: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  #firstSpotlight h2,
-  #secondSpotlight h2 {
-    grid-column: 1 / span 2;
-    margin-bottom: 1rem;
-  }
-
-  #firstSpotlight p,
-  #secondSpotlight p {
-    grid-column: 1 / span 2;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
   }
 }
