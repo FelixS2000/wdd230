@@ -103,7 +103,8 @@
   #weather,
   #release,
   #firstSpotlight,
-  #secondSpotlight{
+  #secondSpotlight,
+  #join{
     text-align: center;
     background-color: #fffffe;
     background-position: 0%;
@@ -134,9 +135,7 @@
     margin-left: 1rem;
   }
   
-  #join{
-    display:none;
-  }
+  
   
   
   

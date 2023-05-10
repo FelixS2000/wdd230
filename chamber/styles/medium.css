@@ -1,7 +1,7 @@
 /* For screens with a minimum width of 768px and a maximum width of 1023px */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-  /* center the main content */
+  /* Center the main content */
   main {
     display: flex;
     flex-wrap: wrap;
@@ -12,48 +12,39 @@
     max-width: 80%;
   }
 
-  /* sections to be placed in a box */
-  #welcome,
-  #release,
-  #firstSpotlight,
-  #secondSpotlight,
-  #join,
-  #event,
-  #weather {
+  section {
     background-color: #fffffe;
     padding: 1em;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
     width: 100%;
   }
 
-  /* place the welcome and release sections at the top */
   #welcome,
   #release {
-    order: 1;
+    width: 100%;
+    order: -2;
   }
 
-  /* place the spotlight sections side by side */
-  #firstSpotlight {
-    order: 2;
-    width: 50%;
-  }
-
+  #firstSpotlight,
   #secondSpotlight {
-    order: 3;
-    width: 50%;
+    width: 100%;
+    height: auto;
+    margin: 0.5em;
+    order: -1;
   }
 
-  /* place the join section before the event section */
   #join {
-    order: 4;
-  }
-
-  /* place the event and weather sections together */
-  #event {
-    order: 5;
+    width: 100%;
+    order: 0;
   }
 
   #weather {
-    order: 6;
+    width: 100%;
+    order: 4; /* Move #weather to the end */
+  }
+
+  #event {
+    width: 100%;
+    order: 3; /* Move #event after #weather */
   }
 }
