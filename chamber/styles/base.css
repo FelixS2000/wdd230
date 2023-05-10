@@ -103,10 +103,11 @@
   #weather,
   #release,
   #firstSpotlight,
-  #secondSpotlight,
-  #join {
+  #secondSpotlight{
     text-align: center;
-    background-color: #ff8906;
+    background-color: #fffffe;
+    background-position: 0%;
+    border: 2px solid black;
   }
   
   /* Footer Styles */
@@ -133,6 +134,9 @@
     margin-left: 1rem;
   }
   
+  #join{
+    display:none;
+  }
   
   
   

@@ -1,47 +1,59 @@
-/* Medium-sized screens */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Styles for the welcome section */
-  #welcome {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+/* For screens with a minimum width of 768px and a maximum width of 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  /* center the main content */
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin: 2em auto;
+    max-width: 80%;
   }
 
-  /* Styles for the release section */
-  #release {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
-
-  /* Styles for the spotlights section */
+  /* sections to be placed in a box */
+  #welcome,
+  #release,
   #firstSpotlight,
-  #secondSpotlight {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
-
-  /* Styles for the join section */
-  #join {
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
-
-  /* Styles for the events and weather sections */
+  #secondSpotlight,
+  #join,
   #event,
   #weather {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
+    background-color: #fffffe;
+    padding: 1em;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+  /* place the welcome and release sections at the top */
+  #welcome,
+  #release {
+    order: 1;
+  }
+
+  /* place the spotlight sections side by side */
+  #firstSpotlight {
+    order: 2;
+    width: 50%;
+  }
+
+  #secondSpotlight {
+    order: 3;
+    width: 50%;
+  }
+
+  /* place the join section before the event section */
+  #join {
+    order: 4;
+  }
+
+  /* place the event and weather sections together */
+  #event {
+    order: 5;
+  }
+
+  #weather {
+    order: 6;
   }
 }
