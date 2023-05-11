@@ -1,29 +1,37 @@
 /* Global Styles */
+:root{
+  --color-primary: #fffffe;
+  --color-secondary: #0f0e17;
+  --color-tertiary: #a7a9be;
+  --color-accent: #ff8906;
+  --color-accent1: #f25f4c;
+}
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-/* Small screens */
-@media (max-width: 768px) {
+  /* Small screens */
+  @media (max-width: 768px) {
     /* Hide the menu by default */
     #menu ul {
       display: none;
     }
-    
+  
     /* Show the menu when the hamburger button is clicked */
     #menu ul.show {
       display: flex;
       flex-direction: column;
     }
-    
+  
     /* Style the hamburger button */
     #hamButton {
       display: block;
       background-color: transparent;
       border: none;
-      color: #333;
+      color: var(--color-secondary);
       font-size: 2rem;
       cursor: pointer;
       margin-right: 1rem;
@@ -35,7 +43,7 @@
     #menu ul {
       display: flex;
     }
-    
+  
     #hamButton {
       display: none;
     }
@@ -46,12 +54,12 @@
     font-family: 'Castoro Titling', serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #fff;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
   }
   
   a {
-    color: #333;
+    color: var(--color-secondary);
     text-decoration: none;
   }
   
@@ -64,7 +72,7 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 1rem;
-    background-color: #fff;
+    background-color: var(--color-primary);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
   
@@ -106,15 +114,15 @@
   #secondSpotlight,
   #join{
     text-align: center;
-    background-color: #fffffe;
+    background-color: var(--color-primary);
     background-position: 0%;
-    border: 2px solid black;
+    border: 2px solid var(--color-secondary);
   }
   
   /* Footer Styles */
   footer {
     padding: 2rem;
-    background-color: #a7a9be;
+    background-color: var(--color-tertiary);
     box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
   
@@ -134,8 +142,4 @@
   .address, .contact {
     margin-left: 1rem;
   }
-  
-  
-  
-  
   
