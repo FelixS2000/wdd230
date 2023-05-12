@@ -1,72 +1,71 @@
 /* Styles for large screens */
 @media only screen and (min-width: 1024px) {
-  .grid-container {
+  main .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
   }
-
-  #event{
+  #event {
     position: relative;
-    width: 100%;
+    width: 190%;
     height: 100%;
-    left: -210%;
-    top: 10%;
+    left: -500%;
+    top: 215%;
   }
 
-  #weather{
+  #weather {
     position: relative;
     width: 100%;
-    height: 400%;
-    left: -105%;
-    top: 10%;
+    height: 350%;
+    left: 111%;
+    top: 350%;
   }
 
-  #join{
+  #join {
     position: relative;
-    width: 100%;
-    height: 500%;
-    left: -209%;
-    top: -200%;
-  }
-
-  #release{
-    position: relative;
-    width: 110%;
-    height: 147%;
-    left: 101%;
-    top: 105%;
-  }
-
-  #firstSpotlight{
-    position: relative;
-    width: 100%;
+    width: 250%;
     height: 100%;
-    left: 5%;
-    top: -275%;
+    left: -180%;
+    top: -6em;
+  }
+  #release {
+    position: relative;
+    width: 300%;
+    height: auto;
+    left: 9%;
+    top: -5em;
   }
 
-  #secondSpotlight{
+  #firstSpotlight {
+    position: relative;
+    width:100%;
+    height: auto;
+    left: -190%;
+    top: -1em;
+  }
+
+  #secondSpotlight {
     position: relative;
     width: 100%;
-    height: 400%;
-    left: 109%;
-    top: -750%;
+    height: auto;
+    left: 25%;
+    top: -5em;
   }
+
   #thirdSpotlight{
+   text-align: center;
+   position: relative;
+   width: 85%;
+   height: auto;
+   left: 235%;
+   top: -8em;
+  }
+
+  #hero {
     position: relative;
-    width: 100%;
-    height: 525%;
-    left: 213%;
-    top: -370%;
-    border: 2px solid var(--color-secondary);
-    text-align: center;
-    }
-    
-    #hero{
-      position: relative;
-      width: 100%;
-      height: 176%;
-      left: 105%;
-    }
+    width: 300%;
+    height: auto;
+    left: 10%;
+    top: -25%;
+  }
 }
