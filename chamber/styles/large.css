@@ -7,45 +7,64 @@
   }
   
   #event{
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 220%;
     position: relative;
-    top: 1%;
+    top: -20%;
   }
 
   #weather{
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 800%;
+    position: relative;
+    top: 550%;
   }
 
   #join{
-    width:100%;
-    height:100%;
+    width: 15%;
+    height: 800%;
+    position: relative;
+    top: -350%;
   }
 
   #release{
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    height: 305%;
+    position: relative;
+    left: 20%;
+    top: 480%;
   }
 
   #firstSpotlight{
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 190%;
+    position: relative;
+    top: -230%;
+    left: 80%;
   }
 
   #secondSpotlight{
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 250%;
+    position: relative;
+    top: -200%;
+    left: 80%;
   }
 
   #thirdSpotlight{
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 250%;
+    position: relative;
+    top: -20%;
+    left: 80%;
   }
 
   #hero{
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    height: 550%;
+    position: relative;
+    top: 229%;
+    left: 20%;
   }
   
   .logo{
