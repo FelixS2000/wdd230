@@ -1,4 +1,72 @@
-@media screen and (min-width: 1024px) {
-    /* Add your styles for large devices here */
+/* Styles for large screens */
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
   }
-  
+
+  #event{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -210%;
+    top: 10%;
+  }
+
+  #weather{
+    position: relative;
+    width: 100%;
+    height: 400%;
+    left: -105%;
+    top: 10%;
+  }
+
+  #join{
+    position: relative;
+    width: 100%;
+    height: 500%;
+    left: -209%;
+    top: -360%;
+  }
+
+  #release{
+    position: relative;
+    width: 110%;
+    height: 100%;
+    left: 100%;
+    top: 70%;
+  }
+
+  #firstSpotlight{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 5%;
+    top: -120%;
+  }
+
+  #secondSpotlight{
+    position: relative;
+    width: 100%;
+    height: 400%;
+    left: 109%;
+    top: -669%;
+  }
+  #thirdSpotlight{
+    position: relative;
+    width: 100%;
+    height: 525%;
+    left: 213%;
+    top: -370%;
+    border: 2px solid var(--color-secondary);
+    text-align: center;
+    }
+    
+    #hero{
+      position: relative;
+      width: 100%;
+      height: 200%;
+      left: 105%;
+    }
+}

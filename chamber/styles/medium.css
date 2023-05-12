@@ -1,71 +1,64 @@
 /* Styles for medium-sized screens */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Header styles */
-  
-  /* Main styles */
-  main {
-    margin: 20px;
+  .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
   }
 
-  #welcome {
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 2;
-    padding: 20px;
+  #hero {
+    position: relative;
+    width: 300%;
+    height: auto;
+    left: 20%;
+    top: -25%;
   }
 
   #release {
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 2;
-    padding: 20px;
+    position: relative;
+    width: 300%;
+    height: auto;
+    left: 20%;
+    top: -7em;
   }
 
   #firstSpotlight {
-    grid-row: 3 / span 1;
-    grid-column: 1 / span 1;
-    padding: 20px;
+    position: relative;
+    width:100%;
+    height: auto;
+    left: -170%;
+    top: 1em;
   }
 
   #secondSpotlight {
-    grid-row: 3 / span 1;
-    grid-column: 2 / span 1;
-    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: -7em;
   }
 
   #join {
-    grid-row: 4 / span 1;
-    grid-column: 1 / span 2;
-    padding: 20px;
+    position: relative;
+    width: 250%;
+    height: 100%;
+    left: 20%;
+    top: -7em;
   }
 
   #event {
-    grid-row: 5 / span 1;
-    grid-column: 1 / span 1;
-    padding: 20px;
+    position: relative;
+    width: 150%;
+    height: 100%;
+    left: -194%;
+    top: 220%;
   }
 
   #weather {
-    grid-row: 5 / span 1;
-    grid-column: 2 / span 1;
-    padding: 20px;
-  }
-
-  /* Footer styles */
-  footer {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .miniLogo img {
-    height: 40px;
-    width: auto;
-  }
-
-  .address p,
-  .contact p {
-    font-size: 14px;
-    line-height: 1.5;
+    position: relative;
+    width: 100%;
+    height: 440%;
+    left: 65%;
+    top: 475%;
   }
 }
