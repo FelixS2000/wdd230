@@ -195,7 +195,8 @@ header {
   
   /* Footer Styles */
   footer {
-    padding: 2rem;
+    padding: 20px;
+    text-align: center;
     background-color: var(--color-tertiary);
     box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
