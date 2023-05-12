@@ -19,14 +19,14 @@
     width: 300%;
     height: auto;
     left: 20%;
-    top: -7em;
+    top: -5em;
   }
 
   #firstSpotlight {
     position: relative;
     width:100%;
     height: auto;
-    left: -170%;
+    left: -190%;
     top: 1em;
   }
 
@@ -34,31 +34,40 @@
     position: relative;
     width: 100%;
     height: auto;
-    left: 50%;
-    top: -7em;
+    left: 25%;
+    top: -6em;
+  }
+
+  #thirdSpotlight{
+   text-align: center;
+   position: relative;
+   width: 85%;
+   height: auto;
+   left: 235%;
+   top: -9em;
   }
 
   #join {
     position: relative;
     width: 250%;
     height: 100%;
-    left: 20%;
-    top: -7em;
+    left: -180%;
+    top: -6em;
   }
 
   #event {
     position: relative;
-    width: 150%;
+    width: 190%;
     height: 100%;
     left: -194%;
-    top: 220%;
+    top: 270%;
   }
 
   #weather {
     position: relative;
     width: 100%;
-    height: 440%;
-    left: 65%;
-    top: 475%;
+    height: 350%;
+    left: 111%;
+    top: 550%;
   }
 }

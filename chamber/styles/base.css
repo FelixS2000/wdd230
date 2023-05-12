@@ -142,4 +142,9 @@
   .address, .contact {
     margin-left: 1rem;
   }
-  
+  #join,
+  #thirdSpotlight{
+    display:ruby;
+    border: 2px solid var(--color-secondary);
+    text-align: center;
+  }
