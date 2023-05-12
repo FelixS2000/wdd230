@@ -1,10 +1,24 @@
 /* Global Styles */
-:root{
+:root {
   --color-primary: #fffffe;
   --color-secondary: #0f0e17;
   --color-tertiary: #a7a9be;
   --color-accent: #ff8906;
   --color-accent1: #f25f4c;
+  --font-family: 'Castoro Titling', serif;
+  --font-size-base: 15px;
+  --line-height-base: 1.5;
+  --box-shadow-base: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border-color-base: var(--color-secondary);
+  --border-width-base: 2px;
+  --border-radius-base: 0;
+  --spacing-base: 1rem;
+}
+/* Header Styles */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 /* Global Styles */
 * {
@@ -42,6 +56,7 @@
   @media (min-width: 769px) {
     #menu ul {
       display: flex;
+      align-items: center;
     }
   
     #hamButton {
@@ -138,17 +153,24 @@
   
   .logo img {
     display: block;
-    max-width: 30%;
+    max-width: 20%;
     height: auto;
   }
   
+  /* Navigation Styles */
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation li {
+    margin-right: var(--spacing-base);
+  }
+
   .navigation ul {
     display: flex;
   }
   
-  .navigation li {
-    margin-right: 1rem;
-  }
   
   .bannerMessage {
     font-weight: bold;
