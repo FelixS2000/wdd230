@@ -27,15 +27,15 @@
     width: 100%;
     height: 500%;
     left: -209%;
-    top: -360%;
+    top: -200%;
   }
 
   #release{
     position: relative;
     width: 110%;
-    height: 100%;
-    left: 100%;
-    top: 70%;
+    height: 147%;
+    left: 101%;
+    top: 105%;
   }
 
   #firstSpotlight{
@@ -43,7 +43,7 @@
     width: 100%;
     height: 100%;
     left: 5%;
-    top: -120%;
+    top: -275%;
   }
 
   #secondSpotlight{
@@ -51,7 +51,7 @@
     width: 100%;
     height: 400%;
     left: 109%;
-    top: -669%;
+    top: -750%;
   }
   #thirdSpotlight{
     position: relative;
@@ -66,7 +66,7 @@
     #hero{
       position: relative;
       width: 100%;
-      height: 200%;
+      height: 176%;
       left: 105%;
     }
 }
