@@ -2,72 +2,54 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
   }
 
   #hero {
     position: relative;
-    width: 300%;
+    width: 100%;
     height: auto;
-    left: 10%;
-    top: -25%;
   }
 
   #release {
     position: relative;
-    width: 300%;
+    width: 100%;
     height: auto;
-    left: 9%;
-    top: -5em;
   }
 
   #firstSpotlight {
     position: relative;
-    width:100%;
+    width: 100%;
     height: auto;
-    left: -190%;
-    top: -1em;
   }
 
   #secondSpotlight {
     position: relative;
     width: 100%;
     height: auto;
-    left: 25%;
-    top: -5em;
   }
 
   #thirdSpotlight{
    text-align: center;
-   position: relative;
-   width: 85%;
-   height: auto;
-   left: 235%;
-   top: -8em;
+   display: none;
   }
 
   #join {
     position: relative;
-    width: 250%;
+    width: 100%;
     height: 100%;
-    left: -180%;
-    top: -6em;
   }
 
   #event {
     position: relative;
-    width: 190%;
+    width: 100%;
     height: 100%;
-    left: -194%;
-    top: 210%;
   }
 
   #weather {
     position: relative;
     width: 100%;
-    height: 350%;
-    left: 111%;
-    top: 350%;
+    height: 100%;
   }
 }

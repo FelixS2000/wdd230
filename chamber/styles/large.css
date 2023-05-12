@@ -1,73 +1,54 @@
 /* Styles for large screens */
 @media only screen and (min-width: 1024px) {
+
   .grid-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
   
-  #event {
-    position: relative;
-    width: 100%;
+  #event{
+    width: 400%;
     height: 200%;
-    left: -500%;
-    top: 215%;
+    position: relative;
+    top: 10%;
   }
 
-  #weather {
-    position: relative;
+  #weather{
     width: 100%;
-    height: 350%;
-    left: 111%;
-    top: 350%;
-  }
-
-  #join {
-    position: relative;
-    width: 250%;
     height: 100%;
-    left: -180%;
-    top: -6em;
   }
 
-  #release {
-    position: relative;
-    width: 300%;
-    height: auto;
-    left: 9%;
-    top: -5em;
+  #join{
+    width:100%;
+    height:100%;
   }
 
-  #firstSpotlight {
-    position: relative;
+  #release{
     width: 100%;
-    height: auto;
-    left: -190%;
-    top: -1em;
+    height: 100%;
   }
 
-  #secondSpotlight {
-    position: relative;
+  #firstSpotlight{
     width: 100%;
-    height: auto;
-    left: 25%;
-    top: -5em;
+    height: 100%;
   }
 
-  #thirdSpotlight {
-    text-align: center;
-    position: relative;
-    width: 85%;
-    height: auto;
-    left: 235%;
-    top: -10em;
+  #secondSpotlight{
+    width: 100%;
+    height: 100%;
   }
 
-  #hero {
-    position: relative;
-    width: 300%;
-    height: auto;
-    left: 10%;
-    top: -25%;
+  #thirdSpotlight{
+    width: 100%;
+    height: 100%;
   }
+
+  #hero{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logo{
+    max-width: 50%
+  };
 }
