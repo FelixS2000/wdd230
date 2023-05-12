@@ -130,7 +130,6 @@
   #thirdSpotlight,
   #join{
     text-align: center;
-    background-color: var(--color-primary);
     background-position: 0%;
     border: 2px solid var(--color-secondary);
     max-width: 100%;
