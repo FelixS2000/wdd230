@@ -61,17 +61,12 @@
 
   #hero{
     width: 55%;
-    height: 150%;
+    height: 499%;
     position: relative;
-    top: 100%;
+    top:207%;
     left: 20%;
   }
   
-  .imageHero img{
-    /* Adjust the styles for large viewport */
-    max-width: 60%;
-    object-fit: cover;
-  }
 
   .logo{
     max-width: 50%

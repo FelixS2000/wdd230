@@ -84,12 +84,18 @@ header {
   a {
     color: var(--color-secondary);
     text-decoration: none;
+    transition: 0.3s;
   }
   
   ul {
     list-style: none;
   }
   
+  /* Hover effect */
+  a:hover {
+    color: var(--color-accent1); /* Change the color to highlight the current menu item */
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -109,11 +115,6 @@ header {
       height: 100%;
     }
 
-    .imageHero {
-      /* Adjust the styles for small viewport */
-      max-width: 100%;
-      object-fit: cover;
-    }
     
   
     #event{
