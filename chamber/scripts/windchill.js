@@ -1,12 +1,16 @@
 // windchill.js
 
 // Get the temperature and wind speed values from the HTML document
-const temperatureValue = document.getElementById("temperature-value").textContent;
-const windSpeedValue = document.getElementById("wind-speed-value").textContent;
+const temperatureValue = document.getElementById("temperature-value");
+const windSpeedValue = document.getElementById("wind-speed-value");
+
+// Get the temperature and wind speed data
+const temperatureData = temperatureValue.textContent;
+const windSpeedData = windSpeedValue.textContent;
 
 // Convert the temperature and wind speed values to numbers
-const temperature = parseFloat(temperatureValue);
-const windSpeed = parseFloat(windSpeedValue);
+const temperature = parseFloat(temperatureData);
+const windSpeed = parseFloat(windSpeedData);
 
 // Check if the values meet the specification limits for wind chill calculation
 if (temperature <= 50 && windSpeed > 3.0) {
