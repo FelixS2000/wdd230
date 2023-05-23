@@ -115,7 +115,17 @@ header {
       height: 100%;
     }
 
-    
+    .label-small{
+      background-color: darkorange;
+      position: relative;
+      top: -190px;
+      left: 1px;
+    }
+
+    .label-medium,
+    .label-large {
+      display: none;
+    }
   
     #event{
       width: 100%;
@@ -228,4 +238,7 @@ header {
     margin-left: 1rem;
   }
   
-  
+  .grid-container img{
+    width: 100%;
+    height: auto;
+  }
