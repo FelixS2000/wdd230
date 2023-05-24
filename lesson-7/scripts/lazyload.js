@@ -1,37 +1,28 @@
-function lazyLoad() {
-    const images = document.querySelectorAll(".lazy");
+// lazyload-custom.js
+
+(function() {
+    function lazyLoad() {
+      var lazyLoadInstance;
   
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2
-    };
-  
-    const intersectionObserver = new IntersectionObserver(function (entries, observer) {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const image = entry.target;
-          const src = image.getAttribute("data-src");
-          const srcset = image.getAttribute("data-srcset");
-  
-          if (src) {
-            image.src = src;
-          }
-  
-          if (srcset) {
-            image.srcset = srcset;
-          }
-  
-          image.classList.add("loaded");
-          intersectionObserver.unobserve(image);
+      function lazyLoadCallback(element) {
+        element.classList.add("loaded");
+        var img = element.querySelector("img");
+        if (img && img.dataset.src) {
+          img.src = img.dataset.src;
         }
+      }
+  
+      lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        thresholds: "200px",
+        callback_enter: lazyLoadCallback
       });
-    }, options);
+    }
   
-    images.forEach((image) => {
-      intersectionObserver.observe(image);
-    });
-  }
-  
-  window.addEventListener("load", lazyLoad);
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", lazyLoad);
+    } else {
+      lazyLoad();
+    }
+  })();
   

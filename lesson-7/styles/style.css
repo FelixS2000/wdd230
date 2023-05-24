@@ -1,21 +1,24 @@
-/* style.css */
-
 #image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .image-wrapper {
-    margin-bottom: 20px;
-  }
-  
-  .lazy {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .loaded {
-    opacity: 1;
-  }
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.image-wrapper {
+margin-bottom: 20px;
+}
+
+.lazy {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.loaded {
+opacity: 1;
+}
+
+img {
+width: 300px;
+height: 400px;
+}
   
