@@ -2,51 +2,63 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Lazy Loading Example</title>
+  <title>Lazy Loading</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Lazy Loading Example</h1>
+  <h1>Lazy Loading</h1>
 
   <div id="image-container">
     <div class="image-wrapper">
       <picture>
-        <source srcset="placeholderOne.jpg" data-srcset="image1.jpg" media="(min-width: 768px)">
-        <img class="lazy" src="placeholderOne.jpg" data-src="image1.jpg" alt="Image 1" width="300" height="400">
+        <source srcset="placeholder.jpg" data-srcset="image1.jpg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderOne.jpeg" data-src="image1.jpg" alt="Image 1">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="placeholderTwo.jpg" data-srcset="image2.jpg" media="(min-width: 768px)">
-        <img class="lazy" src="placeholderTwo.jpg" data-src="image2.jpg" alt="Image 2" width="300" height="400">
+        <source srcset="placeholder.jpg" data-srcset="image2.jpg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderTwo.jpeg" data-src="image2.jpg" alt="Image 2">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="placeholderThree.jpg" data-srcset="image3.jpg" media="(min-width: 768px)">
-        <img class="lazy" src="placeholderThree.jpg" data-src="image3.jpg" alt="Image 3" width="300" height="400">
+        <source srcset="placeholder.jpg" data-srcset="image2.jpg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderThree.jpeg" data-src="image2.jpg" alt="Image 2">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="placeholderFour.jpg" data-srcset="image4.jpg" media="(min-width: 768px)">
-        <img class="lazy" src="placeholderFour.jpg" data-src="image4.jpg" alt="Image 4" width="300" height="400">
+        <source srcset="placeholder.jpg" data-srcset="image2.jpg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderFour.jpeg" data-src="image2.jpg" alt="Image 2">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="placeholderFive.jpg" data-srcset="image5.jpg" media="(min-width: 768px)">
-        <img class="lazy" src="placeholderFive.jpg" data-src="image5.jpg" alt="Image 5" width="300" height="400">
+        <source srcset="placeholder.jpg" data-srcset="image2.jpg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderFive.jpeg" data-src="image2.jpg" alt="Image 2">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="placeholderSix.jpg" data-srcset="image6.jpg" media="(min-width: 768px)">
-        <img class="lazy" src="placeholderSix.jpg" data-src="image6.jpg" alt="Image 6" width="300" height="400">
+        <source srcset="placeholder.jpg" data-srcset="image2.jpg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderSix.jpeg" data-src="image2.jpg" alt="Image 2">
       </picture>
     </div>
+    <!-- Add more image elements as needed -->
   </div>
 
   <script src="lazyload.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        thresholds: "200px",
+        callback_enter: function(element) {
+          element.classList.add("loaded");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

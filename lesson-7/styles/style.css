@@ -1,17 +1,18 @@
+/* style.css */
+
 #image-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   .image-wrapper {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .lazy {
-    transition: opacity 0.3s ease-in-out;
     opacity: 0;
-    width: 300px;
-    height: 400px;
+    transition: opacity 0.3s ease;
   }
   
   .loaded {
