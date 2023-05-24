@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: brown;
   }
   
   h1 {
@@ -12,33 +12,11 @@ body {
     margin-top: 20px;
   }
   
-  #image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-  }
-  
-  .image-wrapper {
-    margin-bottom: 20px;
-  }
-  
-  .lazy {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .loaded {
-    opacity: 1;
-  }
   
   img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    
+    position: relative;
+    left: 200px;
   }
   
   /* Media Query for smaller screens */
@@ -52,4 +30,7 @@ body {
       height: auto;
     }
   }
+  /* style.css */
+
+
   
