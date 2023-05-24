@@ -1,28 +1,21 @@
-// lazyload-custom.js
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyLoadImages = document.querySelectorAll(".lazy");
 
-(function() {
-    function lazyLoad() {
-      var lazyLoadInstance;
-  
-      function lazyLoadCallback(element) {
-        element.classList.add("loaded");
-        var img = element.querySelector("img");
-        if (img && img.dataset.src) {
-          img.src = img.dataset.src;
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const src = img.getAttribute("data-src");
+
+          if (src) {
+            img.setAttribute("src", src);
+            img.removeAttribute("data-src");
+            observer.unobserve(img);
+          }
         }
-      }
-  
-      lazyLoadInstance = new LazyLoad({
-        elements_selector: ".lazy",
-        thresholds: "200px",
-        callback_enter: lazyLoadCallback
       });
-    }
-  
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", lazyLoad);
-    } else {
-      lazyLoad();
-    }
-  })();
-  
+    });
+    lazyLoadImages.forEach(function(img) {
+        observer.observe(img);
+      });
+    });
