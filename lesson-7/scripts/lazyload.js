@@ -1,21 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const lazyLoadImages = document.querySelectorAll(".lazy");
+// Get all the lazy-loaded images
+const lazyImages = document.querySelectorAll('.lazy');
 
-    const observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          const src = img.getAttribute("data-src");
+// Intersection Observer options
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
 
-          if (src) {
-            img.setAttribute("src", src);
-            img.removeAttribute("data-src");
-            observer.unobserve(img);
-          }
-        }
-      });
-    });
-    lazyLoadImages.forEach(function(img) {
-        observer.observe(img);
-      });
-    });
+// Intersection Observer callback function
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const lazyImage = entry.target;
+      lazyImage.src = lazyImage.dataset.src;
+      lazyImage.classList.remove('lazy');
+      observer.unobserve(lazyImage);
+    }
+  });
+}
+
+// Create Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe each lazy-loaded image
+lazyImages.forEach(image => {
+  observer.observe(image);
+});
