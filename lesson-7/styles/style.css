@@ -10,6 +10,7 @@ body {
 h1 {
   text-align: center;
   margin-top: 20px;
+  color: #fff; /* Set the text color to white */
 }
 
 .image-wrapper {
@@ -27,6 +28,7 @@ img.lazy {
 img.lazy.loaded {
   opacity: 1;
 }
+
 .placeholder {
   display: flex;
   align-items: center;
@@ -44,6 +46,7 @@ img.lazy.loaded {
 .loaded {
   filter: blur(0);
 }
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   #image-container {
