@@ -1,0 +1,153 @@
+/* Global Styles */
+:root {
+    --color-primary: #fffffe;
+    --color-secondary: #0f0e17;
+    --color-tertiary: #a7a9be;
+    --color-accent: #ff8906;
+    --color-accent1: #f25f4c;
+    --font-family: 'Castoro Titling', serif;
+    --font-size-base: 15px;
+    --line-height-base: 1.5;
+    --box-shadow-base: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --border-color-base: var(--color-secondary);
+    --border-width-base: 2px;
+    --border-radius-base: 0;
+    --spacing-base: 1rem;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .image-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .loaded {
+    opacity: 1;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .image-description {
+    padding: 10px;
+  }
+  
+  .image-description h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .image-description p {
+    font-size: 14px;
+  }
+  
+  #demographic-data {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #demographic-data h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #demographic-data p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  /* CSS Effect on Image Hover */
+  .image-wrapper:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  /* Small screens */
+  @media (max-width: 768px) {
+    /* Hide the menu by default */
+    #menu ul {
+      display: none;
+    }
+  
+    /* Show the menu when the hamburger button is clicked */
+    #menu ul.show {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Style the hamburger button */
+    #hamButton {
+      display: block;
+      background-color: transparent;
+      border: none;
+      color: var(--color-secondary);
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 769px) {
+    #menu ul {
+      display: flex;
+      align-items: center;
+    }
+  
+    #hamButton {
+      display: none;
+    }
+  }
+  .logo img {
+    display: block;
+    max-width: 20%;
+    height: auto;
+  }
+  /* Navigation Styles */
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation li {
+    margin-right: var(--spacing-base);
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+  
+  
+  .bannerMessage {
+    font-weight: bold;
+  }
+  

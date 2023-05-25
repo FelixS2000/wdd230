@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Discover Hatillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/discover.css">
+    </head>
+    <body>
+        <header>
+            <div class="grid">
+                
+                <div class="bannerMessage"><span id="bannerMessageUser"></span></div>
+                <div class="logo">
+                    <img src="images/logo.webp" alt="Chamber logo">
+                    <p><span id="lastTime"></span></p>
+                </div>
+                <div id="menu" class="navigation">
+                    <button id="hamButton">&#9776;</button>
+                    <ul>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/" title="Home">Home</a></li>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/discover.html" title="About">Discover</a></li>
+                        <li><a href="#" title="Service">Directory</a></li>
+                        <li><a href="#" title="History">Join</a></li>
+                        <li><a href="#" title="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <h1>Welcome to Hatillo</h1>
+
+    <div id="image-container">
+        <div class="image-wrapper">
+        <picture>
+            <source srcset="images/hatilloBeach.jpeg" data-srcset="images/hatilloBeach.jpeg" media="(min-width: 768px)">
+            <img class="lazy" src="hatilloBeach.jpeg" data-src="images/hatilloBeach.jpeg" alt="Hatillo Image 1" loading="lazy">
+        </picture>
+        <div class="image-description">
+            <h2>Beautiful Beach</h2>
+            <p>Enjoy the stunning beaches of Hatillo, known for their crystal clear waters and sandy shores.</p>
+        </div>
+        </div>
+        <div class="image-wrapper">
+        <picture>
+            <source srcset="images/hatillo2.jpg" data-srcset="images/hatilloArchitecture.jpeg" media="(min-width: 768px)">
+            <img class="lazy" src="images/hatilloArchitecture.jpeg" data-src="images/hatilloArchitecture.jpeg" alt="Hatillo Image 2" loading="lazy">
+        </picture>
+        <div class="image-description">
+            <h2>Colonial Architecture</h2>
+            <p>Explore the charming streets of Hatillo with its well-preserved colonial architecture.</p>
+        </div>
+        </div>
+        <div class="image-wrapper">
+        <picture>
+            <source srcset="images/hatillo3.jpg" data-srcset="images/hatilloCuisine.JPG" media="(min-width: 768px)">
+            <img class="lazy" src="images/hatilloCuisine.JPG" data-src="images/hatilloCuisine.JPG" alt="Hatillo Image 3" loading="lazy">
+        </picture>
+        <div class="image-description">
+            <h2>Local Cuisine</h2>
+            <p>Indulge in the delicious flavors of Hatillo's local cuisine, featuring fresh seafood and tropical fruits.</p>
+        </div>
+        </div>
+        <div class="image-wrapper">
+        <picture>
+            <source srcset="images/hatillo4.jpg" data-srcset="images/hatilloNaturalWonder.webp" media="(min-width: 768px)">
+            <img class="lazy" src="images/hatilloNaturalWonder.webp" data-src="images/hatilloNaturalWonder.webp" alt="Hatillo Image 4" loading="lazy">
+        </picture>
+        <div class="image-description">
+            <h2>Natural Wonders</h2>
+            <p>Discover the breathtaking natural wonders surrounding Hatillo, including lush forests and cascading waterfalls.</p>
+        </div>
+        </div>
+        <div class="image-wrapper">
+        <picture>
+            <source srcset="images/hatillo5.jpg" data-srcset="images/hatilloFestivals.webp" media="(min-width: 768px)">
+            <img class="lazy" src="images/hatilloFestivals.webp" data-src="images/hatilloFestivals.webp" alt="Hatillo Image 5" loading="lazy">
+        </picture>
+        <div class="image-description">
+            <h2>Festivals and Traditions</h2>
+            <p>Immerse yourself in Hatillo's vibrant culture by joining colorful festivals and experiencing local traditions.</p>
+        </div>
+        </div>
+        </div>
+    
+        <div id="demographic-data">
+            <h2>Demographic Data</h2>
+            <p>Population: 50,000</p>
+            <p>Median Age: 32 years</p>
+            <p>Average Household Income: $30,000</p>
+        </div>
+        <footer>
+            <div>
+                <p class= "copyright">&copy;<span id="currentYear"></span> Chamber Home Page| Felix S. Guzman | WDD 230 Project | Last Modification: <span id="lastTime"></span></p>
+            </div>
+        </footer>
+        <script src="scripts/discover.js"></script>
+        <script src="scripts/time.js"></script>
+        <script src="scripts/menu.js"></script>
+    </body>
+</html>
