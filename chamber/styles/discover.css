@@ -14,11 +14,12 @@
     --border-radius-base: 0;
     --spacing-base: 1rem;
   }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f1f1f1;
+  body {
+    font-family: 'Castoro Titling', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
   }
   
   h1 {
@@ -91,6 +92,8 @@ body {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+  
   /* Small screens */
   @media (max-width: 768px) {
     /* Hide the menu by default */
@@ -127,11 +130,31 @@ body {
       display: none;
     }
   }
+  
+  
+  
+  
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Hover effect */
+  a:hover {
+    color: var(--color-accent1); /* Change the color to highlight the current menu item */
+  }
+
   .logo img {
     display: block;
     max-width: 20%;
     height: auto;
   }
+  
   /* Navigation Styles */
   .navigation {
     display: flex;
@@ -151,3 +174,22 @@ body {
     font-weight: bold;
   }
   
+  /* Header Styles */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Main Styles */
+  main {
+    padding: 1rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-tertiary);
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
