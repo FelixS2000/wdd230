@@ -2,50 +2,50 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Lazy Loading</title>
+  <title>Progressive Loading of Images</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script src="scripts/lazyload.js" defer></script>
 </head>
 <body>
-  <h1>Lazy Loading</h1>
+  <h1>Progressive Loading of Images</h1>
 
   <div id="image-container">
     <div class="image-wrapper">
       <picture>
-        <source srcset="images/placeholderOne.jpeg" data-srcset="images/placeholderOne.jpeg" media="(min-width: 768px)">
-        <img class="lazy" src="images/placeholderOne.jpeg" data-src="images/placeholderOne.jpeg" alt="Image 1" loading="lazy" width="300" height="400">
+        <source srcset="images/placeholderOne.jpeg" data-srcset="images/imageOne.jpeg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderOne.jpeg" data-src="images/imageOne.jpeg" alt="Image 1" loading="lazy" width="300" height="400">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="images/placeholderTwo.jpeg" data-srcset="images/placeholderTwo.jpeg" media="(min-width: 768px)">
-        <img class="lazy" src="images/placeholderTwo.jpeg" data-src="images/placeholderTwo.jpeg" alt="Image 2" loading="lazy" width="300" height="400">
+        <source srcset="images/placeholderTwo.jpeg" data-srcset="images/imageTwo.jpeg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderTwo.jpeg" data-src="images/imageTwo.jpeg" alt="Image 2" loading="lazy" width="300" height="400">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="images/placeholderThree.jpeg" data-srcset="images/placeholderThree.jpeg" media="(min-width: 768px)">
-        <img class="lazy" src="images/placeholderThree.jpeg" data-src="images/placeholderThree.jpeg" alt="Image 3" loading="lazy" width="300" height="400">
+        <source srcset="images/placeholderThree.jpeg" data-srcset="images/imageThree.jpeg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderThree.jpeg" data-src="images/imageThree.jpeg" alt="Image 3" loading="lazy" width="300" height="400">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="images/placeholderFour.jpeg" data-srcset="images/placeholderFour.jpeg" media="(min-width: 768px)">
-        <img class="lazy" src="images/placeholderFour.jpeg" data-src="images/placeholderFour.jpeg" alt="Image 4" loading="lazy" width="300" height="400">
+        <source srcset="images/placeholderFour.jpeg" data-srcset="images/imageFour.jpeg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderFour.jpeg" data-src="images/imageFour.jpeg" alt="Image 4" loading="lazy" width="300" height="400">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="images/placeholderFive.jpeg" data-srcset="images/placeholderFive.jpeg" media="(min-width: 768px)">
-        <img class="lazy" src="images/placeholderFive.jpeg" data-src="images/placeholderFive.jpeg" alt="Image 5" loading="lazy" width="300" height="400">
+        <source srcset="images/placeholderFive.jpeg" data-srcset="images/imageFive.jpeg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderFive.jpeg" data-src="images/imageFive.jpeg" alt="Image 5" loading="lazy" width="300" height="400">
       </picture>
     </div>
     <div class="image-wrapper">
       <picture>
-        <source srcset="images/placeholderSix.jpeg" data-srcset="images/placeholderSix.jpeg" media="(min-width: 768px)">
-        <img class="lazy" src="images/placeholderSix.jpeg" data-src="images/placeholderSix.jpeg" alt="Image 6" loading="lazy" width="300" height="400">
+        <source srcset="images/placeholderSix.jpeg" data-srcset="images/imageSix.jpeg" media="(min-width: 768px)">
+        <img class="lazy" src="images/placeholderSix.jpeg" data-src="images/imageSix.jpeg" alt="Image 6" loading="lazy" width="300" height="400">
       </picture>
     </div>
   </div>
- <script src="scripts/lazyload.js"></script>
 </body>
 </html>
