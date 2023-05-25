@@ -35,7 +35,7 @@ if (lastVisitTime) {
   const daysSinceLastVisit = Math.round((currentTime - lastVisitTime) / oneDayMilliseconds);
   console.log(`Days since last visit: ${daysSinceLastVisit}`);
 
-  const lastTimeElement = document.getElementById('lastTime');
+  const lastTimeElement = document.getElementById("lastTime");
   if (lastTimeElement) {
     lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
   }
@@ -49,10 +49,10 @@ const currentYear = currentDate.getFullYear();
 const currentMonth = currentDate.getMonth() + 1;
 const currentDay = currentDate.getDate();
 
-const option = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-const lastTimeModifiedElement = document.getElementById('lastTimeModified');
+const option = { weekday: "long", month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric" };
+const lastTimeModifiedElement = document.getElementById("lastTimeModified");
 if (lastTimeModifiedElement) {
-  lastTimeModifiedElement.textContent = currentDate.toLocaleDateString('en-US', option);
+  lastTimeModifiedElement.textContent = currentDate.toLocaleDateString("en-US", option);
 }
 document.getElementById("currentYear").textContent = currentYear;
 
