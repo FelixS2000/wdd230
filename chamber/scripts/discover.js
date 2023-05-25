@@ -56,3 +56,20 @@ if (currentDay === 1) {
   banner.classList.add("banner");
   document.body.insertBefore(banner, document.body.firstChild);
 }
+
+ // Retrieve the last visit time from local storage
+ const lastVisitTime = localStorage.getItem('lastVisitTime');
+ const currentTimes = new Date().getTime();
+
+ // Calculate the number of days between visits
+ const oneDayMilliseconds = 24 * 60 * 60 * 1000;
+ const daysSinceLastVisit = Math.round((currentTime - lastVisitTime) / oneDayMilliseconds);
+
+ // Display the number of days on the page
+ const lastTimeElement = document.getElementById('lastTime');
+ if (lastTimeElement) {
+   lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
+ }
+
+ // Store the current visit time in local storage
+ localStorage.setItem('lastVisitTime', currentTimes);
