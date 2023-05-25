@@ -48,6 +48,7 @@ var formattedDate = date.toLocaleDateString('en-US', options);
 
 document.getElementById("currentYear").textContent = currentYear;
 document.getElementById("lastTime").textContent = document.lastModified;
+document.getElementById("lastTimeModified").textContent = document.lastModified;
 
 if (currentDay === 1) {
   var banner = document.createElement("div");
