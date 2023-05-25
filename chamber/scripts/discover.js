@@ -49,6 +49,11 @@ const currentYear = currentDate.getFullYear();
 const currentMonth = currentDate.getMonth() + 1;
 const currentDay = currentDate.getDate();
 
+const option = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+const lastTimeModifiedElement = document.getElementById('lastTimeModified');
+if (lastTimeModifiedElement) {
+  lastTimeModifiedElement.textContent = currentDate.toLocaleDateString('en-US', option);
+}
 document.getElementById("currentYear").textContent = currentYear;
 
 // Check if it's Monday (day 1)
