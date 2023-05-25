@@ -5,7 +5,7 @@ const lazyImages = document.querySelectorAll('.lazy');
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.1
+  threshold: 1
 };
 
 // Intersection Observer callback function
