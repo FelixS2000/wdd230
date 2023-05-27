@@ -27,25 +27,30 @@ images.forEach((image) => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Your code here
 
-// Local Storage Visit Time
-const lastVisitTime = localStorage.getItem("lastVisitTime");
-const currentTime = new Date().getTime();
+  // Local Storage Visit Time
+  const lastVisitTime = localStorage.getItem("lastVisitTime");
+  const currentTime = new Date().getTime();
 
-if (lastVisitTime) {
-  const oneDayMilliseconds = 24 * 60 * 60 * 1000;
-  const daysSinceLastVisit = Math.round((currentTime - parseInt(lastVisitTime)) / oneDayMilliseconds);
-  console.log(`Days since last visit: ${daysSinceLastVisit}`);
+  if (lastVisitTime) {
+    const oneDayMilliseconds = 24 * 60 * 60 * 1000;
+    const daysSinceLastVisit = Math.round((currentTime - parseInt(lastVisitTime)) / oneDayMilliseconds);
+    console.log(`Days since last visit: ${daysSinceLastVisit}`);
 
-  const lastTimeElement = document.getElementById("lastTime");
-  if (lastTimeElement) {
-    lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
+    const lastTimeElement = document.getElementById("lastTime");
+    if (lastTimeElement) {
+      lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
+    }
+  } else {
+    const lastTimeElement = document.getElementById("lastTime");
+    if (lastTimeElement) {
+      lastTimeElement.textContent = "Days since last visit: 0";
+    }
   }
-}
 
-localStorage.setItem("lastVisitTime", currentTime.toString());
+  localStorage.setItem("lastVisitTime", currentTime.toString());
 });
+
 
 // Display current date
 const currentDate = new Date();
