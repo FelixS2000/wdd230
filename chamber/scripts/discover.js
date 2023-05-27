@@ -32,7 +32,7 @@ const currentTime = new Date().getTime();
 
 if (lastVisitTime) {
   const oneDayMilliseconds = 24 * 60 * 60 * 1000;
-  const daysSinceLastVisit = Math.round((currentTime - lastVisitTime) / oneDayMilliseconds);
+  const daysSinceLastVisit = Math.round((currentTime - parseInt(lastVisitTime)) / oneDayMilliseconds);
   console.log(`Days since last visit: ${daysSinceLastVisit}`);
 
   const lastTimeElement = document.getElementById("lastTime");
@@ -41,7 +41,8 @@ if (lastVisitTime) {
   }
 }
 
-localStorage.setItem("lastVisitTime", currentTime);
+localStorage.setItem("lastVisitTime", currentTime.toString());
+
 
 // Display current date
 const currentDate = new Date();
