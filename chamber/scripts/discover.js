@@ -26,6 +26,9 @@ images.forEach((image) => {
   observer.observe(image);
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Your code here
+
 // Local Storage Visit Time
 const lastVisitTime = localStorage.getItem("lastVisitTime");
 const currentTime = new Date().getTime();
@@ -42,7 +45,7 @@ if (lastVisitTime) {
 }
 
 localStorage.setItem("lastVisitTime", currentTime.toString());
-
+});
 
 // Display current date
 const currentDate = new Date();

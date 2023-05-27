@@ -1,16 +1,15 @@
 var date = new Date();
-var currentYear = date.getFullYear();
-var currentDate = date.getDate();
-var currentMonth = date.getMonth() + 1;
-var currentDay = date.getDay();
-var options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'};
-var formattedDate = date.toLocaleDateString('en-US', options);
+var actualYear = date.getFullYear();
+var actualMonth = date.getMonth() + 1;
+var specialDay = date.getDay();
+var optionsTime = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'};
+var formattedDates = date.toLocaleDateString('en-US', optionsTime);
 
-document.getElementById("currentYear").textContent = currentYear;
+document.getElementById("currentYear").textContent = actualYear;
 document.getElementById("lastModified").textContent = document.lastModified;
-document.getElementById("lastTime").textContent = formattedDate;
+document.getElementById("lastTime").textContent = formattedDates;
 
-if (currentDay === 1) {
+if (specialDay === 1) {
   var banner = document.createElement("div");
   banner.textContent = "🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.";
   banner.classList.add("banner");
