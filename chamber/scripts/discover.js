@@ -26,30 +26,32 @@ images.forEach((image) => {
   observer.observe(image);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-
-  // Local Storage Visit Time
+function calculateDaysSinceLastVisit() {
   const lastVisitTime = localStorage.getItem("lastVisitTime");
   const currentTime = new Date().getTime();
 
   if (lastVisitTime) {
     const oneDayMilliseconds = 24 * 60 * 60 * 1000;
-    const daysSinceLastVisit = Math.round((currentTime - parseInt(lastVisitTime)) / oneDayMilliseconds);
-    console.log(`Days since last visit: ${daysSinceLastVisit}`);
-
-    const lastTimeElement = document.getElementById("lastTime");
-    if (lastTimeElement) {
-      lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
-    }
+    return Math.round((currentTime - parseInt(lastVisitTime)) / oneDayMilliseconds);
   } else {
-    const lastTimeElement = document.getElementById("lastTime");
-    if (lastTimeElement) {
-      lastTimeElement.textContent = "Days since last visit: 0";
-    }
+    return 0;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const daysSinceLastVisit = calculateDaysSinceLastVisit();
+
+  console.log(`Days since last visit: ${daysSinceLastVisit}`);
+
+  const lastTimeElement = document.getElementById("lastTime");
+  if (lastTimeElement) {
+    lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
   }
 
-  localStorage.setItem("lastVisitTime", currentTime.toString());
+  localStorage.setItem("lastVisitTime", new Date().getTime().toString());
 });
+
+
 
 
 // Display current date
