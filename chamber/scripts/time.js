@@ -5,7 +5,7 @@ var specialDay = date.getDay();
 var optionsTime = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'};
 var formattedDates = date.toLocaleDateString('en-US', optionsTime);
 
-document.getElementById("currentYear").textContent = actualYear;
+document.getElementById("actualYear").textContent = actualYear;
 document.getElementById("lastModified").textContent = document.lastModified;
 document.getElementById("lastTime").textContent = formattedDates;
 
