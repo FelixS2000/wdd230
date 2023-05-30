@@ -51,7 +51,7 @@ localStorage.setItem("lastVisitTime", currentTime.toString());
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 const currentMonth = currentDate.getMonth() + 1;
-const currentDay = currentDate.getDate();
+const currentDay = currentDate.getDay();
 
 const option = { weekday: "long", month: "long", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric" };
 const lastTimeModifiedElement = document.getElementById("lastTimeModified");
