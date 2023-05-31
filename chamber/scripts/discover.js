@@ -53,8 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(`Days since last visit: ${daysSinceLastVisit}`);
 
-    // Update last visit time in local storage
-    localStorage.setItem("lastVisitTime", Date.now().toString());
+    // Update last visit time in local storage if not set
+    const lastVisitTime = localStorage.getItem("lastVisitTime");
+    if (!lastVisitTime) {
+      localStorage.setItem("lastVisitTime", Date.now().toString());
+    }
 
     // Display days since last visit
     const lastTimeElement = document.getElementById("lastTime");
@@ -65,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error updating days since last visit:", error);
   }
 });
+
 
 
 
