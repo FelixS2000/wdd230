@@ -27,14 +27,17 @@ images.forEach((image) => {
 });
 
 
+// milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
+const msToDays = 1000 * 60 * 60 * 24;
+
+// Calculate days since last visit
 function calculateDaysSinceLastVisit() {
   try {
     const lastVisitTime = localStorage.getItem("lastVisitTime");
     const currentTime = Date.now();
 
     if (lastVisitTime) {
-      const oneDayMilliseconds = 24 * 60 * 60 * 1000;
-      return Math.floor((currentTime - parseInt(lastVisitTime)) / oneDayMilliseconds);
+      return Math.floor((currentTime - parseInt(lastVisitTime)) / msToDays);
     } else {
       return 0;
     }
@@ -44,22 +47,25 @@ function calculateDaysSinceLastVisit() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   try {
     const daysSinceLastVisit = calculateDaysSinceLastVisit();
 
     console.log(`Days since last visit: ${daysSinceLastVisit}`);
 
+    // Update last visit time in local storage
+    localStorage.setItem("lastVisitTime", Date.now().toString());
+
+    // Display days since last visit
     const lastTimeElement = document.getElementById("lastTime");
     if (lastTimeElement) {
       lastTimeElement.textContent = `Days since last visit: ${daysSinceLastVisit}`;
     }
-
-    localStorage.setItem("lastVisitTime", Date.now().toString());
   } catch (error) {
     console.error("Error updating days since last visit:", error);
   }
 });
+
 
 
 // Display current date
