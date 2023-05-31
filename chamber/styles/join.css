@@ -156,6 +156,11 @@
     display: flex;
   }
   
+  .logo img {
+    display: block;
+    max-width: 20%;
+    height: auto;
+  }
   
   .bannerMessage {
     font-weight: bold;
