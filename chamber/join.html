@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Discover Hatillo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/join.css">
+    </head>
+    <body>
+        <header>
+            <div class="grid">
+                
+                <div class="bannerMessage"><span id="bannerMessageUser"></span></div>
+                <div class="logo">
+                    <img src="images/logo.webp" alt="Chamber logo">
+                    <p><span id="lastTime"></span></p>
+                </div>
+                <div id="menu" class="navigation">
+                    <button id="hamButton">&#9776;</button>
+                    <ul>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/" title="Home">Home</a></li>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/discover.html" title="About">Discover</a></li>
+                        <li><a href="#" title="Join">Join</a></li>
+                        <li><a href="#" title="Directory">Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <h1>Membership Form</h1>
+
+  <form action="thankyou.html" method="get">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+
+    <label for="positionTitle">Business Position Title:</label>
+    <input type="text" id="positionTitle" name="positionTitle" pattern="[A-Za-z\s-]{7,}"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="example@example.com"><br>
+
+    <label for="cellPhone">Cell Phone Number:</label>
+    <input type="tel" id="cellPhone" name="cellPhone" required><br>
+
+    <label for="businessName">Business Name/Title:</label>
+    <input type="text" id="businessName" name="businessName" required><br>
+
+    <label for="membershipLevel">Membership Level:</label>
+    <select id="membershipLevel" name="membershipLevel">
+      <option value="NP Membership">NP Membership</option>
+      <option value="Bronze Membership">Bronze Membership</option>
+      <option value="Silver Membership">Silver Membership</option>
+      <option value="Gold Membership">Gold Membership</option>
+    </select><br>
+
+    <label for="businessDescription">Business Description:</label>
+    <textarea id="businessDescription" name="businessDescription"></textarea><br>
+
+    <input type="hidden" name="formLoadedDateTime" value="">
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  
+        <footer>
+            <div>
+                <p class= "copyright">&copy;<span id="currentYear"></span> Chamber Home Page| Felix S. Guzman | WDD 230 Project | Last Modification: <span id="lastTimeModified"></span></p>
+            </div>
+        </footer>
+        <script src="scripts/join.js"></script>
+        <script src="scripts/menu.js"></script>
+    </body>
+</html>
