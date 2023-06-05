@@ -38,12 +38,12 @@ img.lazy.loaded {
   justify-content: center;
   width: 300px;
   height: 400px;
-  background-color: #f0f0f0;
+  background-color: #eee;
   font-size: 24px;
-  color: #555;
+  color: #999;
   text-align: center;
   transition: filter 0.3s ease-in-out;
-  filter: blur(8px);
+  filter: blur(0px);
 }
 
 .loaded {
