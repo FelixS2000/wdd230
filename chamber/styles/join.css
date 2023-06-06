@@ -23,73 +23,116 @@
     background-color: var(--color-primary);
   }
 
-  h1 {
-    text-align: center;
-    margin-top: 20px;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: center;
   }
-
+  
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navigation li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .h1 {
+    text-align: center;
+  }
+  
   form {
-    display: flex;
-    flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
   }
   
-  label {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
   textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid var(--color-tertiary);
-    border-radius: 5px;
-  }
-  
-  textarea {
-    height: 100px;
+    height: 150px;
   }
   
   input[type="submit"] {
-    margin-top: 20px;
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-align: center;
   }
   
-  input[type="submit"]:hover {
-    background-color: var(--color-accent1);
-  }
+  /* Media Queries for Small Screens */
   
-  /* Additional styles for larger views */
-  @media (min-width: 768px) {
+  @media (max-width: 480px) {
+    .grid {
+      display: block;
+      text-align: center;
+    }
+    
+    .navigation {
+      margin-top: 10px;
+    }
+    
     form {
-      flex-direction: row;
-      justify-content: space-between;
+      padding: 10px;
     }
-  
-    label {
-      width: 30%;
-    }
-  
+    
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    select,
-    textarea {
-      width: 70%;
+    textarea,
+    select {
+      width: 100%;
+      box-sizing: border-box;
     }
-}
+  }
+  
+  /* Media Queries for Medium Screens */
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      align-items: center;
+    }
+    
+    .navigation {
+      text-align: right;
+    }
+    
+    form {
+      max-width: 700px;
+    }
+  }
+  
+  /* Media Queries for Large Screens */
+  
+  @media (min-width: 769px) {
+    .grid {
+      justify-content: space-between;
+    }
+    
+    .navigation {
+      text-align: right;
+    }
+    
+    form {
+      max-width: 900px;
+    }
+  }
   /* Small screens */
   @media (max-width: 768px) {
     /* Hide the menu by default */
