@@ -43,7 +43,6 @@ img.lazy.loaded {
   color: #999;
   text-align: center;
   transition: filter 0.3s ease-in-out;
-  filter: blur(0px);
 }
 
 .loaded {
