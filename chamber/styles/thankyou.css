@@ -1,0 +1,50 @@
+/* styles/thankyou.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    transition: background-color 0.5s ease;
+  }
+  
+  h1 {
+    color: #333;
+    margin-top: 50px;
+    font-size: 28px;
+    transition: color 0.5s ease;
+  }
+  
+  p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    transition: color 0.5s ease;
+  }
+  
+  footer {
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 12px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Hover effect */
+  body:hover {
+    background-color: #fff;
+  }
+  
+  h1:hover,
+  p:hover {
+    color: #c00;
+  }
+  
+  footer:hover {
+    background-color: #000;
+    color: #ccc;
+  }
+  
