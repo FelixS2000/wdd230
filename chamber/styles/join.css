@@ -228,3 +228,10 @@
     background-color: var(--color-tertiary);
     box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
+
+  #currentYear,
+  #lastTimeModified {
+    color: var(--color-primary); /* Set the text color to the primary color */
+    background-color: var(--color-secondary); /* Set the background color to the secondary color */
+    padding: 3px 5px; /* Adjust the padding as needed */
+  }
