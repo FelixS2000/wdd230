@@ -19,11 +19,10 @@ fetch('scripts/data.json')
         </div>
       `;
       // Append the company HTML to the container
-      companyList.innerHTML += companyHTML;
+      companyList.insertAdjacentHTML('beforeend', companyHTML);
     });
   });
 
-// Rest of the code for displaying current date and banner message (as before)
 
 
   // Display current date
