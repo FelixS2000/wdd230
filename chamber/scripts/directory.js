@@ -10,7 +10,7 @@ fetch('scripts/data.json')
       const companyHTML = `
         <div class="company">
           <h2>${company['Company Name']}</h2>
-          <img src="images/${company['Image/Icon']}" alt="${company['Company Name']} Logo">
+          <img src="${company['Image/Icon']}" alt="${company['Company Name']} Logo">
           <p><strong>Address:</strong> ${company.Address}</p>
           <p><strong>Phone Number:</strong> ${company['Phone Number']}</p>
           <p><strong>Website:</strong> <a href="http://${company.Website}" target="_blank">${company.Website}</a></p>
@@ -22,6 +22,8 @@ fetch('scripts/data.json')
       companyList.innerHTML += companyHTML;
     });
   });
+
+// Rest of the code for displaying current date and banner message (as before)
 
 
   // Display current date
