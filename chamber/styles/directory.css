@@ -1,0 +1,139 @@
+/* Global Styles */
+:root {
+    --color-primary: #fffffe;
+    --color-secondary: #0f0e17;
+    --color-tertiary: #a7a9be;
+    --color-accent: #ff8906;
+    --color-accent1: #f25f4c;
+    --font-family: 'Castoro Titling', serif;
+    --font-size-base: 15px;
+    --line-height-base: 1.5;
+    --box-shadow-base: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --border-color-base: var(--color-secondary);
+    --border-width-base: 2px;
+    --border-radius-base: 0;
+    --spacing-base: 1rem;
+  }
+  body {
+    font-family: 'Castoro Titling', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+
+  
+  /* Small screens */
+  @media (max-width: 768px) {
+    /* Hide the menu by default */
+    #menu ul {
+      display: none;
+    }
+  
+    /* Show the menu when the hamburger button is clicked */
+    #menu ul.show {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Style the hamburger button */
+    #hamButton {
+      display: block;
+      background-color: transparent;
+      border: none;
+      color: var(--color-secondary);
+      font-size: 2rem;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 769px) {
+    #menu ul {
+      display: flex;
+      align-items: center;
+    }
+  
+    #hamButton {
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Hover effect */
+  a:hover {
+    color: var(--color-accent1); /* Change the color to highlight the current menu item */
+  }
+
+  .logo img {
+    display: block;
+    max-width: 20%;
+    height: auto;
+  }
+  
+  /* Navigation Styles */
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navigation li {
+    margin-right: var(--spacing-base);
+  }
+
+  .navigation ul {
+    display: flex;
+  }
+  
+  
+  .bannerMessage {
+    font-weight: bold;
+  }
+  
+  /* Header Styles */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Main Styles */
+  main {
+    padding: 1rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-tertiary);
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }

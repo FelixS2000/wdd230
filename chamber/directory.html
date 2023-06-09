@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Directory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/directory.css">
+    </head>
+    <body>
+        <header>
+            <div class="grid">
+                
+                <div class="bannerMessage"><span id="bannerMessageUser"></span></div>
+                <div class="logo">
+                    <img src="images/logo.webp" alt="Chamber logo">
+                    <p><span id="lastTime"></span></p>
+                </div>
+                <div id="menu" class="navigation">
+                    <button id="hamButton">&#9776;</button>
+                    <ul>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/" title="Home">Home</a></li>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/discover.html" title="About">Discover</a></li>
+                        <li><a href="https://felixs2000.github.io/wdd230/chamber/join.html" title="Join">Join</a></li>
+                        <li><a href="#" title="Directory">Directory</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <h1>Hatillo's Directory</h1>
+    <div id="companyList"></div>
+        <footer>
+            <div>
+                <p class= "copyright">&copy;<span id="currentYear"></span> Chamber Home Page| Felix S. Guzman | WDD 230 Project | Last Modification: <span id="lastTimeModified"></span></p>
+            </div>
+        </footer>
+        <script src="scripts/data.json"></script>
+        <script src="scripts/directory.js"></script>
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/time.js"></script>
+    </body>
+</html>
