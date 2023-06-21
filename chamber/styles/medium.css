@@ -30,7 +30,7 @@
     height: 100%;
     position: relative;
     left: -1%;
-    top: -250%;
+    top: -370%;
   }
 
   #firstSpotlight {
@@ -64,23 +64,28 @@
 
   #event {
     width: 50%;
-    height: 200%;
+    height: 270%;
     position: relative;
     left: -1%;
-    top: 500%;
+    top: 710%;
   }
 
   #weather {
     width: 50%;
-    height: 170%;
+    height: 100%;
     position: relative;
     left: 50%;
-    top: 288%;
+    top: 175%;
+  }
+
+  #weather #icon{
+    width:100px;
+    height: auto;
+    position: relative;
+    left: 30%;
   }
   
   footer {
     margin-top: 50px;
   }
-
-  
 }

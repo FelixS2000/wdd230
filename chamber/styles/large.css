@@ -38,14 +38,15 @@
     width: 15%;
     height: 220%;
     position: relative;
-    top: -20%;
+    top: 120%;
   }
 
   #weather{
     width: 15%;
-    height: 300%;
+    height: 100%;
     position: relative;
-    top: 200%;
+    top: 95%;
+    
   }
 
   #join{
@@ -91,7 +92,7 @@
     width: 50%;
     height: 100%;
     position: relative;
-    top: 80%;
+    top: 120%;
     left: 20%;
   }
   
@@ -108,5 +109,4 @@
     padding: 20px;
     text-align: center;
   }
-  
 }
