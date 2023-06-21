@@ -1,30 +1,41 @@
 // windchill.js
 
-// Get the temperature and wind speed values from the HTML document
-const temperatureValue = document.getElementById("temperature-value");
-const windSpeedValue = document.getElementById("wind-speed-value");
+// My OpenWeatherMap API key
+const apiKey = '5446be76d7c7bdd03fa8dc5f3a9eddb6';
 
-// Get the temperature and wind speed data
-const temperatureData = temperatureValue.textContent;
-const windSpeedData = windSpeedValue.textContent;
+// Location information
+const city = 'San Cristobal';
+const countryCode = '91002';
 
-// Convert the temperature and wind speed values to numbers
-const temperature = parseFloat(temperatureData);
-const windSpeed = parseFloat(windSpeedData);
+// Function to fetch weather data from OpenWeatherMap API
+async function fetchWeatherData() {
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=imperial`);
+        const data = await response.json();
 
-// Check if the values meet the specification limits for wind chill calculation
-if (temperature <= 50 && windSpeed > 3.0) {
-  // Calculate the wind chill factor using the provided formula
-  const windChill = calculateWindChill(temperature, windSpeed);
+        // Extract relevant information from the API response
+        const temperature = data.main.temp;
+        const condition = data.weather[0].description;
+        const icon = data.weather[0].icon;
+        const windSpeed = data.wind.speed;
+        const windChill = calculateWindChill(temperature, windSpeed);
 
-  // Update the HTML document to display the wind chill value
-  document.getElementById("wind-chill-value").textContent = windChill.toFixed(2) + " °F";
-} else {
-  // Display "N/A" if the input values do not meet the requirements for wind chill calculation
-  document.getElementById("wind-chill-value").textContent = "N/A";
+        // Update the HTML elements with the fetched data
+        document.getElementById('temperature-value').textContent = temperature + ' °F';
+        document.getElementById('condition-value').textContent = condition;
+        document.getElementById('icon').innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png" alt="Weather Icon">`;
+        document.getElementById('wind-speed-value').textContent = windSpeed;
+        document.getElementById('wind-chill-value').textContent = windChill || 'N/A';
+    } catch (error) {
+        console.log('Error:', error);
+    }
 }
 
-// Function to calculate the wind chill factor
+// Function to calculate wind chill
 function calculateWindChill(temperature, windSpeed) {
-  return 35.74 + (0.6215 * temperature) - (35.75 * Math.pow(windSpeed, 0.16)) + (0.4275 * temperature * Math.pow(windSpeed, 0.16));
+    // Implement your wind chill calculation logic here
+    // Return the calculated wind chill value or null if not applicable
 }
+
+// Fetch weather data when the page loads
+fetchWeatherData();
