@@ -45,8 +45,32 @@
     width: 15%;
     height: 100%;
     position: relative;
-    top: 95%;
+    top: 120%;
     
+  }
+
+  #weather h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #weather div {
+    margin-bottom: 10px;
+  }
+  
+  #temperature span,
+  #wind-speed span,
+  #wind-chill span {
+    font-weight: bold;
+  }
+  
+  #icon img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #condition-value {
+    text-transform: capitalize;
   }
 
   #join{
@@ -68,7 +92,7 @@
     width: 15%;
     height: 190%;
     position: relative;
-    top: -270%;
+    top: -230%;
     left: 80%;
   }
 
@@ -76,7 +100,7 @@
     width: 15%;
     height: 250%;
     position: relative;
-    top: -210%;
+    top: -170%;
     left: 80%;
   }
 

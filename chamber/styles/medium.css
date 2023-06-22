@@ -67,7 +67,7 @@
     height: 270%;
     position: relative;
     left: -1%;
-    top: 710%;
+    top: 667%;
   }
 
   #weather {
@@ -75,7 +75,33 @@
     height: 100%;
     position: relative;
     left: 50%;
-    top: 175%;
+    top: 155%;
+  }
+
+  #weather h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #weather div {
+    margin-bottom: 10px;
+  }
+  
+  #temperature span,
+  #wind-speed span,
+  #wind-chill span {
+    font-weight: bold;
+  }
+  
+  #icon img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 45%;
+  }
+  
+  #condition-value {
+    text-transform: capitalize;
   }
 
   #weather #icon{
