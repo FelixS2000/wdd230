@@ -1,10 +1,28 @@
 /* CSS styles for the contact page */
 
-/* Global styles */
-    body {
-    font-family: Arial, sans-serif;
-    }
-
+/* Global Styles */
+:root {
+    --color-primary: #fffffe;
+    --color-secondary: #0f0e17;
+    --color-tertiary: #a7a9be;
+    --color-accent: #ff8906;
+    --color-accent1: #f25f4c;
+    --font-family: 'Castoro Titling', serif;
+    --font-size-base: 15px;
+    --line-height-base: 1.5;
+    --box-shadow-base: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --border-color-base: var(--color-secondary);
+    --border-width-base: 2px;
+    --border-radius-base: 0;
+    --spacing-base: 1rem;
+  }
+  body {
+    font-family: 'Castoro Titling', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+  }
     /* Contact form styles */
     .contact-form {
     max-width: 600px;
