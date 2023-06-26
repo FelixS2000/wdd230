@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/contact.css">
+    </head>
+
+<body>
+    <header>
+        <div class="grid">
+            
+            <div class="bannerMessage"><span id="bannerMessageUser"></span></div>
+            <div class="logo">
+                <img src="images/logo.webp" alt="Chamber logo">
+                <p><span id="lastTime"></span></p>
+            </div>
+            <div id="menu" class="navigation">
+                <button id="hamButton">&#9776;</button>
+                <ul>
+                    <li><a href="https://felixs2000.github.io/wdd230/chamber/" title="Home">Home</a></li>
+                    <li><a href="https://felixs2000.github.io/wdd230/chamber/discover.html" title="About">Discover</a></li>
+                    <li><a href="https://felixs2000.github.io/wdd230/chamber/join.html" title="Join">Join</a></li>
+                    <li><a href="https://felixs2000.github.io/wdd230/chamber/directory.html" title="Directory">Directory</a></li>
+                    <li><a href="https://felixs2000.github.io/wdd230/chamber/contact.html" title="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+  <!-- Contact form and map section -->
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out to us with any questions or inquiries.</p>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <section class="map-container">
+    <!-- Embed the Google Maps iframe here -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121127.52853647743!2d-70.23106813430789!3d18.42762411640668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea55e494287acaf%3A0x4d9b1cb786a6f4c!2sDistrito%20Municipal%20De%20Hatillo!5e0!3m2!1sen!2sdo!4v1687809684950!5m2!1sen!2sdo"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <footer>
+    <div>
+        <p class= "copyright">&copy;<span id="currentYear"></span> Chamber Home Page| Felix S. Guzman | WDD 230 Project | Last Modification: <span id="lastTimeModified"></span></p>
+    </div>
+</footer>
+<script src="scripts/contact.js"></script>
+<script src="scripts/menu.js"></script>
+  
+</body>
+
+</html>
