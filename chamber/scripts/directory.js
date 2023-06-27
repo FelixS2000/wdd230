@@ -1,12 +1,21 @@
-// Read the data from data.json
 fetch('scripts/data.json')
   .then(response => response.json())
   .then(data => {
-    // Get the container element to display the companies
-    const companyList = document.getElementById('companyList');
+    // Get the container elements for each spotlight section
+    const firstSpotlight = document.getElementById('firstSpotlight');
+    const secondSpotlight = document.getElementById('secondSpotlight');
+    const thirdSpotlight = document.getElementById('thirdSpotlight');
 
-    // Generate HTML for each company
-    data.companies.forEach(company => {
+    // Randomly select two to three chamber members with silver or gold status
+    const selectedCompanies = data.companies.filter(company => {
+      const membershipLevel = company['Membership Level'];
+      return membershipLevel === 'Silver Membership' || membershipLevel === 'Gold Membership';
+    });
+
+    const randomCompanies = selectedCompanies.sort(() => Math.random() - 0.5).slice(0, 3);
+
+    // Generate HTML for each spotlight company and insert it into the respective section
+    randomCompanies.forEach(company => {
       const companyHTML = `
         <div class="company">
           <h2>${company['Company Name']}</h2>
@@ -18,10 +27,14 @@ fetch('scripts/data.json')
           <p><strong>Additional Information:</strong> ${company['Additional Information']}</p>
         </div>
       `;
-      // Append the company HTML to the container
-      companyList.insertAdjacentHTML('beforeend', companyHTML);
+
+      // Randomly select the spotlight section to insert the company HTML
+      const randomNumber = Math.floor(Math.random() * 3) + 1;
+      const spotlightSection = document.getElementById(`spotlight${randomNumber}`);
+      spotlightSection.insertAdjacentHTML('beforeend', companyHTML);
     });
   });
+
 
 
 
