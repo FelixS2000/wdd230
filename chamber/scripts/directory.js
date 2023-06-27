@@ -51,10 +51,3 @@ if (lastTimeModifiedElement) {
 }
 document.getElementById("currentYear").textContent = currentYear;
 
-// Check if it's Monday (day 1)
-if (currentDay === 1) {
-  const banner = document.createElement("div");
-  banner.textContent = "🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.";
-  banner.classList.add("banner");
-  document.body.insertBefore(banner, document.body.firstChild);
-}
