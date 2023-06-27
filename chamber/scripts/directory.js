@@ -1,43 +1,29 @@
-function displayCompanyInfo() {
-  fetch('scripts/data.json')
-    .then(response => response.json())
-    .then(data => {
-      // Get the container elements for each spotlight section
-      const firstSpotlight = document.getElementById('firstSpotlight');
-      const secondSpotlight = document.getElementById('secondSpotlight');
-      const thirdSpotlight = document.getElementById('thirdSpotlight');
+fetch('scripts/data.json')
+  .then(response => response.json())
+  .then(data => {
+    const companyList = document.getElementById('companyList');
 
-      // Randomly select two to three chamber members with silver or gold status
-      const selectedCompanies = data.companies.filter(company => {
-        const membershipLevel = company['Membership Level'];
-        return membershipLevel === 'Silver Membership' || membershipLevel === 'Gold Membership';
-      });
+    // Iterate over each company in the data
+    data.companies.forEach(company => {
+      // Create a div element for each company
+      const companyDiv = document.createElement('div');
+      companyDiv.classList.add('company');
 
-      const randomCompanies = selectedCompanies.sort(() => Math.random() - 0.5).slice(0, 3);
+      // Set the HTML content for the company div
+      companyDiv.innerHTML = `
+        <h2>${company['Company Name']}</h2>
+        <img src="${company['Image/Icon']}" alt="${company['Company Name']} Logo">
+        <p><strong>Address:</strong> ${company.Address}</p>
+        <p><strong>Phone Number:</strong> ${company['Phone Number']}</p>
+        <p><strong>Website:</strong> <a href="http://${company.Website}" target="_blank">${company.Website}</a></p>
+        <p><strong>Membership Level:</strong> ${company['Membership Level']}</p>
+        <p><strong>Additional Information:</strong> ${company['Additional Information']}</p>
+      `;
 
-      // Generate HTML for each spotlight company and insert it into the respective section
-      randomCompanies.forEach(company => {
-        const companyHTML = `
-          <div class="company">
-            <h2>${company['Company Name']}</h2>
-            <img src="${company['Image/Icon']}" alt="${company['Company Name']} Logo">
-            <p><strong>Address:</strong> ${company.Address}</p>
-            <p><strong>Phone Number:</strong> ${company['Phone Number']}</p>
-            <p><strong>Website:</strong> <a href="http://${company.Website}" target="_blank">${company.Website}</a></p>
-            <p><strong>Membership Level:</strong> ${company['Membership Level']}</p>
-            <p><strong>Additional Information:</strong> ${company['Additional Information']}</p>
-          </div>
-        `;
-
-        // Randomly select the spotlight section to insert the company HTML
-        const randomNumber = Math.floor(Math.random() * 3) + 1;
-        const spotlightSection = document.getElementById(`spotlight${randomNumber}`);
-        spotlightSection.insertAdjacentHTML('beforeend', companyHTML);
-      });
+      // Append the company div to the companyList element
+      companyList.appendChild(companyDiv);
     });
-}
-
-displayCompanyInfo();
+  });
 
   // Display current date
 const currentDate = new Date();
