@@ -5,6 +5,14 @@ fetch('scripts/data.json')
     const spotlight2 = document.getElementById('secondSpotlight');
     const spotlight3 = document.getElementById('thirdSpotlight');
 
+    if (!data || !data.companies) {
+      // Handle the case when data or companies array is missing
+      spotlight1.innerHTML = '<h2>Error: Data not available</h2>';
+      spotlight2.innerHTML = '<h2>Error: Data not available</h2>';
+      spotlight3.innerHTML = '<h2>Error: Data not available</h2>';
+      return;
+    }
+
     // Filter companies with silver or gold status
     const silverGoldMembers = data.companies.filter(company => company['Membership Level'] === 'Silver' || company['Membership Level'] === 'Gold');
 
@@ -24,19 +32,14 @@ fetch('scripts/data.json')
         <p><strong>Additional Information:</strong> ${member['Additional Information']}</p>
       `;
     });
+  })
+  .catch(error => {
+    // Handle any errors that occur during the fetch or JSON parsing
+    const spotlight1 = document.getElementById('firstSpotlight');
+    const spotlight2 = document.getElementById('secondSpotlight');
+    const spotlight3 = document.getElementById('thirdSpotlight');
+    spotlight1.innerHTML = '<h2>Error: Failed to fetch data</h2>';
+    spotlight2.innerHTML = '<h2>Error: Failed to fetch data</h2>';
+    spotlight3.innerHTML = '<h2>Error: Failed to fetch data</h2>';
+    console.error(error);
   });
-
-// Function to randomly select members from an array
-function getRandomMembers(array, min, max) {
-  const selectedMembers = [];
-  const numMembers = Math.floor(Math.random() * (max - min + 1)) + min;
-  const arrayCopy = [...array];
-
-  for (let i = 0; i < numMembers; i++) {
-    const randomIndex = Math.floor(Math.random() * arrayCopy.length);
-    const selectedMember = arrayCopy.splice(randomIndex, 1)[0];
-    selectedMembers.push(selectedMember);
-  }
-
-  return selectedMembers;
-}
