@@ -28,7 +28,60 @@ const data = {
         "Membership Level": "Gold Membership",
         "Additional Information": "Tropical Foods is a leading food processing and distribution company."
       },
-      // ... rest of the companies
+      {
+        "Company Name": "Global Logistics",
+        "Address": "987 Ocean Boulevard, Puerto Plata",
+        "Phone Number": "+1 567-890-1234",
+        "Website": "www.globallogisticsdr.com",
+        "Image/Icon": "https://w7.pngwing.com/pngs/687/88/png-transparent-mover-transport-logistic-logistics-cargo-aircraft-global-logistics-freight-transport-service-mode-of-transport.png",
+        "Membership Level": "Bronze Membership",
+        "Additional Information": "Global Logistics offers comprehensive logistics and supply chain solutions."
+      },
+      {
+        "Company Name": "Sunshine Resorts",
+        "Address": "321 Paradise Road, Bavaro",
+        "Phone Number": "+1 432-109-8765",
+        "Website": "www.sunshineresorts.com",
+        "Image/Icon": "https://www.thesunshineresortkokut.com/images/logo-sunshine.png",
+        "Membership Level": "Silver Membership",
+        "Additional Information": "Sunshine Resorts operates luxury resorts and hotels across the Dominican Republic."
+      },
+      {
+        "Company Name": "Fresh Produce Co.",
+        "Address": "654 Orchard Lane, La Romana",
+        "Phone Number": "+1 789-012-3456",
+        "Website": "www.freshproduceco.com",
+        "Image/Icon": "https://w7.pngwing.com/pngs/1004/875/png-transparent-food-vegetable-machine-industry-fresh-produce-natural-foods-food-frozen-dessert.png",
+        "Membership Level": "Gold Membership",
+        "Additional Information": "Fresh Produce Co. is a supplier of high-quality fresh fruits and vegetables."
+      },
+      {
+        "Company Name": "Tech Innovators",
+        "Address": "321 Innovation Avenue, Santo Domingo",
+        "Phone Number": "+1 890-567-1234",
+        "Website": "www.techinnovatorsdr.com",
+        "Image/Icon": "https://w7.pngwing.com/pngs/375/919/png-transparent-computer-icons-innovation-innovative-miscellaneous-text-technology.png",
+        "Membership Level": "Bronze Membership",
+        "Additional Information": "Tech Innovators develops innovative software solutions for businesses."
+      },
+      {
+        "Company Name": "Caribbean Tours",
+        "Address": "987 Palm Beach Road, Punta Cana",
+        "Phone Number": "+1 567-123-8901",
+        "Website": "www.caribbeantoursdr.com",
+        "Image/Icon": "https://caribetours.com.do/wp-content/uploads/2021/04/CARIBE-TOURS-300x167.jpg",
+        "Membership Level": "Silver Membership",
+        "Additional Information": "Caribbean Tours offers guided tours and travel packages in the Caribbean region."
+      },
+      {
+        "Company Name": "HealthFirst Clinic",
+        "Address": "654 Wellness Street, Santiago",
+        "Phone Number": "+1 432-987-6543",
+        "Website": "www.healthfirstclinicdr.com",
+        "Image/Icon": "https://www.logolynx.com/images/logolynx/e4/e4a99703fecf63bd46e37c5ef2c5ce0c.jpeg",
+        "Membership Level": "Gold Membership",
+        "Additional Information": "HealthFirst Clinic provides comprehensive healthcare services and medical consultations."
+      }
     ]
   };
   
