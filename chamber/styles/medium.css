@@ -20,34 +20,34 @@
   }
   #hero {
     width: 100%;
-    height: 100%;
+    height: 101%;
     position: relative;
     left: -1%;
-  }
+}
 
   #release {
     width: 100%;
-    height: 100%;
+    height: 205%;
     position: relative;
     left: -1%;
-    top: -370%;
-  }
+    top: -350%;
+}
 
   #firstSpotlight {
     width: 39%;
-    height: 113%;
+    height: 126%;
     position: relative;
     left: -1%;
-    top: -154%;
-  }
+    top: -102%;
+}
 
-  #secondSpotlight {
+  #secondSpotlight  {
     width: 38%;
-    height: 88%;
+    height: 104%;
     position: relative;
     left: 61%;
-    top: -207%;
-  }
+    top: -183%;
+}
 
   #thirdSpotlight{
    text-align: center;
@@ -59,24 +59,24 @@
     height: 100%;
     position: relative;
     left: -1%;
-    top: -1700%;
-  }
+    top: -1260%;
+}
 
   #event {
     width: 50%;
     height: 270%;
     position: relative;
     left: -1%;
-    top: 667%;
-  }
+    top: 825%;
+}
 
   #weather {
     width: 49%;
     height: 94%;
     position: relative;
     left: 50%;
-    top: 151%;
-  }
+    top: 204%;
+}
 
   #weather h2 {
     font-size: 20px;

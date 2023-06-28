@@ -30,22 +30,22 @@
   .label-large{
     background-color: darkorange;
     position: relative;
-    top: -400px;
+    top: -319px;
     left: 40px;
-  }
+}
 
   #event{
-    width: 15%;
-    height: 220%;
+    width: 19%;
+    height: 150%;
     position: relative;
-    top: 120%;
-  }
+    top: 63%;
+}
 
   #weather{
-    width: 15%;
-    height: 100%;
+    width: 19%;
+    height: 103%;
     position: relative;
-    top: 120%;
+    top: 50%;
     
   }
 
@@ -74,51 +74,51 @@
   }
 
   #join{
-    width: 15%;
-    height: 800%;
+    width: 19%;
+    height: 733%;
     position: relative;
-    top: -350%;
-  }
+    top: -1323%;
+}
 
-  #release{
-    width: 55%;
-    height: 305%;
+  #release {
+    width: 51%;
+    height: 301%;
     position: relative;
     left: 20%;
-    top: 480%;
-  }
+    top: 265%;
+}
 
   #firstSpotlight{
-    width: 15%;
-    height: 190%;
+    width: 20%;
+    height: 106%;
     position: relative;
-    top: -230%;
-    left: 80%;
-  }
+    top: -247%;
+    left: 76%;
+}
 
   #secondSpotlight{
-    width: 15%;
-    height: 250%;
+    width: 20%;
+    height: 112%;
     position: relative;
-    top: -170%;
-    left: 80%;
-  }
+    top: -201%;
+    left: 76%;
+}
 
-  #thirdSpotlight{
-    width: 15%;
-    height: 250%;
+  #thirdSpotlight {
+    width: 20%;
+    height: 216%;
     position: relative;
-    top: -20%;
-    left: 80%;
-  }
+    top: -320%;
+    left: 76%;
+}
 
   #hero{
     width: 50%;
-    height: 100%;
+    height: 107%;
     position: relative;
     top: 120%;
     left: 20%;
-  }
+}
   
 
   .logo{
