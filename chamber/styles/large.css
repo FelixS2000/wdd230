@@ -34,20 +34,19 @@
     left: 40px;
   }
 
-  #event{
-    width: 15%;
-    height: 220%;
+  #event {
+    width: 19%;
+    height: 196%;
     position: relative;
-    top: 120%;
-  }
+    top: -98%;
+}
 
-  #weather{
-    width: 15%;
-    height: 100%;
+  #weather {
+    width: 19%;
+    height: 132%;
     position: relative;
-    top: 120%;
-    
-  }
+    top: -18%;
+}
 
   #weather h2 {
     font-size: 20px;
@@ -80,45 +79,45 @@
     top: -350%;
   }
 
-  #release{
-    width: 55%;
-    height: 305%;
+  #release {
+    width: 57%;
+    height: 310%;
     position: relative;
     left: 20%;
-    top: 480%;
-  }
+    top: 112%;
+}
 
-  #firstSpotlight{
-    width: 15%;
-    height: 190%;
+  #firstSpotlight {
+    width: 20%;
+    height: 117%;
     position: relative;
-    top: -230%;
-    left: 80%;
-  }
+    top: -319%;
+    left: 79%;
+}
 
-  #secondSpotlight{
-    width: 15%;
-    height: 250%;
+  #secondSpotlight {
+    width: 20%;
+    height: 111%;
     position: relative;
-    top: -170%;
-    left: 80%;
-  }
+    top: -245%;
+    left: 79%;
+}
 
-  #thirdSpotlight{
-    width: 15%;
-    height: 250%;
+  #thirdSpotlight {
+    width: 20%;
+    height: 303%;
     position: relative;
-    top: -20%;
-    left: 80%;
-  }
+    top: -628%;
+    left: 79%;
+}
 
-  #hero{
-    width: 50%;
-    height: 100%;
+  #hero {
+    width: 58%;
+    height: 103%;
     position: relative;
-    top: 120%;
+    top: 71%;
     left: 20%;
-  }
+}
   
 
   .logo{

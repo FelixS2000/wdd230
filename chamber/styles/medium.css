@@ -34,19 +34,19 @@
   }
 
   #firstSpotlight {
-    width: 50%;
-    height: 200%;
+    width: 39%;
+    height: 113%;
     position: relative;
     left: -1%;
-    top: -200%;
+    top: -154%;
   }
 
   #secondSpotlight {
-    width: 50%;
-    height: 285%;
+    width: 38%;
+    height: 88%;
     position: relative;
-    left: 50%;
-    top: -435%;
+    left: 61%;
+    top: -207%;
   }
 
   #thirdSpotlight{
@@ -59,7 +59,7 @@
     height: 100%;
     position: relative;
     left: -1%;
-    top: -655%;
+    top: -1700%;
   }
 
   #event {
@@ -71,11 +71,11 @@
   }
 
   #weather {
-    width: 50%;
-    height: 100%;
+    width: 49%;
+    height: 94%;
     position: relative;
     left: 50%;
-    top: 155%;
+    top: 151%;
   }
 
   #weather h2 {
