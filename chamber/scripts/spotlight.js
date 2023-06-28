@@ -5,22 +5,57 @@ document.addEventListener("DOMContentLoaded", function() {
         {
           "Company Name": "Acme Corporation",
           "Address": "123 Main Street, Santo Domingo",
-          "Phone Number": "+1 123-456-7890",
-          "Website": "www.acmecorp.com",
           "Image/Icon": "https://www.deinmarktplatz.eu/images/logos/1/acme_vfcz-z1.png",
           "Membership Level": "Bronze Membership",
-          "Additional Information": "Acme Corporation specializes in manufacturing industrial machinery."
         },
         {
           "Company Name": "XYZ Tech Solutions",
           "Address": "456 Maple Avenue, Santiago",
-          "Phone Number": "+1 987-654-3210",
-          "Website": "www.xyztechsolutions.com",
           "Image/Icon": "https://xyzteknoloji.com/wp-content/uploads/2022/03/logo.png",
           "Membership Level": "Silver Membership",
-          "Additional Information": "XYZ Tech Solutions provides IT consulting services and software solutions."
         },
-        // ... rest of the companies
+        {
+          "Company Name": "Tropical Foods",
+          "Address": "789 Palm Street, Punta Cana",
+          "Image/Icon": "https://img.lovepik.com/free-png/20220101/lovepik-tropical-fruit-png-image_401147673_wh860.png",
+          "Membership Level": "Gold Membership",
+        },
+        {
+          "Company Name": "Global Logistics",
+          "Address": "987 Ocean Boulevard, Puerto Plata",
+          "Image/Icon": "https://w7.pngwing.com/pngs/687/88/png-transparent-mover-transport-logistic-logistics-cargo-aircraft-global-logistics-freight-transport-service-mode-of-transport.png",
+          "Membership Level": "Bronze Membership",
+        },
+        {
+          "Company Name": "Sunshine Resorts",
+          "Address": "321 Paradise Road, Bavaro",
+          "Image/Icon": "https://www.thesunshineresortkokut.com/images/logo-sunshine.png",
+          "Membership Level": "Silver Membership",
+        },
+        {
+          "Company Name": "Fresh Produce Co.",
+          "Address": "654 Orchard Lane, La Romana",
+          "Image/Icon": "https://w7.pngwing.com/pngs/1004/875/png-transparent-food-vegetable-machine-industry-fresh-produce-natural-foods-food-frozen-dessert.png",
+          "Membership Level": "Gold Membership",
+        },
+        {
+          "Company Name": "Tech Innovators",
+          "Address": "321 Innovation Avenue, Santo Domingo",
+          "Image/Icon": "https://w7.pngwing.com/pngs/375/919/png-transparent-computer-icons-innovation-innovative-miscellaneous-text-technology.png",
+          "Membership Level": "Bronze Membership",
+        },
+        {
+          "Company Name": "Caribbean Tours",
+          "Address": "987 Palm Beach Road, Punta Cana",
+          "Image/Icon": "https://caribetours.com.do/wp-content/uploads/2021/04/CARIBE-TOURS-300x167.jpg",
+          "Membership Level": "Silver Membership",
+        },
+        {
+          "Company Name": "HealthFirst Clinic",
+          "Address": "654 Wellness Street, Santiago",
+          "Image/Icon": "https://www.logolynx.com/images/logolynx/e4/e4a99703fecf63bd46e37c5ef2c5ce0c.jpeg",
+          "Membership Level": "Gold Membership",
+        }
       ]
     };
   
@@ -46,15 +81,18 @@ document.addEventListener("DOMContentLoaded", function() {
       const secondCompany = selectedCompanies[1];
       populateSpotlight(secondSpotlight, secondCompany);
     }
+
+    // Populate the third spotlight with information from the third selected company
+    if (selectedCompanies.length >= 3) {
+      const thirdCompany = selectedCompanies[2];
+      populateSpotlight(thirdSpotlight, thirdCompany);
+    }
   
     // Helper function to populate a spotlight section with company information
     function populateSpotlight(spotlight, company) {
       spotlight.innerHTML = `
         <h2>${company['Company Name']}</h2>
-        <p>${company['Additional Information']}</p>
         <p>Address: ${company['Address']}</p>
-        <p>Phone Number: ${company['Phone Number']}</p>
-        <p>Website: <a href="${company['Website']}" target="_blank">${company['Website']}</a></p>
         <img src="${company['Image/Icon']}" alt="${company['Company Name']}">
       `;
     }
