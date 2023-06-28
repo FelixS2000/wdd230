@@ -27,26 +27,26 @@
 
   #release {
     width: 100%;
-    height: 205%;
+    height: 289%;
     position: relative;
     left: -1%;
-    top: -370%;
+    top: -279%;
 }
 
   #firstSpotlight  {
-    width: 37%;
-    height: 97%;
+    width: 39%;
+    height: 90%;
     position: relative;
     left: -1%;
-    top: -133%;
+    top: -59%;
 }
 
   #secondSpotlight {
     width: 38%;
-    height: 114%;
+    height: 107%;
     position: relative;
     left: 61%;
-    top: -284%;
+    top: -206%;
 }
 
   #thirdSpotlight{
@@ -59,7 +59,7 @@
     height: 100%;
     position: relative;
     left: -1%;
-    top: -1700%;
+    top: -901%;
 }
 
   #event  {
@@ -67,7 +67,7 @@
     height: 270%;
     position: relative;
     left: -1%;
-    top: 667%;
+    top: 902%;
 }
 
   #weather {
@@ -75,7 +75,7 @@
     height: 94%;
     position: relative;
     left: 50%;
-    top: 151%;
+    top: 232%;
 }
 
   #weather h2 {
