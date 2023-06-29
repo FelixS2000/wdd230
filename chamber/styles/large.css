@@ -79,13 +79,13 @@
     top: -350%;
   }
 
-  #release {
+  #release  {
     width: 55%;
-    height: 200%; /* Adjusted height */
+    height: 305%;
     position: relative;
     left: 20%;
-    top: 650%;
-  }
+    top: 681%;
+}
 
   #firstSpotlight {
     width: 15%;
