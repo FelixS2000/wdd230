@@ -1,6 +1,5 @@
 /* Styles for large screens */
 @media only screen and (min-width: 1024px) {
-
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -9,7 +8,7 @@
   .grid-container img {
     position: relative;
   }
-  
+
   .grid-container img::after {
     content: "Large";
     position: absolute;
@@ -22,12 +21,13 @@
     font-weight: bold;
     z-index: 1;
   }
+
   .label-small,
   .label-medium {
-  display: none;
+    display: none;
   }
 
-  .label-large{
+  .label-large {
     background-color: darkorange;
     position: relative;
     top: -319px;
@@ -36,52 +36,52 @@
 
   #event {
     width: 15%;
-    height: 185%;
+    height: 190%; /* Adjusted height */
     position: relative;
-    top: 220%;
+    top: 225%;
   }
 
   #weather {
     width: 15%;
-    height: 110%;
+    height: 100%; /* Adjusted height */
     position: relative;
-    top: 178%;
+    top: 159%;
   }
 
   #weather h2 {
     font-size: 20px;
     margin-bottom: 10px;
   }
-  
+
   #weather div {
     margin-bottom: 10px;
   }
-  
+
   #temperature span,
   #wind-speed span,
   #wind-chill span {
     font-weight: bold;
   }
-  
+
   #icon img {
     width: 50px;
     height: 50px;
   }
-  
+
   #condition-value {
     text-transform: capitalize;
   }
 
-  #join{
+  #join {
     width: 15%;
-    height: 800%;
+    height: 700%; /* Adjusted height */
     position: relative;
     top: -350%;
   }
 
   #release {
     width: 55%;
-    height: 305%;
+    height: 200%; /* Adjusted height */
     position: relative;
     left: 20%;
     top: 650%;
@@ -89,39 +89,38 @@
 
   #firstSpotlight {
     width: 15%;
-    height: 117%;
+    height: 100%; /* Adjusted height */
     position: relative;
-    top: -122%;
+    top: -90%;
     left: 80%;
   }
 
   #secondSpotlight {
     width: 15%;
-    height: 99%;
+    height: auto; /* Adjusted height */
     position: relative;
-    top: -72%;
+    top: -90%;
     left: 80%;
   }
 
   #thirdSpotlight {
     width: 15%;
-    height: 250%;
+    height: 250%; /* Adjusted height */
     position: relative;
     top: -43%;
     left: 80%;
   }
 
-  #hero{
+  #hero {
     width: 50%;
-    height: 100%;
+    height: auto; /* Adjusted height */
     position: relative;
     top: 155%;
     left: 20%;
   }
-  
 
-  .logo{
-    max-width: 50%
+  .logo {
+    max-width: 50%;
   }
 
   footer {
