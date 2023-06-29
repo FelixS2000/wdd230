@@ -53,6 +53,37 @@
     background-color: #45a049;
     }
 
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .contact-info h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-info ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      padding: 0;
+    }
+    
+    .contact-info li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-info strong {
+      font-weight: bold;
+    }
+    
+    /* Adjust any other CSS styles as needed */
+    
+
     /* Map container styles */
     .map-container {
     position: relative;
