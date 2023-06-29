@@ -23,7 +23,7 @@ async function fetchWeatherData() {
         // Update the HTML elements with the fetched data
         document.getElementById('temperature-value').textContent = temperature + ' °F';
         document.getElementById('condition-value').textContent = condition;
-        document.getElementById('icon').innerHTML = `<img src="http://openweathermap.org/img/w/${icon}.png" alt="Weather Icon">`;
+        document.getElementById('icon').innerHTML = `<img src="https://openweathermap.org/img/w/${icon}.png" alt="Weather Icon">`;
         document.getElementById('wind-speed-value').textContent = windSpeed;
         document.getElementById('wind-chill-value').textContent = windChill || 'N/A';
     } catch (error) {
