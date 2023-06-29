@@ -12,13 +12,13 @@ fetch('data.json')
     shuffleArray(silverAndGoldCompanies);
 
     // Display companies in the spotlights
-    const firstSpotlight = document.getElementById('firstSpotlight');
-    const secondSpotlight = document.getElementById('secondSpotlight');
-    const thirdSpotlight = document.getElementById('thirdSpotlight');
+    const spotlightSections = document.querySelectorAll('.spotlight');
 
-    displayCompany(firstSpotlight, silverAndGoldCompanies[0]);
-    displayCompany(secondSpotlight, silverAndGoldCompanies[1]);
-    displayCompany(thirdSpotlight, silverAndGoldCompanies[2]);
+    for (let i = 0; i < spotlightSections.length; i++) {
+      const spotlightSection = spotlightSections[i];
+      const company = silverAndGoldCompanies[i];
+      displayCompany(spotlightSection, company);
+    }
   });
 
 // Function to shuffle an array randomly
