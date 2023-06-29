@@ -35,18 +35,18 @@
 
   #firstSpotlight   {
     width: 48%;
-    height: 205%;
+    height: 240%;
     position: relative;
     left: -1%;
-    top: -445%;
+    top: -466%;
 }
 
   #secondSpotlight  {
-    width: 44%;
-    height: 204%;
+    width: 45%;
+    height: 240%;
     position: relative;
-    left: 55%;
-    top: -582%;
+    left: 54%;
+    top: -604%;
 }
 
   #thirdSpotlight{
@@ -64,7 +64,7 @@
 
   #event  {
     width: 50%;
-    height: 272%;
+    height: 270%;
     position: relative;
     left: -1%;
     top: 608%;
@@ -72,7 +72,7 @@
 
   #weather {
     width: 49%;
-    height: 93%;
+    height: 94%;
     position: relative;
     left: 50%;
     top: 131%;
