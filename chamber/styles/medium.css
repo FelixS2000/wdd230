@@ -27,26 +27,26 @@
 
   #release {
     width: 100%;
-    height: 289%;
+    height: 126%;
     position: relative;
     left: -1%;
-    top: -279%;
+    top: -363%;
 }
 
-  #firstSpotlight  {
-    width: 39%;
-    height: 90%;
+  #firstSpotlight   {
+    width: 48%;
+    height: 205%;
     position: relative;
     left: -1%;
-    top: -59%;
+    top: -302%;
 }
 
-  #secondSpotlight {
-    width: 38%;
-    height: 107%;
+  #secondSpotlight  {
+    width: 41%;
+    height: 293%;
     position: relative;
-    left: 61%;
-    top: -206%;
+    left: 57%;
+    top: -581%;
 }
 
   #thirdSpotlight{
@@ -67,7 +67,7 @@
     height: 270%;
     position: relative;
     left: -1%;
-    top: 902%;
+    top: 608%;
 }
 
   #weather {
