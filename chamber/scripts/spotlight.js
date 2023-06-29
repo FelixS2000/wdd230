@@ -34,25 +34,16 @@ function displayCompany(spotlightSection, company) {
   const h2 = document.createElement('h2');
   h2.textContent = company['Company Name'];
 
-  const h3 = document.createElement('h3');
-  h3.textContent = company['Additional Information'];
-
-  const img = document.createElement('img');
-  img.src = company['Image/Icon'];
-  img.alt = company['Company Name'];
-
   const p = document.createElement('p');
-  p.textContent = 'Website: ';
+  p.textContent = 'Membership: ' + company['Membership Level'];
 
   const a = document.createElement('a');
   a.href = company['Website'];
-  a.textContent = company['Website'];
+  a.textContent = 'Website';
   a.target = '_blank';
 
   p.appendChild(a);
 
   spotlightSection.appendChild(h2);
-  spotlightSection.appendChild(h3);
-  spotlightSection.appendChild(img);
   spotlightSection.appendChild(p);
 }
