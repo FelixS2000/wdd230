@@ -61,7 +61,7 @@ function fetchFruitData() {
   }
   
   // Function to calculate the total nutritional values based on the selected fruits
-  function calculateTotalNutrition(selectedFruits) {
+function calculateTotalNutrition(selectedFruits) {
     const fruitData = localStorage.getItem('fruitData');
     const parsedFruitData = JSON.parse(fruitData);
   
@@ -75,17 +75,18 @@ function fetchFruitData() {
   
     selectedFruits.forEach(fruitName => {
       const fruit = parsedFruitData.find(fruit => fruit.name === fruitName);
-      if (fruit) {
-        totalNutrition.carbohydrates += fruit.nutrition.carbohydrates;
-        totalNutrition.protein += fruit.nutrition.protein;
-        totalNutrition.fat += fruit.nutrition.fat;
-        totalNutrition.sugar += fruit.nutrition.sugar;
-        totalNutrition.calories += fruit.nutrition.calories;
+      if (fruit && fruit.nutrition) {
+        totalNutrition.carbohydrates += fruit.nutrition.carbohydrates || 0;
+        totalNutrition.protein += fruit.nutrition.protein || 0;
+        totalNutrition.fat += fruit.nutrition.fat || 0;
+        totalNutrition.sugar += fruit.nutrition.sugar || 0;
+        totalNutrition.calories += fruit.nutrition.calories || 0;
       }
     });
   
     return totalNutrition;
   }
+  
   
   // Initialize the page
   function initializePage() {
