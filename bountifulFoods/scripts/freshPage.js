@@ -12,6 +12,23 @@ async function fetchFruitData() {
     }
   }
   
+  // Function to populate fruit options
+  function populateFruitOptions(fruitData) {
+    const fruit1Select = document.getElementById('fruit1');
+    const fruit2Select = document.getElementById('fruit2');
+    const fruit3Select = document.getElementById('fruit3');
+  
+    fruitData.forEach(fruit => {
+      const option = document.createElement('option');
+      option.value = fruit.name;
+      option.textContent = fruit.name;
+  
+      fruit1Select.appendChild(option.cloneNode(true));
+      fruit2Select.appendChild(option.cloneNode(true));
+      fruit3Select.appendChild(option);
+    });
+  }
+  
   // Function to handle form submission and display the output
   function handleFormSubmission(event) {
     event.preventDefault();
@@ -52,6 +69,7 @@ async function fetchFruitData() {
   
     // Display the output in the output area
     const outputArea = document.getElementById('outputArea');
+    
     outputArea.innerHTML = output;
   }
   
@@ -87,7 +105,6 @@ async function fetchFruitData() {
         localStorage.setItem('fruitData', JSON.stringify(fruitData));
       })
       .catch(error => console.log('Error:', error));
-  
   
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', handleFormSubmission);
