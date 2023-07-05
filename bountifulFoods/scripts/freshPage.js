@@ -38,8 +38,16 @@ function handleFormSubmit(event) {
 
   const totalNutrition = calculateTotalNutrition(fruitData, fruitSelections);
 
+  // Get the individual fruit objects for the selected fruits
+  const selectedFruits = fruitData.filter(fruit => fruitSelections.includes(fruit.name));
+
   const outputDiv = document.getElementById('output');
   outputDiv.innerHTML = `
+    <h3>Order Summary:</h3>
+    <p>Selected Fruits:</p>
+    <ul>
+      ${selectedFruits.map(fruit => `<li>${fruit.name}</li>`).join('')}
+    </ul>
     <p>Total Calories: ${totalNutrition.totalCalories}</p>
     <p>Total Carbs: ${totalNutrition.totalCarbs}</p>
     <p>Total Protein: ${totalNutrition.totalProtein}</p>
