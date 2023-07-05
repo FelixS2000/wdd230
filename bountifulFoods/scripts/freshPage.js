@@ -5,7 +5,9 @@ function fetchFruitData() {
     // Make a GET request to the JSON data source
     return fetch(jsonURL)
       .then(response => response.json())
-      .catch(error => console.log("Error fetching fruit data:", error));
+      .catch(error => {
+        throw new Error("Error fetching fruit data:", error);
+      });
   }
   
   // Function to populate the fruit options in the select elements
@@ -61,7 +63,10 @@ function fetchFruitData() {
         const outputArea = document.getElementById('outputArea');
         outputArea.innerHTML = output;
       })
-      .catch(error => console.log('Error:', error));
+      .catch(error => {
+        throw new Error('Error:', error);
+        // Handle the error, e.g., display an error message
+      });
   }
   
   // Function to calculate the total nutritional values based on the selected fruits
@@ -94,7 +99,10 @@ function fetchFruitData() {
       .then(fruitData => {
         populateFruitOptions(fruitData);
       })
-      .catch(error => console.log('Error:', error));
+      .catch(error => {
+        throw new Error('Error:', error);
+        // Handle the error, e.g., display an error message
+      });
   
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', handleFormSubmission);
