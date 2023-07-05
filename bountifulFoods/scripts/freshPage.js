@@ -1,18 +1,14 @@
 // Function to calculate the total nutritional values based on selected fruits
 function calculateTotalNutrition(fruitData, fruitSelections) {
-    // Initialize variables for total nutritional values
     let totalCalories = 0;
     let totalCarbs = 0;
     let totalProtein = 0;
     let totalFat = 0;
   
-    // Iterate over the fruit selections
     fruitSelections.forEach(selection => {
-      // Find the selected fruit in the fruit data
       const fruit = fruitData.find(item => item.name === selection);
   
-      // If the fruit is found, update the total nutritional values
-      if (fruit) {
+      if (fruit && fruit.nutrition) {
         totalCalories += fruit.nutrition.calories || 0;
         totalCarbs += fruit.nutrition.carbs || 0;
         totalProtein += fruit.nutrition.protein || 0;
@@ -20,7 +16,6 @@ function calculateTotalNutrition(fruitData, fruitSelections) {
       }
     });
   
-    // Return an object containing the total nutritional values
     return {
       totalCalories,
       totalCarbs,
