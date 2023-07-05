@@ -11,7 +11,7 @@ async function fetchFruitData() {
   }
   
   // Function to calculate the total nutritional values based on selected fruits
-  function calculateTotalNutrition(fruitData, fruitSelections) {
+function calculateTotalNutrition(fruitData, fruitSelections) {
     let totalCarbs = 0;
     let totalProtein = 0;
     let totalFat = 0;
@@ -21,11 +21,22 @@ async function fetchFruitData() {
     for (const selection of fruitSelections) {
       const fruit = fruitData.find(item => item.name === selection);
       if (fruit) {
-        totalCarbs += fruit.nutrition.carbs;
-        totalProtein += fruit.nutrition.protein;
-        totalFat += fruit.nutrition.fat;
-        totalSugar += fruit.nutrition.sugar;
-        totalCalories += fruit.nutrition.calories;
+        const nutrition = fruit.nutrition;
+        if (nutrition && nutrition.hasOwnProperty('carbohydrates')) {
+          totalCarbs += nutrition.carbohydrates;
+        }
+        if (nutrition && nutrition.hasOwnProperty('protein')) {
+          totalProtein += nutrition.protein;
+        }
+        if (nutrition && nutrition.hasOwnProperty('fat')) {
+          totalFat += nutrition.fat;
+        }
+        if (nutrition && nutrition.hasOwnProperty('sugar')) {
+          totalSugar += nutrition.sugar;
+        }
+        if (nutrition && nutrition.hasOwnProperty('calories')) {
+          totalCalories += nutrition.calories;
+        }
       }
     }
   
@@ -37,6 +48,7 @@ async function fetchFruitData() {
       totalCalories
     };
   }
+  
   
   // Function to handle form submission
   function handleFormSubmit(event) {
