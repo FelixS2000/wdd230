@@ -43,21 +43,23 @@ function fetchFruitData() {
   
         // Format the output string
         const output = `
-          <h2>Order Summary</h2>
-          <p><strong>First Name:</strong> ${firstName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-          <p><strong>Fruit 1:</strong> ${fruit1}</p>
-          <p><strong>Fruit 2:</strong> ${fruit2}</p>
-          <p><strong>Fruit 3:</strong> ${fruit3}</p>
-          <p><strong>Special Instructions:</strong> ${instructions}</p>
-          <h3>Total Nutrition</h3>
-          <p><strong>Carbohydrates:</strong> ${totalNutrition.carbohydrates} g</p>
-          <p><strong>Protein:</strong> ${totalNutrition.protein} g</p>
-          <p><strong>Fat:</strong> ${totalNutrition.fat} g</p>
-          <p><strong>Sugar:</strong> ${totalNutrition.sugar} g</p>
-          <p><strong>Calories:</strong> ${totalNutrition.calories} kcal</p>
+        <h2>Order Summary</h2>
+        <p><strong>First Name:</strong> ${firstName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+        <p><strong>Fruit 1:</strong> ${fruit1}</p>
+        <p><strong>Fruit 2:</strong> ${fruit2}</p>
+        <p><strong>Fruit 3:</strong> ${fruit3}</p>
+        <p><strong>Special Instructions:</strong> ${instructions}</p>
+        <h3>Total Nutrition</h3>
+        <p><strong>Number of Nutrients:</strong> ${totalNutrition.count}</p>
+        <p><strong>Carbohydrates:</strong> ${totalNutrition.carbohydrates} g</p>
+        <p><strong>Protein:</strong> ${totalNutrition.protein} g</p>
+        <p><strong>Fat:</strong> ${totalNutrition.fat} g</p>
+        <p><strong>Sugar:</strong> ${totalNutrition.sugar} g</p>
+        <p><strong>Calories:</strong> ${totalNutrition.calories} kcal</p>
         `;
+
   
         // Display the output in the output area
         const outputArea = document.getElementById('outputArea');
@@ -70,8 +72,9 @@ function fetchFruitData() {
   }
   
   // Function to calculate the total nutritional values based on the selected fruits
-  function calculateTotalNutrition(selectedFruits, fruitData) {
+    function calculateTotalNutrition(selectedFruits, fruitData) {
     let totalNutrition = {
+      count: 0,
       carbohydrates: 0,
       protein: 0,
       fat: 0,
@@ -82,6 +85,7 @@ function fetchFruitData() {
     selectedFruits.forEach(fruitName => {
       const fruit = fruitData.find(fruit => fruit.name === fruitName);
       if (fruit && fruit.nutrition) {
+        totalNutrition.count++;
         totalNutrition.carbohydrates += fruit.nutrition.carbohydrates || 0;
         totalNutrition.protein += fruit.nutrition.protein || 0;
         totalNutrition.fat += fruit.nutrition.fat || 0;
@@ -92,6 +96,7 @@ function fetchFruitData() {
   
     return totalNutrition;
   }
+  
   
   // Initialize the page
   function initializePage() {
