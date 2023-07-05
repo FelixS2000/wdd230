@@ -1,29 +1,5 @@
-// Function to fetch fruit data from the JSON data source
-function fetchFruitData() {
-    const jsonURL = 'https://brotherblazzard.github.io/canvas-content/fruit.json';
-  
-    // Make a GET request to the JSON data source
-    return fetch(jsonURL)
-      .then(response => response.json())
-      .catch(error => console.log("Error fetching fruit data:", error));
-  }
-  
-  // Function to populate the fruit options in the select elements
-  function populateFruitOptions(fruitData) {
-    const selectElements = document.querySelectorAll('select[id^="fruit"]');
-  
-    selectElements.forEach(selectElement => {
-      fruitData.forEach(fruit => {
-        const option = document.createElement('option');
-        option.value = fruit.name;
-        option.textContent = fruit.name;
-        selectElement.appendChild(option);
-      });
-    });
-  }
-  
-  // Function to handle form submission and display the output
-  function handleFormSubmission(event) {
+// Function to handle form submission and display the output
+function handleFormSubmission(event) {
     event.preventDefault();
   
     const firstName = document.getElementById('firstName').value;
@@ -34,8 +10,11 @@ function fetchFruitData() {
     const fruit3 = document.getElementById('fruit3').value;
     const instructions = document.getElementById('instructions').value;
   
+    // Retrieve the fruit data from localStorage
+    const fruitData = JSON.parse(localStorage.getItem('fruitData'));
+  
     // Calculate the total nutritional values based on the selected fruits
-    const totalNutrition = calculateTotalNutrition([fruit1, fruit2, fruit3]);
+    const totalNutrition = calculateTotalNutrition([fruit1, fruit2, fruit3], fruitData);
   
     // Format the output string
     const output = `
@@ -61,10 +40,7 @@ function fetchFruitData() {
   }
   
   // Function to calculate the total nutritional values based on the selected fruits
-  function calculateTotalNutrition(selectedFruits) {
-    const fruitData = localStorage.getItem('fruitData');
-    const parsedFruitData = JSON.parse(fruitData);
-  
+  function calculateTotalNutrition(selectedFruits, fruitData) {
     let totalNutrition = {
       carbohydrates: 0,
       protein: 0,
@@ -74,7 +50,7 @@ function fetchFruitData() {
     };
   
     selectedFruits.forEach(fruitName => {
-      const fruit = parsedFruitData.find(fruit => fruit.name === fruitName);
+      const fruit = fruitData.find(fruit => fruit.name === fruitName);
       if (fruit) {
         totalNutrition.carbohydrates += fruit.nutrition.carbohydrates;
         totalNutrition.protein += fruit.nutrition.protein;
