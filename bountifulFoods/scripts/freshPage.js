@@ -10,10 +10,11 @@ function handleFormSubmission(event) {
     const fruit3 = document.getElementById('fruit3').value;
     const instructions = document.getElementById('instructions').value;
   
-    // Calculate the total nutritional values based on the selected fruits
+    // Fetch the fruit data
     fetchFruitData()
       .then(fruitData => {
-        const totalNutrition = calculateTotalNutrition([fruit1, fruit2, fruit3], fruitData);
+        // Find the selected fruits in the fruit data
+        const selectedFruits = fruitData.filter(fruit => [fruit1, fruit2, fruit3].includes(fruit.name));
   
         // Format the output string
         let output = `
@@ -21,11 +22,14 @@ function handleFormSubmission(event) {
           <p><strong>First Name:</strong> ${firstName}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-          <p><strong>Fruit 1:</strong> ${fruit1}</p>
-          <p><strong>Fruit 2:</strong> ${fruit2}</p>
-          <p><strong>Fruit 3:</strong> ${fruit3}</p>
+          <p><strong>Fruit 1:</strong> ${findFruitName(fruit1, selectedFruits)}</p>
+          <p><strong>Fruit 2:</strong> ${findFruitName(fruit2, selectedFruits)}</p>
+          <p><strong>Fruit 3:</strong> ${findFruitName(fruit3, selectedFruits)}</p>
           <p><strong>Special Instructions:</strong> ${instructions}</p>
         `;
+  
+        // Calculate the total nutritional values based on the selected fruits
+        const totalNutrition = calculateTotalNutrition(selectedFruits);
   
         // Add the nutrition information if it exists
         if (Object.keys(totalNutrition).length > 0) {
@@ -47,5 +51,11 @@ function handleFormSubmission(event) {
         throw new Error('Error:', error);
         // Handle the error, e.g., display an error message
       });
+  }
+  
+  // Helper function to find the fruit name in the selected fruits array
+  function findFruitName(fruitId, selectedFruits) {
+    const fruit = selectedFruits.find(fruit => fruit.id === parseInt(fruitId));
+    return fruit ? fruit.name : '';
   }
   
