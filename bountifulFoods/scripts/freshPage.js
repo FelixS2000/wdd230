@@ -1,6 +1,6 @@
 // Function to fetch fruit data from the JSON data source
 function fetchFruitData() {
-    const jsonURL = 'fruitData.json';
+    const jsonURL = 'https://brotherblazzard.github.io/canvas-content/fruit.json';
   
     // Make a GET request to the JSON data source
     return fetch(jsonURL)
