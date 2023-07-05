@@ -88,13 +88,13 @@ async function fetchFruitData() {
         <p><strong>Total Calories:</strong> ${totalNutrition.totalCalories} cal</p>
         `;
 
-        // Get the output element
-        const outputElement = document.getElementById('output');
+// Get the output element
+const outputElement = document.getElementById('output');
 
-        // Display the formatted output
-        outputElement.innerHTML = output;
-        });
-        }
+// Display the formatted output
+outputElement.innerHTML = output;
+});
+}
 
-        // Add an event listener to the form submit button
-        document.getElementById('orderForm').addEventListener('submit', handleFormSubmit);
+// Add an event listener to the form submit button
+document.getElementById('orderForm').addEventListener('submit', handleFormSubmit);
