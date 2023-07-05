@@ -70,7 +70,7 @@ function fetchFruitData() {
   }
   
   // Function to calculate the total nutritional values based on the selected fruits
-  function calculateTotalNutrition(selectedFruits, fruitData) {
+function calculateTotalNutrition(selectedFruits, fruitData) {
     let totalNutrition = {
       carbohydrates: 0,
       protein: 0,
@@ -90,8 +90,16 @@ function fetchFruitData() {
       }
     });
   
+    // Remove the properties with value 0
+    Object.keys(totalNutrition).forEach(key => {
+      if (totalNutrition[key] === 0) {
+        delete totalNutrition[key];
+      }
+    });
+  
     return totalNutrition;
   }
+  
   
   // Initialize the page
   function initializePage() {
