@@ -31,6 +31,7 @@ async function fetchFruitData() {
     const totalNutrition = calculateTotalNutrition([fruit1, fruit2, fruit3], fruitData);
   
     // Format the output string
+    const currentDate = new Date().toLocaleDateString();
     const output = `
       <h2>Order Summary</h2>
       <p><strong>First Name:</strong> ${firstName}</p>
@@ -40,6 +41,7 @@ async function fetchFruitData() {
       <p><strong>Fruit 2:</strong> ${fruit2}</p>
       <p><strong>Fruit 3:</strong> ${fruit3}</p>
       <p><strong>Special Instructions:</strong> ${instructions}</p>
+      <p><strong>Order Date:</strong> ${currentDate}</p>
       <h3>Total Nutrition</h3>
       <p><strong>Carbohydrates:</strong> ${totalNutrition.carbohydrates} g</p>
       <p><strong>Protein:</strong> ${totalNutrition.protein} g</p>
@@ -69,7 +71,7 @@ async function fetchFruitData() {
         totalNutrition.carbohydrates += fruit.nutrition.carbohydrates;
         totalNutrition.protein += fruit.nutrition.protein;
         totalNutrition.fat += fruit.nutrition.fat;
-        totalNutritionsugar += fruit.nutrition.sugar;
+        totalNutrition.sugar += fruit.nutrition.sugar;
         totalNutrition.calories += fruit.nutrition.calories;
       }
     });
@@ -81,9 +83,11 @@ async function fetchFruitData() {
   function initializePage() {
     fetchFruitData()
       .then(fruitData => {
+        populateFruitOptions(fruitData);
         localStorage.setItem('fruitData', JSON.stringify(fruitData));
       })
       .catch(error => console.log('Error:', error));
+  
   
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', handleFormSubmission);
