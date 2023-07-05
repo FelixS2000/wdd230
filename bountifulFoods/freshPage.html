@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Page</title>
-    <link rel="stylesheet" href="styles/freshPage.css">
+  <title>Build Your Own Specialty Drink</title>
+  <script src="scripts/freshPage.js" defer></script>
 </head>
 <body>
-    <main>
-        <div class="userForm">
-            <input type="text" name="firstName" id="firstName" placeholder="First Name">
-            <input type="email" name="email" id="emailUser" placeholder="Email">
-            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone Number">
-            <br>
-            
-            <select name="fruit1" id="fruit1">
-                <!-- Options for fruit 1 will be dynamically populated using JavaScript -->
-            </select>
-            <select name="fruit2" id="fruit2">
-                <!-- Options for fruit 2 will be dynamically populated using JavaScript -->
-            </select>
-            <select name="fruit3" id="fruit3">
-                <!-- Options for fruit 3 will be dynamically populated using JavaScript -->
-            </select>
-            
-            <br>
-            <textarea name="instructions" id="instructions" placeholder="Special Instructions"></textarea>
-            <br>
-            <button id="submitBtn">Submit</button>
-        </div>
-        
-        <div id="outputArea"></div>
-    </main>
+  <h1>Build Your Own Specialty Drink</h1>
+  <form id="drinkForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" required><br><br>
 
-    <script src="scripts/freshPage.js"></script>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" required><br><br>
+
+    <label for="fruit1">Fruit 1:</label>
+    <select id="fruit1" required></select><br><br>
+
+    <label for="fruit2">Fruit 2:</label>
+    <select id="fruit2" required></select><br><br>
+
+    <label for="fruit3">Fruit 3:</label>
+    <select id="fruit3" required></select><br><br>
+
+    <label for="specialInstructions">Special Instructions:</label><br>
+    <textarea id="specialInstructions" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Order Summary:</h2>
+  <div id="orderSummary"></div>
 </body>
 </html>

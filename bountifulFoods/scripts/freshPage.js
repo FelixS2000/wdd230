@@ -1,115 +1,87 @@
-// Function to fetch fruit data
+// Function to fetch the fruit data from the JSON source
 async function fetchFruitData() {
     try {
       const response = await fetch('https://brotherblazzard.github.io/canvas-content/fruit.json');
-      if (!response.ok) {
-        throw new Error('Error fetching fruit data');
-      }
-      return await response.json();
+      const data = await response.json();
+      return data;
     } catch (error) {
       console.log('Error fetching fruit data:', error);
-      throw error;
+      return [];
     }
   }
   
-  // Function to populate fruit options
-  function populateFruitOptions(fruitData) {
-    const fruit1Select = document.getElementById('fruit1');
-    const fruit2Select = document.getElementById('fruit2');
-    const fruit3Select = document.getElementById('fruit3');
+  // Function to calculate the total nutritional values based on selected fruits
+  function calculateTotalNutrition(fruitData, fruitSelections) {
+    let totalCarbs = 0;
+    let totalProtein = 0;
+    let totalFat = 0;
+    let totalSugar = 0;
+    let totalCalories = 0;
   
-    fruitData.forEach(fruit => {
-      const option = document.createElement('option');
-      option.value = fruit.name;
-      option.textContent = fruit.name;
+    for (const selection of fruitSelections) {
+      const fruit = fruitData.find(item => item.name === selection);
+      if (fruit) {
+        totalCarbs += fruit.nutrition.carbs;
+        totalProtein += fruit.nutrition.protein;
+        totalFat += fruit.nutrition.fat;
+        totalSugar += fruit.nutrition.sugar;
+        totalCalories += fruit.nutrition.calories;
+      }
+    }
   
-      fruit1Select.appendChild(option.cloneNode(true));
-      fruit2Select.appendChild(option.cloneNode(true));
-      fruit3Select.appendChild(option);
-    });
+    return {
+      totalCarbs,
+      totalProtein,
+      totalFat,
+      totalSugar,
+      totalCalories
+    };
   }
   
-  // Function to handle form submission and display the output
-  function handleFormSubmission(event) {
+  // Function to handle form submission
+  function handleFormSubmit(event) {
     event.preventDefault();
   
     const firstName = document.getElementById('firstName').value;
-    const email = document.getElementById('emailUser').value;
+    const email = document.getElementById('email').value;
     const phoneNumber = document.getElementById('phoneNumber').value;
     const fruit1 = document.getElementById('fruit1').value;
     const fruit2 = document.getElementById('fruit2').value;
     const fruit3 = document.getElementById('fruit3').value;
-    const instructions = document.getElementById('instructions').value;
+    const specialInstructions = document.getElementById('specialInstructions').value;
   
-    // Retrieve the fruit data from localStorage
-    const fruitData = JSON.parse(localStorage.getItem('fruitData'));
+    const fruitSelections = [fruit1, fruit2, fruit3];
   
-    // Calculate the total nutritional values based on the selected fruits
-    const totalNutrition = calculateTotalNutrition([fruit1, fruit2, fruit3], fruitData);
-  
-    // Format the output string
-    const currentDate = new Date().toLocaleDateString();
-    const output = `
-      <h2>Order Summary</h2>
-      <p><strong>First Name:</strong> ${firstName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-      <p><strong>Fruit 1:</strong> ${fruit1}</p>
-      <p><strong>Fruit 2:</strong> ${fruit2}</p>
-      <p><strong>Fruit 3:</strong> ${fruit3}</p>
-      <p><strong>Special Instructions:</strong> ${instructions}</p>
-      <p><strong>Order Date:</strong> ${currentDate}</p>
-      <h3>Total Nutrition</h3>
-      <p><strong>Carbohydrates:</strong> ${totalNutrition.carbohydrates} g</p>
-      <p><strong>Protein:</strong> ${totalNutrition.protein} g</p>
-      <p><strong>Fat:</strong> ${totalNutrition.fat} g</p>
-      <p><strong>Sugar:</strong> ${totalNutrition.sugar} g</p>
-      <p><strong>Calories:</strong> ${totalNutrition.calories} kcal</p>
-    `;
-  
-    // Display the output in the output area
-    const outputArea = document.getElementById('outputArea');
+    fetchFruitData().then(fruitData => {
+        const totalNutrition = calculateTotalNutrition(fruitData, fruitSelections);
+        const currentDate = new Date().toLocaleDateString();
     
-    outputArea.innerHTML = output;
-  }
-  
-  // Function to calculate the total nutritional values based on the selected fruits
-  function calculateTotalNutrition(selectedFruits, fruitData) {
-    let totalNutrition = {
-      carbohydrates: 0,
-      protein: 0,
-      fat: 0,
-      sugar: 0,
-      calories: 0
-    };
-  
-    selectedFruits.forEach(fruitName => {
-      const fruit = fruitData.find(fruit => fruit.name === fruitName);
-      if (fruit) {
-        totalNutrition.carbohydrates += fruit.nutrition.carbohydrates;
-        totalNutrition.protein += fruit.nutrition.protein;
-        totalNutrition.fat += fruit.nutrition.fat;
-        totalNutrition.sugar += fruit.nutrition.sugar;
-        totalNutrition.calories += fruit.nutrition.calories;
-      }
-    });
-  
-    return totalNutrition;
-  }
-  
-  // Initialize the page
-  function initializePage() {
-    fetchFruitData()
-      .then(fruitData => {
-        populateFruitOptions(fruitData);
-        localStorage.setItem('fruitData', JSON.stringify(fruitData));
+        // Create the formatted output
+        let output = `
+          <h3>Order Details:</h3>
+          <p><strong>First Name:</strong> ${firstName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+          <p><strong>Fruit 1:</strong> ${fruit1}</p>
+          <p><strong>Fruit 2:</strong> ${fruit2}</p>
+          <p><strong>Fruit 3:</strong> ${fruit3}</p>
+          <p><strong>Special Instructions:</strong> ${specialInstructions}</p>
+    
+          <h3>Nutritional Information:</h3>
+          <p><strong>Total Carbohydrates:</strong> ${totalNutrition.totalCarbs} g</p>
+          <p><strong>Total Protein:</strong> ${totalNutrition.totalProtein} g</p>
+          <p><strong>Total Fat:</strong> ${totalNutrition.totalFat} g</p>
+          <p><strong>Total Sugar:</strong> ${totalNutrition.totalSugar} g</p>
+          <p><strong>Total Calories:</strong> ${totalNutrition.totalCalories} cal</p>
+    
+          <p><strong>Order Date:</strong> ${currentDate}</p>
+        `;
+    
+        document.getElementById('orderSummary').innerHTML = output;
       })
-      .catch(error => console.log('Error:', error));
-  
-    const submitBtn = document.getElementById('submitBtn');
-    submitBtn.addEventListener('click', handleFormSubmission);
-  }
-  
-  // Run the initialization function when the page is fully loaded
-  window.addEventListener('load', initializePage);
-  
+      .catch(error => {
+        console.log('Error:', error);
+        document.getElementById('orderSummary').innerHTML = '<p>Error processing the order. Please try again.</p>';
+      });
+    }
+      
