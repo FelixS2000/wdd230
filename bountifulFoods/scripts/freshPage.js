@@ -1,4 +1,3 @@
-// Function to calculate the total nutritional values based on selected fruits
 function calculateTotalNutrition(fruitData, fruitSelections) {
     let totalCalories = 0;
     let totalCarbs = 0;
@@ -9,10 +8,11 @@ function calculateTotalNutrition(fruitData, fruitSelections) {
       const fruit = fruitData.find(item => item.name === selection);
   
       if (fruit && fruit.nutrition) {
-        totalCalories += fruit.nutrition.calories || 0;
-        totalCarbs += fruit.nutrition.carbs || 0;
-        totalProtein += fruit.nutrition.protein || 0;
-        totalFat += fruit.nutrition.fat || 0;
+        const nutrition = fruit.nutrition;
+        totalCalories += nutrition.calories ? nutrition.calories : 0;
+        totalCarbs += nutrition.carbohydrates ? nutrition.carbohydrates : 0;
+        totalProtein += nutrition.protein ? nutrition.protein : 0;
+        totalFat += nutrition.fat ? nutrition.fat : 0;
       }
     });
   
@@ -23,6 +23,7 @@ function calculateTotalNutrition(fruitData, fruitSelections) {
       totalFat
     };
   }
+  
   
   // Function to handle form submission
   function handleFormSubmit(event) {
