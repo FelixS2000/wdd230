@@ -61,9 +61,9 @@ function fetchFruitData() {
   }
   
   // Function to calculate the total nutritional values based on the selected fruits
-function calculateTotalNutrition(selectedFruits) {
+    function calculateTotalNutrition(selectedFruits) {
     const fruitData = localStorage.getItem('fruitData');
-    const parsedFruitData = JSON.parse(fruitData);
+    const parsedFruitData = fruitData ? JSON.parse(fruitData) : [];
   
     let totalNutrition = {
       carbohydrates: 0,
@@ -86,6 +86,7 @@ function calculateTotalNutrition(selectedFruits) {
   
     return totalNutrition;
   }
+  
 
   
   // Initialize the page
