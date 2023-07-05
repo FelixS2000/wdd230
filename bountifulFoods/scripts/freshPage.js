@@ -48,7 +48,7 @@ function handleFormSubmission(event) {
         outputArea.innerHTML = output;
       })
       .catch(error => {
-        throw new Error('Error:', error);
+        console.error('Error:', error);
         // Handle the error, e.g., display an error message
       });
   }
@@ -57,5 +57,16 @@ function handleFormSubmission(event) {
   function findFruitName(fruitId, selectedFruits) {
     const fruit = selectedFruits.find(fruit => fruit.id === parseInt(fruitId));
     return fruit ? fruit.name : '';
+  }
+  
+  // Fetch the fruit data
+  function fetchFruitData() {
+    return fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch fruit data.');
+        }
+        return response.json();
+      });
   }
   
