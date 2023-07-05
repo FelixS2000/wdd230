@@ -69,8 +69,8 @@ async function fetchFruitData() {
         totalNutrition.carbohydrates += fruit.nutrition.carbohydrates;
         totalNutrition.protein += fruit.nutrition.protein;
         totalNutrition.fat += fruit.nutrition.fat;
-        totalNutrition.sugar += fruit.nutrition.sugar;
-        totalNutrition.calories +=fruit.nutrition.calories;
+        totalNutritionsugar += fruit.nutrition.sugar;
+        totalNutrition.calories += fruit.nutrition.calories;
       }
     });
   
@@ -81,8 +81,6 @@ async function fetchFruitData() {
   function initializePage() {
     fetchFruitData()
       .then(fruitData => {
-        // Call the function to populate fruit options if you have defined it
-        populateFruitOptions(fruitData);
         localStorage.setItem('fruitData', JSON.stringify(fruitData));
       })
       .catch(error => console.log('Error:', error));
