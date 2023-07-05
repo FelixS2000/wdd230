@@ -1,15 +1,19 @@
 // Function to fetch fruit data
-function fetchFruitData() {
-    return fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
-      .then(response => response.json())
-      .catch(error => {
-        console.log('Error fetching fruit data:', error);
-        throw error;
-      });
-  }  
-
-// Function to handle form submission and display the output
-function handleFormSubmission(event) {
+async function fetchFruitData() {
+    try {
+      const response = await fetch('https://brotherblazzard.github.io/canvas-content/fruit.json');
+      if (!response.ok) {
+        throw new Error('Error fetching fruit data');
+      }
+      return await response.json();
+    } catch (error) {
+      console.log('Error fetching fruit data:', error);
+      throw error;
+    }
+  }
+  
+  // Function to handle form submission and display the output
+  function handleFormSubmission(event) {
     event.preventDefault();
   
     const firstName = document.getElementById('firstName').value;
@@ -66,7 +70,7 @@ function handleFormSubmission(event) {
         totalNutrition.protein += fruit.nutrition.protein;
         totalNutrition.fat += fruit.nutrition.fat;
         totalNutrition.sugar += fruit.nutrition.sugar;
-        totalNutrition.calories += fruit.nutrition.calories;
+        totalNutrition.calories +=fruit.nutrition.calories;
       }
     });
   
@@ -74,14 +78,14 @@ function handleFormSubmission(event) {
   }
   
   // Initialize the page
-    function initializePage() {
+  function initializePage() {
     fetchFruitData()
       .then(fruitData => {
+        // Call the function to populate fruit options if you have defined it
         populateFruitOptions(fruitData);
         localStorage.setItem('fruitData', JSON.stringify(fruitData));
       })
       .catch(error => console.log('Error:', error));
-  
   
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', handleFormSubmission);
