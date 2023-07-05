@@ -1,3 +1,13 @@
+// Function to fetch fruit data
+function fetchFruitData() {
+    return fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
+      .then(response => response.json())
+      .catch(error => {
+        console.log('Error fetching fruit data:', error);
+        throw error;
+      });
+  }  
+
 // Function to handle form submission and display the output
 function handleFormSubmission(event) {
     event.preventDefault();
@@ -64,13 +74,14 @@ function handleFormSubmission(event) {
   }
   
   // Initialize the page
-  function initializePage() {
+    function initializePage() {
     fetchFruitData()
       .then(fruitData => {
         populateFruitOptions(fruitData);
         localStorage.setItem('fruitData', JSON.stringify(fruitData));
       })
       .catch(error => console.log('Error:', error));
+  
   
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.addEventListener('click', handleFormSubmission);
