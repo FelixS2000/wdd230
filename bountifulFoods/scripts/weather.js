@@ -10,7 +10,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=5446be76
   currentTemp.textContent = `Temperature: ${Math.round(data.main.temp - 273.15)}°C`;
   conditionDesc.textContent = `Condition: ${data.weather[0].description}`;
   humidity.textContent = `Humidity: ${data.main.humidity}%`;
-  weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 });
 
  fetch('https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&appid=32ba0bfed592484379e51106cef3f204')
@@ -24,7 +24,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=5446be76
 
       // Getting Weather Icons
       for (let i = 0; i < 3; i++) {
-        document.getElementById("img" + (i + 1)).src = "http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+        document.getElementById("img" + (i + 1)).src = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
       }
     })
     .catch(err => alert("Something went wrong: Please check your internet connection."));
