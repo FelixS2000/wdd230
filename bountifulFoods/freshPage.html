@@ -7,31 +7,39 @@
   <link rel="stylesheet" href="styles/freshPage.css">
 </head>
 <body>
-  <h1>Build Your Own Specialty Drink</h1>
-  <form id="orderForm">
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" required><br><br>
+  <main>
+    <header>
+      <div class="navigation">
+          <ul>
+              <li><a href="https://felixs2000.github.io/wdd230/bountifulFoods" title="Home Page">Home</a></li>
+              <li><a href="https://felixs2000.github.io/wdd230/bountifulFoods/freshPage.html" title="Fruit Mix Maker Page">Fresh Page</a></li>
+              <li><a href="https://felixs2000.github.io/wdd230/bountifulFoods/about.html" title="About Us Page">About Us</a></li>
+          </ul>
+      </div>
+    </header>
+    <h1>Build Your Own Specialty Drink</h1>
+    <form id="orderForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required><br><br>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required><br><br>
 
-    <label for="phoneNumber">Phone Number:</label>
-    <input type="tel" id="phoneNumber" required><br><br>
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" required><br><br>
 
-    <select id="fruit1"></select>
-    <select id="fruit2"></select>
-    <select id="fruit3"></select>
+      <select id="fruit1"></select>
+      <select id="fruit2"></select>
+      <select id="fruit3"></select>
 
 
-    <label for="specialInstructions">Special Instructions:</label><br>
-    <textarea id="specialInstructions" rows="4" cols="50"></textarea><br><br>
+      <label for="specialInstructions">Special Instructions:</label><br>
+      <textarea id="specialInstructions" rows="4" cols="50"></textarea><br><br>
 
-    <button type="submit">Submit</button>
-  </form>
-
-  
-  <div id="output"></div>
-
+      <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+  </main>
   <script src="scripts/freshPage.js"></script>
 </body>
 </html>
