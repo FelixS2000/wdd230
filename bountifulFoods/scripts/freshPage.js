@@ -1,4 +1,4 @@
-function calculateTotalNutrition(fruitData, fruitSelections) {
+function calculateTotalNutrition(fruitSelections) {
   let totalCalories = 0;
   let totalCarbs = 0;
   let totalProtein = 0;
@@ -36,7 +36,7 @@ function handleFormSubmit(event) {
 
   const fruitSelections = [fruit1, fruit2, fruit3];
 
-  const totalNutrition = calculateTotalNutrition(fruitData, fruitSelections);
+  const totalNutrition = calculateTotalNutrition(fruitSelections);
 
   // Get the individual fruit objects for the selected fruits
   const selectedFruits = fruitData.filter(fruit => fruitSelections.includes(fruit.name));
@@ -74,6 +74,9 @@ async function fetchFruitData() {
     document.getElementById('fruit1').innerHTML = fruitOptions.join('');
     document.getElementById('fruit2').innerHTML = fruitOptions.join('');
     document.getElementById('fruit3').innerHTML = fruitOptions.join('');
+
+    const form = document.getElementById('orderForm');
+    form.addEventListener('submit', handleFormSubmit); // Add event listener here as well
   } catch (error) {
     console.log('Error fetching fruit data:', error);
   }
