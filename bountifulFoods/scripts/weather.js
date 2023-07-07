@@ -1,15 +1,17 @@
- // Fetch the current weather data
- fetch('https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=5446be76d7c7bdd03fa8dc5f3a9eddb6')
- .then(response => response.json())
- .then(data => {
-   const currentTemp = document.getElementById('currentTemp');
-   const conditionDesc = document.getElementById('conditionDesc');
-   const humidity = document.getElementById('humidity');
+// Fetch the current weather data
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Carlsbad&appid=5446be76d7c7bdd03fa8dc5f3a9eddb6')
+.then(response => response.json())
+.then(data => {
+  const currentTemp = document.getElementById('currentTemp');
+  const conditionDesc = document.getElementById('conditionDesc');
+  const humidity = document.getElementById('humidity');
+  const weatherIcon = document.getElementById('weatherIcon');
 
-   currentTemp.textContent = `Temperature: ${Math.round(data.main.temp - 273.15)}°C`;
-   conditionDesc.textContent = `Condition: ${data.weather[0].description}`;
-   humidity.textContent = `Humidity: ${data.main.humidity}%`;
- });
+  currentTemp.textContent = `Temperature: ${Math.round(data.main.temp - 273.15)}°C`;
+  conditionDesc.textContent = `Condition: ${data.weather[0].description}`;
+  humidity.textContent = `Humidity: ${data.main.humidity}%`;
+  weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+});
 
  fetch('https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&appid=32ba0bfed592484379e51106cef3f204')
     .then(response => response.json())
