@@ -1,13 +1,16 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 /* Common styles */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
-
+.mixStyle{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
 /* Header */
 header {
   display: flex;
@@ -67,17 +70,15 @@ header {
 }
 
 .imagesFruit {
-  text-align: center;
-  margin-top: 20px;
-  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  width: 95%;
+  height: 15%;
   background-color: #f0f0f0;
 }
 
-.imagesFruit img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+
 
 .summaryInformation,
 .fruitDrinkMix,
@@ -89,8 +90,17 @@ header {
   background-color: #f0f0f0;
 }
 
-.summaryInformation p {
-  margin: 0;
+.summaryInformation {
+  width: 50%;
+  height: 10%;
+}
+
+.socialMedia{
+    width: 38%;
+    height: 8%;
+    position: absolute;
+    left: 57%;
+    top: 12%;
 }
 
 .socialMedia h2 {
@@ -114,6 +124,8 @@ header {
 
 .sanDiegoWeather {
   text-align: center;
+  position: absolute;
+  top: 50%;
 }
 
 .forecast {
@@ -128,6 +140,12 @@ header {
 
 .forecast div {
   margin: 0 10px;
+}
+
+.informationCard{
+    width: 100%;
+    position: absolute;
+    top: 85%;
 }
 
 .informationCard h2 {
@@ -160,8 +178,7 @@ header {
   }
 }
 
-/* Media queries for small devices */
-@media (max-width: 767px) {
+
   header {
     padding: 10px;
   }
