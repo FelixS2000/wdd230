@@ -11,18 +11,35 @@
    humidity.textContent = `Humidity: ${data.main.humidity}%`;
  });
 
- document.addEventListener('DOMContentLoaded', function() {
-  fetch('https://api.openweathermap.org/data/2.5/forecast/daily?q=Carlsbad&cnt=3&appid=5446be76d7c7bdd03fa8dc5f3a9eddb6')
-    .then(response => response.json())
-    .then(data => {
-      const forecast = data.list;
-      const day1 = document.getElementById('day1');
-      const day2 = document.getElementById('day2');
-      const day3 = document.getElementById('day3');
+ fetch('https://api.openweathermap.org/data/2.5/forecast?q=Carlsbad&appid=32ba0bfed592484379e51106cef3f204')
+  .then(response => response.json())
+  .then(data => {
+    //Getting the min and max values for each day
+    for (i = 0; i < 3; i++) {
+      document.getElementById("day" + (i + 1) + "Min").innerHTML = "Min: " + Number(data.list[i].main.temp_min - 273.15).toFixed(1) + "°";
+      document.getElementById("day" + (i + 1) + "Max").innerHTML = "Max: " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°";
+    }
 
-      // Extract and display the temperature for each day
-      day1.textContent = `Day 1: ${Math.round(forecast[0].temp.day - 273.15)}°C`;
-      day2.textContent = `Day 2: ${Math.round(forecast[1].temp.day - 273.15)}°C`;
-      day3.textContent = `Day 3: ${Math.round(forecast[2].temp.day - 273.15)}°C`;
-    });
-});
+    //Getting Weather Icons
+    for (i = 0; i < 3; i++) {
+      document.getElementById("img" + (i + 1)).src = "http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png";
+    }
+  })
+  .catch(err => alert("Something went wrong: Please check your internet connection."));
+
+//Getting and displaying the text for the upcoming three days of the week
+var d = new Date();
+var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+//Function to get the correct integer for the index of the days array
+function CheckDay(day) {
+  if (day + d.getDay() > 6) {
+    return day + d.getDay() - 7;
+  } else {
+    return day + d.getDay();
+  }
+}
+
+for (i = 0; i < 3; i++) {
+  document.getElementById("day" + (i + 1)).innerHTML = weekday[CheckDay(i)];
+}
