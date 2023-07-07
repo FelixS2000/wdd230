@@ -54,6 +54,11 @@ function handleFormSubmit(event) {
     <p>Total Fat: ${totalNutrition.totalFat}</p>
     <p>Total Sugar: ${totalNutrition.totalSugar}</p>
   `;
+
+  const specialInstructions = document.getElementById('specialInstructions').value;
+  outputDiv.innerHTML += `
+    <p>Special Instructions: ${specialInstructions}</p>
+  `;
 }
 
 document.getElementById('orderForm').addEventListener('submit', handleFormSubmit);
