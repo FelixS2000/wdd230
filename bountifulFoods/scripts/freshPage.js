@@ -10,7 +10,7 @@ function calculateTotalNutrition(fruitSelections) {
 
     if (fruit && fruit.nutrition) {
       const nutrition = fruit.nutrition;
-      totalCarbs += nutrition.carbohydrates ? nutrition.carbohydrates : 0;
+      totalCarbs += nutrition.carbs ? nutrition.carbs : 0;
       totalProtein += nutrition.protein ? nutrition.protein : 0;
       totalFat += nutrition.fat ? nutrition.fat : 0;
       totalCalories += nutrition.calories ? nutrition.calories : 0;
@@ -65,7 +65,8 @@ let fruitData;
 async function fetchFruitData() {
   try {
     const response = await fetch('https://brotherblazzard.github.io/canvas-content/fruit.json');
-    fruitData = await response.json();
+    const data = await response.json();
+    fruitData = data.fruits;
 
     const fruitOptions = fruitData.map(fruit => `<option value="${fruit.name}">${fruit.name}</option>`);
     document.getElementById('fruit1').innerHTML = fruitOptions.join('');
