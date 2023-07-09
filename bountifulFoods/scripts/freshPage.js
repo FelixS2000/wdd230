@@ -1,8 +1,8 @@
 function calculateTotalNutrition(fruitSelections) {
-  let totalCalories = 0;
   let totalCarbs = 0;
   let totalProtein = 0;
   let totalFat = 0;
+  let totalCalories = 0;
   let totalSugar = 0;
 
   fruitSelections.forEach(selection => {
@@ -10,19 +10,19 @@ function calculateTotalNutrition(fruitSelections) {
 
     if (fruit && fruit.nutrition) {
       const nutrition = fruit.nutrition;
-      totalCalories += nutrition.calories ? nutrition.calories : 0;
       totalCarbs += nutrition.carbohydrates ? nutrition.carbohydrates : 0;
       totalProtein += nutrition.protein ? nutrition.protein : 0;
       totalFat += nutrition.fat ? nutrition.fat : 0;
+      totalCalories += nutrition.calories ? nutrition.calories : 0;
       totalSugar += nutrition.sugar ? nutrition.sugar : 0;
     }
   });
 
   return {
-    totalCalories,
     totalCarbs,
     totalProtein,
     totalFat,
+    totalCalories,
     totalSugar
   };
 }
@@ -38,20 +38,17 @@ function handleFormSubmit(event) {
 
   const totalNutrition = calculateTotalNutrition(fruitSelections);
 
-  // Get the individual fruit objects for the selected fruits
-  const selectedFruits = fruitData.filter(fruit => fruitSelections.includes(fruit.name));
-
   const outputDiv = document.getElementById('output');
   outputDiv.innerHTML = `
     <h3>Order Summary:</h3>
     <p>Selected Fruits:</p>
     <ul>
-      ${selectedFruits.map(fruit => `<li>${fruit.name}</li>`).join('')}
+      ${fruitSelections.map(fruit => `<li>${fruit}</li>`).join('')}
     </ul>
-    <p>Total Calories: ${totalNutrition.totalCalories}</p>
     <p>Total Carbs: ${totalNutrition.totalCarbs}</p>
     <p>Total Protein: ${totalNutrition.totalProtein}</p>
     <p>Total Fat: ${totalNutrition.totalFat}</p>
+    <p>Total Calories: ${totalNutrition.totalCalories}</p>
     <p>Total Sugar: ${totalNutrition.totalSugar}</p>
   `;
 
