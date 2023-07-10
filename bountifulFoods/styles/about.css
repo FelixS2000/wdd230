@@ -44,31 +44,6 @@ header {
     color: #007bff;
   }  
   
-  .main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-  }
-  
-  .bountifulHistory h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .bountifulHistory p {
-    line-height: 1.6;
-  }
-  
-  .contactInformation h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .contactInformation p {
-    line-height: 1.6;
-  }
   
   .googleMap {
     position: relative;
@@ -88,16 +63,32 @@ header {
   }
   
   
+  .main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .bountifulHistory h3,
+  .contactInformation h3,
   .resources h3 {
     color: #333;
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center; /* Align headings to the center */
+  }
+  
+  .bountifulHistory p,
+  .contactInformation p {
+    line-height: 1.6;
+    text-align: center; /* Align paragraphs to the center */
   }
   
   .resources ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center; /* Align list items to the center */
   }
   
   .resources li {
