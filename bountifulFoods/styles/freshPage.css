@@ -1,7 +1,11 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Common styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 20px;
   }
   
   h1 {
