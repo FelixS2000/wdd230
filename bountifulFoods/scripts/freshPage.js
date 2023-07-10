@@ -72,37 +72,6 @@ async function fetchFruitData() {
     document.getElementById('fruit1').innerHTML = fruitOptions.join('');
     document.getElementById('fruit2').innerHTML = fruitOptions.join('');
     document.getElementById('fruit3').innerHTML = fruitOptions.join('');
-
-    const form = document.getElementById('orderForm');
-    form.addEventListener('submit', handleFormSubmit); // Add event listener here as well
-
-    // Call calculateTotalNutrition function here
-    const fruit1 = document.getElementById('fruit1').value;
-    const fruit2 = document.getElementById('fruit2').value;
-    const fruit3 = document.getElementById('fruit3').value;
-
-    const fruitSelections = [fruit1, fruit2, fruit3];
-
-    const totalNutrition = calculateTotalNutrition(fruitSelections);
-
-    const outputDiv = document.getElementById('output');
-    outputDiv.innerHTML = `
-      <h3>Order Summary:</h3>
-      <p>Selected Fruits:</p>
-      <ul>
-        ${fruitSelections.map(fruit => `<li>${fruit}</li>`).join('')}
-      </ul>
-      <p>Total Carbs: ${totalNutrition.totalCarbs}</p>
-      <p>Total Protein: ${totalNutrition.totalProtein}</p>
-      <p>Total Fat: ${totalNutrition.totalFat}</p>
-      <p>Total Calories: ${totalNutrition.totalCalories}</p>
-      <p>Total Sugar: ${totalNutrition.totalSugar}</p>
-    `;
-
-    const specialInstructions = document.getElementById('specialInstructions').value;
-    outputDiv.innerHTML += `
-      <p>Special Instructions: ${specialInstructions}</p>
-    `;
   } catch (error) {
     console.log('Error fetching fruit data:', error);
   }
