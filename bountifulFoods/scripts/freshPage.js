@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Load the fruit options from the JSON data source
-  var request = new XMLHttpRequest();
-  request.open("GET", "https://brotherblazzard.github.io/canvas-content/fruit.json", true);
-  request.onreadystatechange = function() {
-    if (request.readyState === 4 && request.status === 200) {
-      var data = JSON.parse(request.responseText);
+  fetch("https://brotherblazzard.github.io/canvas-content/fruit.json")
+    .then(response => response.json())
+    .then(data => {
       var fruits = data.fruits;
 
       // Populate the select elements with fruit options
@@ -17,9 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
           selectElements[i].appendChild(option);
         }
       }
-    }
-  };
-  request.send();
+    });
 
   // Handle form submission
   var form = document.getElementById("order-form");
@@ -46,17 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var totalFat = 0;
     var totalSugar = 0;
     var totalCalories = 0;
-    var fruits = JSON.parse(request.responseText).fruits;
+    var fruits = Array.from(document.getElementById("fruit1").options).map(option => option.value);
     for (var i = 0; i < fruitSelections.length; i++) {
       var fruit = fruits.find(function(item) {
-        return item.name === fruitSelections[i];
+        return item === fruitSelections[i];
       });
       if (fruit) {
-        totalCarbs += fruit.nutrition.carbs;
-        totalProtein += fruit.nutrition.protein;
-        totalFat += fruit.nutrition.fat;
-        totalSugar += fruit.nutrition.sugar;
-        totalCalories += fruit.nutrition.calories;
+        var fruitData = data.fruits.find(item => item.name === fruit);
+        totalCarbs += fruitData.nutrition.carbs;
+        totalProtein += fruitData.nutrition.protein;
+        totalFat += fruitData.nutrition.fat;
+        totalSugar += fruitData.nutrition.sugar;
+        totalCalories += fruitData.nutrition.calories;
       }
     }
 
