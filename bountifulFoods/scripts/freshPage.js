@@ -75,5 +75,12 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
       // Display order summary
       const outputArea = document.getElementById('output-area');
       outputArea.innerHTML = orderSummary;
+
+      // Count the total number of specialty drinks
+      const totalDrinks = selectedFruits.filter(fruitName => fruitName.toLowerCase().includes('special')).length;
+
+      // Display the total number of specialty drinks
+      const totalDrinksElement = document.querySelector('.totalDrinks');
+      totalDrinksElement.textContent = totalDrinks.toString();
     });
   });
