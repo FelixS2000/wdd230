@@ -39,13 +39,15 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
         calories: 0
       };
 
-      selectedFruits.forEach(fruit => {
-        const fruitData = data.find(item => item.name === fruit);
-        nutritionalInfo.carbohydrates += fruitData.carbohydrates;
-        nutritionalInfo.protein += fruitData.protein;
-        nutritionalInfo.fat += fruitData.fat;
-        nutritionalInfo.sugar += fruitData.sugar;
-        nutritionalInfo.calories += fruitData.calories;
+      selectedFruits.forEach(fruitName => {
+        const fruitData = data.find(item => item.name === fruitName);
+        if (fruitData && fruitData.nutritions) {
+          nutritionalInfo.carbohydrates += parseFloat(fruitData.nutritions.carbohydrates) || 0;
+          nutritionalInfo.protein += parseFloat(fruitData.nutritions.protein) || 0;
+          nutritionalInfo.fat += parseFloat(fruitData.nutritions.fat) || 0;
+          nutritionalInfo.sugar += parseFloat(fruitData.nutritions.sugar) || 0;
+          nutritionalInfo.calories += parseFloat(fruitData.nutritions.calories) || 0;
+        }
       });
 
       // Get current date and time
@@ -62,11 +64,11 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
         <p><strong>Order Date:</strong> ${currentDate}</p>
         <p><strong>Nutritional Information:</strong></p>
         <ul>
-          <li>Carbohydrates: ${nutritionalInfo.carbohydrates}g</li>
-          <li>Protein: ${nutritionalInfo.protein}g</li>
-          <li>Fat: ${nutritionalInfo.fat}g</li>
-          <li>Sugar: ${nutritionalInfo.sugar}g</li>
-          <li>Calories: ${nutritionalInfo.calories}kcal</li>
+          <li>Carbohydrates: ${nutritionalInfo.carbohydrates.toFixed(2)}g</li>
+          <li>Protein: ${nutritionalInfo.protein.toFixed(2)}g</li>
+          <li>Fat: ${nutritionalInfo.fat.toFixed(2)}g</li>
+          <li>Sugar: ${nutritionalInfo.sugar.toFixed(2)}g</li>
+          <li>Calories: ${nutritionalInfo.calories.toFixed(2)}kcal</li>
         </ul>
       `;
 
