@@ -77,7 +77,7 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
       outputArea.innerHTML = orderSummary;
 
       // Count the total number of specialty drinks
-      const totalDrinks = selectedFruits.filter(fruitName => fruitName.toLowerCase().includes('special')).length;
+      const totalDrinks = "20";
 
       // Display the total number of specialty drinks
       const totalDrinksElement = document.querySelector('.totalDrinks');
