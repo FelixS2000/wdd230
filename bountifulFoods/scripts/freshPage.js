@@ -76,12 +76,5 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
       const outputArea = document.getElementById('output-area');
       outputArea.innerHTML = orderSummary;
 
-      // Count the total number of specialty drinks
-      const totalDrinks = "20";
-
-      // Display the total number of specialty drinks
-      const totalDrinksElement = document.querySelector('.totalDrinks');
-      totalDrinksElement.innerHTML = `Total Drinks are ${totalDrinks}`;
-
     });
   });
