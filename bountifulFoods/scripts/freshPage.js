@@ -1,80 +1,79 @@
-function calculateTotalNutrition(fruitSelections) {
-  let totalCarbs = 0;
-  let totalProtein = 0;
-  let totalFat = 0;
-  let totalCalories = 0;
-  let totalSugar = 0;
+document.addEventListener("DOMContentLoaded", function() {
+  // Load the fruit options from the JSON data source
+  var request = new XMLHttpRequest();
+  request.open("GET", "https://brotherblazzard.github.io/canvas-content/fruit.json", true);
+  request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status === 200) {
+      var data = JSON.parse(request.responseText);
+      var fruits = data.fruits;
 
-  fruitSelections.forEach(selection => {
-    const fruit = fruitData.find(item => item.name === selection);
-
-    if (fruit && fruit.nutrition) {
-      const nutrition = fruit.nutrition;
-      totalCarbs += nutrition.carbs ? nutrition.carbs : 0;
-      totalProtein += nutrition.protein ? nutrition.protein : 0;
-      totalFat += nutrition.fat ? nutrition.fat : 0;
-      totalCalories += nutrition.calories ? nutrition.calories : 0;
-      totalSugar += nutrition.sugar ? nutrition.sugar : 0;
+      // Populate the select elements with fruit options
+      var selectElements = document.getElementsByClassName("fruit-select");
+      for (var i = 0; i < selectElements.length; i++) {
+        for (var j = 0; j < fruits.length; j++) {
+          var option = document.createElement("option");
+          option.value = fruits[j].name;
+          option.text = fruits[j].name;
+          selectElements[i].appendChild(option);
+        }
+      }
     }
-  });
-
-  return {
-    totalCarbs,
-    totalProtein,
-    totalFat,
-    totalCalories,
-    totalSugar
   };
-}
+  request.send();
 
-function handleFormSubmit(event) {
-  event.preventDefault();
+  // Handle form submission
+  var form = document.getElementById("order-form");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
 
-  const fruit1 = document.getElementById('fruit1').value;
-  const fruit2 = document.getElementById('fruit2').value;
-  const fruit3 = document.getElementById('fruit3').value;
+    // Get the input values
+    var firstName = document.getElementById("first-name").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phone-number").value;
+    var fruitSelections = [];
+    var fruitSelectElements = document.getElementsByClassName("fruit-select");
+    for (var i = 0; i < fruitSelectElements.length; i++) {
+      fruitSelections.push(fruitSelectElements[i].value);
+    }
+    var specialInstructions = document.getElementById("special-instructions").value;
 
-  const fruitSelections = [fruit1, fruit2, fruit3];
+    // Get the current date
+    var currentDate = new Date().toLocaleDateString();
 
-  const totalNutrition = calculateTotalNutrition(fruitSelections);
+    // Calculate the total nutrition values based on the selected fruits
+    var totalCarbs = 0;
+    var totalProtein = 0;
+    var totalFat = 0;
+    var totalSugar = 0;
+    var totalCalories = 0;
+    var fruits = JSON.parse(request.responseText).fruits;
+    for (var i = 0; i < fruitSelections.length; i++) {
+      var fruit = fruits.find(function(item) {
+        return item.name === fruitSelections[i];
+      });
+      if (fruit) {
+        totalCarbs += fruit.nutrition.carbs;
+        totalProtein += fruit.nutrition.protein;
+        totalFat += fruit.nutrition.fat;
+        totalSugar += fruit.nutrition.sugar;
+        totalCalories += fruit.nutrition.calories;
+      }
+    }
 
-  const outputDiv = document.getElementById('output');
-  outputDiv.innerHTML = `
-    <h3>Order Summary:</h3>
-    <p>Selected Fruits:</p>
-    <ul>
-      ${fruitSelections.map(fruit => `<li>${fruit}</li>`).join('')}
-    </ul>
-    <p>Total Carbs: ${totalNutrition.totalCarbs}</p>
-    <p>Total Protein: ${totalNutrition.totalProtein}</p>
-    <p>Total Fat: ${totalNutrition.totalFat}</p>
-    <p>Total Calories: ${totalNutrition.totalCalories}</p>
-    <p>Total Sugar: ${totalNutrition.totalSugar}</p>
-  `;
+    // Display the formatted output
+    var output = "First Name: " + firstName + "<br>";
+    output += "Email: " + email + "<br>";
+    output += "Phone Number: " + phoneNumber + "<br>";
+    output += "Fruit Selections: " + fruitSelections.join(", ") + "<br>";
+    output += "Special Instructions: " + specialInstructions + "<br>";
+    output += "Order Date: " + currentDate + "<br>";
+    output += "Total Nutrition Values:<br>";
+    output += "- Carbohydrates: " + totalCarbs + "g<br>";
+    output += "- Protein: " + totalProtein + "g<br>";
+    output += "- Fat: " + totalFat + "g<br>";
+    output += "- Sugar: " + totalSugar + "g<br>";
+    output += "- Calories: " + totalCalories + "cal<br>";
 
-  const specialInstructions = document.getElementById('specialInstructions').value;
-  outputDiv.innerHTML += `
-    <p>Special Instructions: ${specialInstructions}</p>
-  `;
-}
-
-document.getElementById('orderForm').addEventListener('submit', handleFormSubmit);
-
-let fruitData;
-
-async function fetchFruitData() {
-  try {
-    const response = await fetch('https://brotherblazzard.github.io/canvas-content/fruit.json');
-    const data = await response.json();
-    fruitData = data.fruits;
-
-    const fruitOptions = fruitData.map(fruit => `<option value="${fruit.name}">${fruit.name}</option>`);
-    document.getElementById('fruit1').innerHTML = fruitOptions.join('');
-    document.getElementById('fruit2').innerHTML = fruitOptions.join('');
-    document.getElementById('fruit3').innerHTML = fruitOptions.join('');
-  } catch (error) {
-    console.log('Error fetching fruit data:', error);
-  }
-}
-
-fetchFruitData();
+    document.getElementById("output-area").innerHTML = output;
+  });
+});
