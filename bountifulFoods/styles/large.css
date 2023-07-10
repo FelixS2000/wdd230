@@ -69,15 +69,17 @@ header {
   margin: 0;
 }
 
+.fruitDrinkMix {
+  background-color: #194d33;
+}
+
 .fruitDrinkMix a {
+  color: #fff;
   text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
 .fruitDrinkMix a:hover {
-  color: #0056b3;
+  text-decoration: underline;
 }
 
 .socialMedia h2 {
