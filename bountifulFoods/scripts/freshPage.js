@@ -54,6 +54,8 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
       let totalDrinks = localStorage.getItem('totalDrinks');
       if (!totalDrinks) {
         totalDrinks = 0;
+      } else {
+        totalDrinks = Number(totalDrinks);
       }
 
       // Increment the total number of drinks with the current submission count
