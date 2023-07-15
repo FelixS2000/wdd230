@@ -76,5 +76,8 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
       const outputArea = document.getElementById('output-area');
       outputArea.innerHTML = orderSummary;
 
+      // Store the total number of specialty drinks locally
+      const totalDrinks = selectedFruits.length;
+      localStorage.setItem('totalDrinks', totalDrinks);
     });
   });
