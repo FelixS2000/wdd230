@@ -50,6 +50,18 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
         }
       });
 
+      // Get the current total number of drinks from local storage
+      let totalDrinks = localStorage.getItem('totalDrinks');
+      if (!totalDrinks) {
+        totalDrinks = 0;
+      }
+
+      // Increment the total number of drinks with the current submission count
+      totalDrinks += selectedFruits.length;
+
+      // Store the updated total number of drinks locally
+      localStorage.setItem('totalDrinks', totalDrinks);
+
       // Get current date and time
       const currentDate = new Date().toLocaleString();
 
@@ -75,9 +87,5 @@ fetch('https://brotherblazzard.github.io/canvas-content/fruit.json')
       // Display order summary
       const outputArea = document.getElementById('output-area');
       outputArea.innerHTML = orderSummary;
-
-      // Store the total number of specialty drinks locally
-      const totalDrinks = selectedFruits.length;
-      localStorage.setItem('totalDrinks', totalDrinks);
     });
   });
